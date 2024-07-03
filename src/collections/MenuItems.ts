@@ -6,48 +6,94 @@ const MenuItems: CollectionConfig = {
 		singular: 'Пункт меню',
 		plural: 'Пункты меню',
 	},
+	access: {
+		read: () => true, // Public read access
+	},
 	fields: [
 		{
-			name: 'label',
-			label: 'Название пункта меню',
+			name: 'labelKz',
+			label: 'Название пункта меню (Kz)',
 			type: 'text',
 			required: true,
 		},
 		{
-			name: 'menuListType',
-			label: 'Тип содержимого',
+			name: 'labelRu',
+			label: 'Название пункта меню (Ru)',
+			type: 'text',
+			required: true,
+		},
+		{
+			name: 'labelEn',
+			label: 'Название пункта меню (En)',
+			type: 'text',
+			required: true,
+		},
+		{
+			name: 'linkType',
+			label: 'Тип ссылки',
 			type: 'select',
 			options: [
 				{
-					label: 'Список подменю',
-					value: 'submenu',
+					label: 'Страница',
+					value: 'page',
 				},
 				{
-					label: 'Ссылка',
-					value: 'link',
+					label: 'Произвольная ссылка',
+					value: 'custom',
 				},
 			],
 			required: true,
 		},
 		{
+			name: 'page',
+			label: 'Страница',
+			type: 'relationship',
+			relationTo: 'pages',
+			admin: {
+				condition: data => data.linkType === 'page',
+			},
+		},
+		{
+			name: 'freeLink',
+			label: 'Произвольная ссылка',
+			type: 'text',
+			admin: {
+				condition: data => data.linkType === 'custom',
+			},
+		},
+		{
 			name: 'menuList',
 			label: 'Список подменю',
 			type: 'array',
-			admin: {
-				condition: data => data.menuListType === 'submenu',
-			},
 			fields: [
 				{
-					name: 'menuLabel',
-					label: 'Название подменю',
+					name: 'labelKz',
+					label: 'Название подменю (Kz)',
 					type: 'text',
 					required: true,
 				},
 				{
+					name: 'labelRu',
+					label: 'Название подменю (Ru)',
+					type: 'text',
+					required: true,
+				},
+				{
+					name: 'labelEn',
+					label: 'Название подменю (En)',
+					type: 'text',
+					required: true,
+				},
+				{
+					name: 'page',
+					label: 'Страница',
+					type: 'relationship',
+					relationTo: 'pages',
+				},
+				{
 					name: 'menuItems',
 					label: 'Пункты подменю',
-					type: 'array',
-					required: true,
+					type: 'group',
 					fields: [
 						{
 							name: 'linkList',
@@ -55,8 +101,20 @@ const MenuItems: CollectionConfig = {
 							type: 'array',
 							fields: [
 								{
-									name: 'label',
-									label: 'Название ссылки',
+									name: 'labelKz',
+									label: 'Название ссылки (Kz)',
+									type: 'text',
+									required: true,
+								},
+								{
+									name: 'labelRu',
+									label: 'Название ссылки (Ru)',
+									type: 'text',
+									required: true,
+								},
+								{
+									name: 'labelEn',
+									label: 'Название ссылки (En)',
 									type: 'text',
 									required: true,
 								},
@@ -70,7 +128,7 @@ const MenuItems: CollectionConfig = {
 											value: 'page',
 										},
 										{
-											label: 'Кастомная ссылка',
+											label: 'Произвольная ссылка',
 											value: 'custom',
 										},
 									],
@@ -88,7 +146,7 @@ const MenuItems: CollectionConfig = {
 								},
 								{
 									name: 'customLink',
-									label: 'Кастомная ссылка',
+									label: 'Произвольная ссылка',
 									type: 'text',
 									admin: {
 										condition: (data, siblingData) =>
@@ -96,11 +154,6 @@ const MenuItems: CollectionConfig = {
 									},
 								},
 							],
-						},
-						{
-							name: 'richText',
-							label: 'Разметка',
-							type: 'richText',
 						},
 						{
 							name: 'additionalMenu',
@@ -118,9 +171,22 @@ const MenuItems: CollectionConfig = {
 									type: 'array',
 									fields: [
 										{
-											name: 'label',
-											label: 'Название ссылки',
+											name: 'labelKz',
+											label: 'Название ссылки (Kz)',
 											type: 'text',
+											required: true,
+										},
+										{
+											name: 'labelRu',
+											label: 'Название ссылки (Ru)',
+											type: 'text',
+											required: true,
+										},
+										{
+											name: 'labelEn',
+											label: 'Название ссылки (En)',
+											type: 'text',
+											required: true,
 										},
 										{
 											name: 'linkType',
@@ -132,7 +198,7 @@ const MenuItems: CollectionConfig = {
 													value: 'page',
 												},
 												{
-													label: 'Кастомная ссылка',
+													label: 'Произвольная ссылка',
 													value: 'custom',
 												},
 											],
@@ -150,7 +216,7 @@ const MenuItems: CollectionConfig = {
 										},
 										{
 											name: 'customLink',
-											label: 'Кастомная ссылка',
+											label: 'Произвольная ссылка',
 											type: 'text',
 											admin: {
 												condition: (data, siblingData) =>
@@ -164,53 +230,6 @@ const MenuItems: CollectionConfig = {
 					],
 				},
 			],
-		},
-		{
-			name: 'linkType',
-			label: 'Тип ссылки',
-			type: 'select',
-			options: [
-				{
-					label: 'Страница',
-					value: 'page',
-				},
-				{
-					label: 'Кастомная ссылка',
-					value: 'custom',
-				},
-			],
-			required: true,
-			admin: {
-				condition: data => data.menuListType === 'link',
-			},
-		},
-		{
-			name: 'page',
-			label: 'Страница',
-			type: 'relationship',
-			relationTo: 'pages',
-			admin: {
-				condition: data =>
-					data.menuListType === 'link' && data.linkType === 'page',
-			},
-		},
-		{
-			name: 'customLink',
-			label: 'Кастомная ссылка',
-			type: 'text',
-			admin: {
-				condition: data =>
-					data.menuListType === 'link' && data.linkType === 'custom',
-			},
-		},
-		{
-			name: 'pageSlug',
-			label: 'Slug страницы',
-			type: 'text',
-			admin: {
-				readOnly: true,
-				hidden: true,
-			},
 		},
 	],
 	hooks: {
@@ -236,22 +255,33 @@ const MenuItems: CollectionConfig = {
 					}
 				}
 
+				const processMenuList = async menuList => {
+					if (!menuList) return
+					for (const submenu of menuList) {
+						if (
+							submenu.page &&
+							typeof submenu.page === 'object' &&
+							submenu.page.id
+						) {
+							submenu.pageSlug = await updatePageSlug(submenu.page.id)
+							submenu.page = submenu.page.id
+						}
+						if (submenu.menuItems?.linkList) {
+							await processLinks(submenu.menuItems.linkList)
+						}
+						if (submenu.menuItems?.additionalMenu?.links) {
+							await processLinks(submenu.menuItems.additionalMenu.links)
+						}
+					}
+				}
+
 				if (doc.page && typeof doc.page === 'object' && doc.page.id) {
 					doc.pageSlug = await updatePageSlug(doc.page.id)
 					doc.page = doc.page.id
 				}
 
 				if (doc.menuList) {
-					for (const submenu of doc.menuList) {
-						for (const item of submenu.menuItems) {
-							if (item.linkList) {
-								await processLinks(item.linkList)
-							}
-							if (item.additionalMenu && item.additionalMenu.links) {
-								await processLinks(item.additionalMenu.links)
-							}
-						}
-					}
+					await processMenuList(doc.menuList)
 				}
 
 				return doc

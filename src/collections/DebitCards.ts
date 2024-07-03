@@ -45,6 +45,13 @@ const DebitCardData: CollectionConfig = {
 	],
 	fields: [
 		{
+			name: 'icon',
+			label: 'Иконка',
+			type: 'upload',
+			relationTo: 'icons',
+			required: true,
+		},
+		{
 			name: 'key',
 			label: 'Название дебетовой карты',
 			type: 'text',

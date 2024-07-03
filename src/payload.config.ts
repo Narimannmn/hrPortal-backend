@@ -1,4 +1,5 @@
 import DebitCardData from './collections/DebitCards'
+import Icons from './collections/Icons'
 import Media from './collections/Media'
 import MenuItems from './collections/MenuItems'
 import Pages from './collections/Pages'
@@ -15,7 +16,7 @@ export default buildConfig({
 		bundler: webpackBundler(),
 	},
 	editor: slateEditor({}),
-	collections: [Users, Pages, Media, DebitCardData, MenuItems],
+	collections: [Users, Pages, Media, DebitCardData, MenuItems, Icons],
 	typescript: {
 		outputFile: path.resolve(__dirname, 'payload-types.ts'),
 	},
