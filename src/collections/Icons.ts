@@ -14,14 +14,7 @@ const Icons: CollectionConfig = {
 		staticDir: 'icons',
 		mimeTypes: ['image/svg+xml'],
 	},
-	fields: [
-		{
-			name: 'name',
-			label: 'Название иконки',
-			type: 'text',
-			required: true,
-		},
-	],
+	fields: [],
 }
 
 export default Icons
