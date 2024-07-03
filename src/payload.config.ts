@@ -1,9 +1,10 @@
+import DebitCardData from './collections/DebitCards'
 import Media from './collections/Media'
+import MenuItems from './collections/MenuItems'
 import Pages from './collections/Pages'
 import Users from './collections/Users'
 import { webpackBundler } from '@payloadcms/bundler-webpack'
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
-import { payloadCloud } from '@payloadcms/plugin-cloud'
 import { slateEditor } from '@payloadcms/richtext-slate'
 import path from 'path'
 import { buildConfig } from 'payload/config'
@@ -14,7 +15,7 @@ export default buildConfig({
 		bundler: webpackBundler(),
 	},
 	editor: slateEditor({}),
-	collections: [Users, Pages, Media],
+	collections: [Users, Pages, Media, DebitCardData, MenuItems],
 	typescript: {
 		outputFile: path.resolve(__dirname, 'payload-types.ts'),
 	},
