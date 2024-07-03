@@ -34,76 +34,32 @@ export const Hero: Block = {
 		},
 		{
 			name: 'width',
-			label: 'Ширина',
+			label: 'Ширина фонового изображения',
 			type: 'number',
 			required: true,
 		},
 		{
 			name: 'height',
-			label: 'Высота',
+			label: 'Высота фонового изображения',
 			type: 'number',
 			required: true,
 		},
 		{
-			name: 'marginRight',
-			label: 'Правый отступ',
+			name: 'justifyContent',
+			label: 'Выравнивание по вертикали',
 			type: 'select',
 			options: [
 				{
-					label: '0',
-					value: '0',
+					label: 'Влево',
+					value: 'left',
 				},
 				{
-					label: 'Auto',
-					value: 'auto',
-				},
-			],
-			required: true,
-		},
-		{
-			name: 'marginLeft',
-			label: 'Левый отступ',
-			type: 'select',
-			options: [
-				{
-					label: '0',
-					value: '0',
+					label: 'Вправо',
+					value: 'right',
 				},
 				{
-					label: 'Auto',
-					value: 'auto',
-				},
-			],
-			required: true,
-		},
-		{
-			name: 'marginTop',
-			label: 'Верхний отступ',
-			type: 'select',
-			options: [
-				{
-					label: '0',
-					value: '0',
-				},
-				{
-					label: 'Auto',
-					value: 'auto',
-				},
-			],
-			required: true,
-		},
-		{
-			name: 'marginBottom',
-			label: 'Нижний отступ',
-			type: 'select',
-			options: [
-				{
-					label: '0',
-					value: '0',
-				},
-				{
-					label: 'Auto',
-					value: 'auto',
+					label: 'По центру',
+					value: 'center',
 				},
 			],
 			required: true,

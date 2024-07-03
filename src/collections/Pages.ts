@@ -5,6 +5,9 @@ import { ItemTypes } from '../blocks/itemTypes'
 import { table } from '../blocks/table'
 import { detailsCoin } from '../blocks/detailsCoin'
 import { packageOffers } from '../blocks/packageOffers'
+import { advantageCard } from '../blocks/advantageCard'
+import { servicesCard } from '../blocks/servicesCard'
+import { optionalCard } from '../blocks/optionalCard'
 
 const Pages: CollectionConfig = {
 	slug: 'pages',
@@ -42,6 +45,9 @@ const Pages: CollectionConfig = {
 				table,
 				detailsCoin,
 				packageOffers,
+				advantageCard,
+				servicesCard,
+				optionalCard,
 			],
 		},
 	],
