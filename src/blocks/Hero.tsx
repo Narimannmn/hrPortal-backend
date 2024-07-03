@@ -20,12 +20,6 @@ export const Hero: Block = {
 			required: false,
 		},
 		{
-			name: 'backgroundColor',
-			label: 'hex code of color',
-			type: 'text',
-			required: true,
-		},
-		{
 			name: 'heroImage',
 			label: 'Фоновое изображение',
 			type: 'upload',
@@ -33,28 +27,86 @@ export const Hero: Block = {
 			required: true,
 		},
 		{
+			name: 'backgroundColor',
+			label: 'Цвет фона (hex код)',
+			type: 'text',
+			required: true,
+		},
+		{
 			name: 'width',
-			label: 'Ширина картинки',
+			label: 'Ширина',
 			type: 'number',
-			required: false,
+			required: true,
 		},
 		{
 			name: 'height',
-			label: 'Высота картинки',
+			label: 'Высота',
 			type: 'number',
-			required: false,
+			required: true,
 		},
 		{
-			name: 'top',
-			label: 'Отступ сверху',
-			type: 'number',
-			required: false,
+			name: 'marginRight',
+			label: 'Правый отступ',
+			type: 'select',
+			options: [
+				{
+					label: '0',
+					value: '0',
+				},
+				{
+					label: 'Auto',
+					value: 'auto',
+				},
+			],
+			required: true,
 		},
 		{
-			name: 'bottom',
-			label: 'Отступ снизу',
-			type: 'number',
-			required: false,
+			name: 'marginLeft',
+			label: 'Левый отступ',
+			type: 'select',
+			options: [
+				{
+					label: '0',
+					value: '0',
+				},
+				{
+					label: 'Auto',
+					value: 'auto',
+				},
+			],
+			required: true,
+		},
+		{
+			name: 'marginTop',
+			label: 'Верхний отступ',
+			type: 'select',
+			options: [
+				{
+					label: '0',
+					value: '0',
+				},
+				{
+					label: 'Auto',
+					value: 'auto',
+				},
+			],
+			required: true,
+		},
+		{
+			name: 'marginBottom',
+			label: 'Нижний отступ',
+			type: 'select',
+			options: [
+				{
+					label: '0',
+					value: '0',
+				},
+				{
+					label: 'Auto',
+					value: 'auto',
+				},
+			],
+			required: true,
 		},
 	],
 }

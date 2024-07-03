@@ -1,5 +1,10 @@
 import { Hero } from '../blocks/Hero'
+import { NumeratedCard } from '../blocks/NumeratedCard'
 import { CollectionConfig } from 'payload/types'
+import { ItemTypes } from '../blocks/itemTypes'
+import { table } from '../blocks/table'
+import { detailsCoin } from '../blocks/detailsCoin'
+import { packageOffers } from '../blocks/packageOffers'
 
 const Pages: CollectionConfig = {
 	slug: 'pages',
@@ -27,7 +32,14 @@ const Pages: CollectionConfig = {
 			name: 'layout',
 			label: 'Layout',
 			type: 'blocks',
-			blocks: [Hero],
+			blocks: [
+				Hero,
+				NumeratedCard,
+				ItemTypes,
+				table,
+				detailsCoin,
+				packageOffers,
+			],
 		},
 	],
 }
