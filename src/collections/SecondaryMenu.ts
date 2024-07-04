@@ -82,11 +82,10 @@ const SecondaryMenu: CollectionConfig = {
 					required: true,
 				},
 				{
-					name: 'pageSlug',
+					name: 'page',
 					label: 'Страница',
 					type: 'relationship',
 					relationTo: 'pages',
-					required: false,
 					admin: {
 						condition: (data, siblingData) => siblingData.linkType === 'page',
 					},
@@ -95,7 +94,6 @@ const SecondaryMenu: CollectionConfig = {
 					name: 'customLink',
 					label: 'Произвольная ссылка',
 					type: 'text',
-					required: false,
 					admin: {
 						condition: (data, siblingData) => siblingData.linkType === 'custom',
 					},
@@ -104,20 +102,33 @@ const SecondaryMenu: CollectionConfig = {
 		},
 	],
 	hooks: {
-		beforeChange: [
-			async ({ data, req }) => {
-				if (data.links) {
-					for (const link of data.links) {
-						if (link.linkType === 'page' && link.pageSlug) {
-							const page = await req.payload.findByID({
-								collection: 'pages',
-								id: link.pageSlug,
-								depth: 0,
-							})
-							link.pageSlug = page.slug
+		afterRead: [
+			async ({ doc, req }) => {
+				const updatePageSlug = async pageId => {
+					if (!pageId) return null
+					const page = await req.payload.findByID({
+						collection: 'pages',
+						id: pageId,
+						depth: 0,
+					})
+					return page?.slug || null
+				}
+
+				const processLinks = async links => {
+					if (!links) return
+					for (const link of links) {
+						if (link.page && typeof link.page === 'object' && link.page.id) {
+							link.pageSlug = await updatePageSlug(link.page.id)
+							link.page = link.page.id
 						}
 					}
 				}
+
+				if (doc.links) {
+					await processLinks(doc.links)
+				}
+
+				return doc
 			},
 		],
 	},

@@ -10,39 +10,96 @@ export const table: Block = {
 		{
 			name: 'heading',
 			label: 'Заголовок',
-			type: 'text',
-			required: true,
+			type: 'group',
+			fields: [
+				{
+					name: 'labelRu',
+					label: 'Заголовок (Рус)',
+					type: 'text',
+					required: true,
+				},
+				{
+					name: 'labelEn',
+					label: 'Заголовок (En)',
+					type: 'text',
+					required: true,
+				},
+				{
+					name: 'labelKz',
+					label: 'Заголовок (Қаз)',
+					type: 'text',
+					required: true,
+				},
+			],
 		},
 		{
 			name: 'headers',
-			label: 'Headers',
+			label: 'Заголовки столбцов',
 			type: 'array',
 			fields: [
 				{
 					name: 'label',
-					label: 'Label',
-					type: 'text',
-					required: true,
+					label: 'Заголовок',
+					type: 'group',
+					fields: [
+						{
+							name: 'labelRu',
+							label: 'Заголовок (Рус)',
+							type: 'text',
+							required: true,
+						},
+						{
+							name: 'labelEn',
+							label: 'Заголовок (En)',
+							type: 'text',
+							required: true,
+						},
+						{
+							name: 'labelKz',
+							label: 'Заголовок (Қаз)',
+							type: 'text',
+							required: true,
+						},
+					],
 				},
 			],
 			required: true,
 		},
 		{
 			name: 'rows',
-			label: 'Rows',
+			label: 'Строки',
 			type: 'array',
 			minRows: 1,
 			fields: [
 				{
 					name: 'cells',
-					label: 'Cells',
+					label: 'Ячейки',
 					type: 'array',
 					fields: [
 						{
 							name: 'value',
-							label: 'Value',
-							type: 'text',
-							required: true,
+							label: 'Значение',
+							type: 'group',
+							fields: [
+								{
+									name: 'labelRu',
+									label: 'Значение (Рус)',
+									type: 'text',
+									required: true,
+								},
+								{
+									name: 'labelEn',
+									label: 'Значение (En)',
+									type: 'text',
+									required: true,
+								},
+								{
+									name: 'labelKz',
+									label: 'Значение (Қаз)',
+									type: 'text',
+									required: true,
+								},
+							],
 						},
 					],
 					required: true,

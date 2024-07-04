@@ -3,13 +3,13 @@ import { Block } from 'payload/types'
 export const ItemTypes: Block = {
 	slug: 'itemTypes',
 	labels: {
-		singular: 'Item Type',
-		plural: 'Item Types',
+		singular: 'Item Type Block',
+		plural: 'Item Type Blocks',
 	},
 	fields: [
 		{
 			name: 'items',
-			label: 'Items',
+			label: 'Элементы',
 			type: 'array',
 			fields: [
 				{
@@ -22,14 +22,52 @@ export const ItemTypes: Block = {
 				{
 					name: 'title',
 					label: 'Заголовок',
-					type: 'text',
-					required: true,
+					type: 'group',
+					fields: [
+						{
+							name: 'labelRu',
+							label: 'Заголовок (Рус)',
+							type: 'text',
+							required: true,
+						},
+						{
+							name: 'labelEn',
+							label: 'Заголовок (En)',
+							type: 'text',
+							required: true,
+						},
+						{
+							name: 'labelKz',
+							label: 'Заголовок (Қаз)',
+							type: 'text',
+							required: true,
+						},
+					],
 				},
 				{
 					name: 'description',
 					label: 'Описание',
-					type: 'textarea',
-					required: true,
+					type: 'group',
+					fields: [
+						{
+							name: 'labelRu',
+							label: 'Описание (Рус)',
+							type: 'text',
+							required: true,
+						},
+						{
+							name: 'labelEn',
+							label: 'Описание (En)',
+							type: 'text',
+							required: true,
+						},
+						{
+							name: 'labelKz',
+							label: 'Описание (Қаз)',
+							type: 'text',
+							required: true,
+						},
+					],
 				},
 				{
 					name: 'characteristics',
@@ -39,14 +77,52 @@ export const ItemTypes: Block = {
 						{
 							name: 'label',
 							label: 'Наименование характеристики',
-							type: 'text',
-							required: true,
+							type: 'group',
+							fields: [
+								{
+									name: 'labelRu',
+									label: 'Наименование (Рус)',
+									type: 'text',
+									required: true,
+								},
+								{
+									name: 'labelEn',
+									label: 'Наименование (En)',
+									type: 'text',
+									required: true,
+								},
+								{
+									name: 'labelKz',
+									label: 'Наименование (Қаз)',
+									type: 'text',
+									required: true,
+								},
+							],
 						},
 						{
 							name: 'value',
 							label: 'Значение характеристики',
-							type: 'text',
-							required: true,
+							type: 'group',
+							fields: [
+								{
+									name: 'labelRu',
+									label: 'Значение (Рус)',
+									type: 'text',
+									required: true,
+								},
+								{
+									name: 'labelEn',
+									label: 'Значение (En)',
+									type: 'text',
+									required: true,
+								},
+								{
+									name: 'labelKz',
+									label: 'Значение (Қаз)',
+									type: 'text',
+									required: true,
+								},
+							],
 						},
 					],
 					required: true,
@@ -58,26 +134,47 @@ export const ItemTypes: Block = {
 					fields: [
 						{
 							name: 'label',
-							label: 'Текст кнопки',
-							type: 'text',
-							required: true,
+							label: 'Надпись кнопки',
+							type: 'group',
+							fields: [
+								{
+									name: 'labelRu',
+									label: 'Надпись (Рус)',
+									type: 'text',
+									required: true,
+								},
+								{
+									name: 'labelEn',
+									label: 'Надпись (En)',
+									type: 'text',
+									required: true,
+								},
+								{
+									name: 'labelKz',
+									label: 'Надпись (Қаз)',
+									type: 'text',
+									required: true,
+								},
+							],
 						},
 						{
-							name: 'backgroundColor',
-							label: 'Цвет фона кнопки',
-							type: 'text',
-							required: true,
-						},
-						{
-							name: 'color',
-							label: 'Цвет текста кнопки',
-							type: 'text',
-							required: true,
-						},
-						{
-							name: 'borderRadius',
-							label: 'Радиус границы кнопки',
-							type: 'number',
+							name: 'variant',
+							label: 'Тип кнопки',
+							type: 'select',
+							options: [
+								{
+									label: 'Primary',
+									value: 'primary',
+								},
+								{
+									label: 'Secondary',
+									value: 'secondary',
+								},
+								{
+									label: 'Ghost',
+									value: 'ghost',
+								},
+							],
 							required: true,
 						},
 					],
