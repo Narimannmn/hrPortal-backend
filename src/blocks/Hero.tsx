@@ -10,14 +10,49 @@ export const Hero: Block = {
 		{
 			name: 'title',
 			label: 'Заголовок',
-			type: 'text',
-			required: true,
+			type: 'group',
+			fields: [
+				{
+					name: 'labelRu',
+					label: 'Заголовок (Рус)',
+					type: 'text',
+					required: true,
+				},
+				{
+					name: 'labelEn',
+					label: 'Заголовок (En)',
+					type: 'text',
+					required: true,
+				},
+				{
+					name: 'labelKz',
+					label: 'Заголовок (Қаз)',
+					type: 'text',
+					required: true,
+				},
+			],
 		},
 		{
 			name: 'subtitle',
 			label: 'Подзаголовок',
-			type: 'text',
-			required: false,
+			type: 'group',
+			fields: [
+				{
+					name: 'labelRu',
+					label: 'Подзаголовок (Рус)',
+					type: 'text',
+				},
+				{
+					name: 'labelEn',
+					label: 'Подзаголовок (En)',
+					type: 'text',
+				},
+				{
+					name: 'labelKz',
+					label: 'Подзаголовок (Қаз)',
+					type: 'text',
+				},
+			],
 		},
 		{
 			name: 'heroImage',
@@ -28,20 +63,26 @@ export const Hero: Block = {
 		},
 		{
 			name: 'backgroundColor',
-			label: 'Цвет фона (hex код)',
-			type: 'text',
-			required: true,
-		},
-		{
-			name: 'width',
-			label: 'Ширина фонового изображения',
-			type: 'number',
-			required: true,
-		},
-		{
-			name: 'height',
-			label: 'Высота фонового изображения',
-			type: 'number',
+			label: 'Цвет фона',
+			type: 'select',
+			options: [
+				{
+					label: 'Ярко-голубой',
+					value: 'light-gray',
+				},
+				{
+					label: 'Голубой',
+					value: 'blue-background',
+				},
+				{
+					label: 'Серый',
+					value: 'gray',
+				},
+				{
+					label: 'Градиент (голубой - ярко-голубой)',
+					value: 'gradient-blue',
+				},
+			],
 			required: true,
 		},
 		{

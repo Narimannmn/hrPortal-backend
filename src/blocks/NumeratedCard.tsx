@@ -1,7 +1,7 @@
 import { Block } from 'payload/types'
 
 export const NumeratedCard: Block = {
-	slug: 'NumeratedCard',
+	slug: 'numeratedCard',
 	labels: {
 		singular: 'Numerated Card Block',
 		plural: 'Numerated Card Blocks',
@@ -10,8 +10,27 @@ export const NumeratedCard: Block = {
 		{
 			name: 'heading',
 			label: 'Заголовок',
-			type: 'text',
-			required: true,
+			type: 'group',
+			fields: [
+				{
+					name: 'labelRu',
+					label: 'Заголовок (Рус)',
+					type: 'text',
+					required: true,
+				},
+				{
+					name: 'labelEn',
+					label: 'Заголовок (En)',
+					type: 'text',
+					required: true,
+				},
+				{
+					name: 'labelKz',
+					label: 'Заголовок (Қаз)',
+					type: 'text',
+					required: true,
+				},
+			],
 		},
 		{
 			name: 'cards',
@@ -30,14 +49,52 @@ export const NumeratedCard: Block = {
 				{
 					name: 'title',
 					label: 'Заголовок карты',
-					type: 'text',
-					required: true,
+					type: 'group',
+					fields: [
+						{
+							name: 'labelRu',
+							label: 'Заголовок (Рус)',
+							type: 'text',
+							required: true,
+						},
+						{
+							name: 'labelEn',
+							label: 'Заголовок (En)',
+							type: 'text',
+							required: true,
+						},
+						{
+							name: 'labelKz',
+							label: 'Заголовок (Қаз)',
+							type: 'text',
+							required: true,
+						},
+					],
 				},
 				{
 					name: 'description',
 					label: 'Описание карты',
-					type: 'text',
-					required: true,
+					type: 'group',
+					fields: [
+						{
+							name: 'labelRu',
+							label: 'Описание (Рус)',
+							type: 'text',
+							required: true,
+						},
+						{
+							name: 'labelEn',
+							label: 'Описание (En)',
+							type: 'text',
+							required: true,
+						},
+						{
+							name: 'labelKz',
+							label: 'Описание (Қаз)',
+							type: 'text',
+							required: true,
+						},
+					],
 				},
 				{
 					name: 'numberImageWidth',
