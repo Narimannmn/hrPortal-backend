@@ -31,6 +31,7 @@ export const table: Block = {
 			name: 'rows',
 			label: 'Rows',
 			type: 'array',
+			minRows: 1,
 			fields: [
 				{
 					name: 'cells',
