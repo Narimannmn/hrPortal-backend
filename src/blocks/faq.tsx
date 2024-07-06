@@ -1,10 +1,10 @@
 import { Block } from 'payload/types'
 
-export const advantageCard: Block = {
-	slug: 'advantageCard',
+export const faq: Block = {
+	slug: 'faq',
 	labels: {
-		singular: 'Advantage Block',
-		plural: 'Advantages Blocks',
+		singular: 'FAQ Block',
+		plural: 'FAQ Blocks',
 	},
 	fields: [
 		{
@@ -33,63 +33,57 @@ export const advantageCard: Block = {
 			],
 		},
 		{
-			name: 'advantages',
-			label: 'Преимущества',
+			name: 'faqs',
+			label: 'Часто задаваемые вопросы',
 			type: 'array',
+			minRows: 1,
 			fields: [
 				{
-					name: 'image',
-					label: 'Изображение',
-					type: 'upload',
-					relationTo: 'media',
-					required: true,
-				},
-				{
-					name: 'title',
-					label: 'Заголовок',
+					name: 'question',
+					label: 'Вопрос',
 					type: 'group',
 					fields: [
 						{
 							name: 'labelRu',
-							label: 'Заголовок (Рус)',
+							label: 'Вопрос (Рус)',
 							type: 'text',
 							required: true,
 						},
 						{
 							name: 'labelEn',
-							label: 'Заголовок (En)',
+							label: 'Вопрос (En)',
 							type: 'text',
 							required: true,
 						},
 						{
 							name: 'labelKz',
-							label: 'Заголовок (Қаз)',
+							label: 'Вопрос (Қаз)',
 							type: 'text',
 							required: true,
 						},
 					],
 				},
 				{
-					name: 'description',
-					label: 'Описание',
+					name: 'answer',
+					label: 'Ответ',
 					type: 'group',
 					fields: [
 						{
 							name: 'labelRu',
-							label: 'Описание (Рус)',
-							type: 'text',
+							label: 'Ответ (Рус)',
+							type: 'textarea',
 							required: true,
 						},
 						{
 							name: 'labelEn',
-							label: 'Описание (En)',
-							type: 'text',
+							label: 'Ответ (En)',
+							type: 'textarea',
 							required: true,
 						},
 						{
 							name: 'labelKz',
-							label: 'Описание (Қаз)',
-							type: 'text',
+							label: 'Ответ (Қаз)',
+							type: 'textarea',
 							required: true,
 						},
 					],

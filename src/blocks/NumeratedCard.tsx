@@ -99,7 +99,17 @@ export const NumeratedCard: Block = {
 				{
 					name: 'numberImageWidth',
 					label: 'Ширина изображения номера',
-					type: 'number',
+					type: 'select',
+					options: [
+						{
+							label: 'Маленький',
+							value: 'small',
+						},
+						{
+							label: 'Обычный',
+							value: 'regular',
+						},
+					],
 					required: true,
 				},
 			],

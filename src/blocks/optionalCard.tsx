@@ -10,8 +10,27 @@ export const optionalCard: Block = {
 		{
 			name: 'heading',
 			label: 'Заголовок',
-			type: 'text',
-			required: true,
+			type: 'group',
+			fields: [
+				{
+					name: 'labelRu',
+					label: 'Заголовок (Рус)',
+					type: 'text',
+					required: true,
+				},
+				{
+					name: 'labelEn',
+					label: 'Заголовок (En)',
+					type: 'text',
+					required: true,
+				},
+				{
+					name: 'labelKz',
+					label: 'Заголовок (Қаз)',
+					type: 'text',
+					required: true,
+				},
+			],
 		},
 		{
 			name: 'items',
@@ -30,14 +49,49 @@ export const optionalCard: Block = {
 				{
 					name: 'title',
 					label: 'Заголовок',
-					type: 'text',
-					required: true,
+					type: 'group',
+					fields: [
+						{
+							name: 'labelRu',
+							label: 'Заголовок (Рус)',
+							type: 'text',
+							required: true,
+						},
+						{
+							name: 'labelEn',
+							label: 'Заголовок (En)',
+							type: 'text',
+							required: true,
+						},
+						{
+							name: 'labelKz',
+							label: 'Заголовок (Қаз)',
+							type: 'text',
+							required: true,
+						},
+					],
 				},
 				{
 					name: 'description',
 					label: 'Описание',
-					type: 'text',
-					required: false,
+					type: 'group',
+					fields: [
+						{
+							name: 'labelRu',
+							label: 'Описание (Рус)',
+							type: 'text',
+						},
+						{
+							name: 'labelEn',
+							label: 'Описание (En)',
+							type: 'text',
+						},
+						{
+							name: 'labelKz',
+							label: 'Описание (Қаз)',
+							type: 'text',
+						},
+					],
 				},
 			],
 			required: true,

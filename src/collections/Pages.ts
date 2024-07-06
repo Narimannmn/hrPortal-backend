@@ -8,6 +8,7 @@ import { packageOffers } from '../blocks/packageOffers'
 import { advantageCard } from '../blocks/advantageCard'
 import { servicesCard } from '../blocks/servicesCard'
 import { optionalCard } from '../blocks/optionalCard'
+import { faq } from '../blocks/faq'
 
 const Pages: CollectionConfig = {
 	slug: 'pages',
@@ -48,6 +49,7 @@ const Pages: CollectionConfig = {
 				advantageCard,
 				servicesCard,
 				optionalCard,
+				faq,
 			],
 		},
 	],
