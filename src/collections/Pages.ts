@@ -1,5 +1,8 @@
 import { Hero } from '../blocks/Hero'
 import { NumeratedCard } from '../blocks/NumeratedCard'
+import PageHeaderBlock from '../blocks/PageHeaderBlock'
+import { PostsBlock } from '../blocks/PostsBlock'
+import ProductCardsBlock from '../blocks/ProductCardsBlock'
 import SliderHeroWithCardsBlock from '../blocks/SliderHeroWithCardsBlock'
 import { advantageCard } from '../blocks/advantageCard'
 import { detailsCoin } from '../blocks/detailsCoin'
@@ -10,6 +13,25 @@ import { servicesCard } from '../blocks/servicesCard'
 import { faq } from '../blocks/faq'
 import { table } from '../blocks/table'
 import { CollectionConfig } from 'payload/types'
+
+const extractSlug = data => {
+	if (Array.isArray(data)) {
+		return data.map(item => {
+			if (
+				item.pageSlug &&
+				typeof item.pageSlug === 'object' &&
+				item.pageSlug.slug
+			) {
+				item.pageSlug = item.pageSlug.slug
+			}
+			if (item.cards) {
+				item.cards = extractSlug(item.cards)
+			}
+			return item
+		})
+	}
+	return data
+}
 
 const Pages: CollectionConfig = {
 	slug: 'pages',
@@ -52,9 +74,33 @@ const Pages: CollectionConfig = {
 				optionalCard,
 				faq,
 				SliderHeroWithCardsBlock,
+				PageHeaderBlock,
+				PostsBlock,
+				ProductCardsBlock,
 			],
 		},
 	],
+	hooks: {
+		afterRead: [
+			({ doc }) => {
+				if (doc.layout && Array.isArray(doc.layout)) {
+					doc.layout = doc.layout.map(block => {
+						if (block.blockType === 'SliderHeroWithCardsBlock' && block.list) {
+							block.list = extractSlug(block.list)
+						}
+						if (block.blockType === 'SliderHeroWithCardsBlock' && block.cards) {
+							block.cards = extractSlug(block.cards)
+						}
+						if (block.blockType === 'ProductCardsBlock' && block.cards) {
+							block.cards = extractSlug(block.cards)
+						}
+						return block
+					})
+				}
+				return doc
+			},
+		],
+	},
 }
 
 export default Pages

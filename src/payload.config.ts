@@ -6,6 +6,8 @@ import MenuItems from './collections/MenuItems'
 import Pages from './collections/Pages'
 import SecondaryMenu from './collections/SecondaryMenu'
 import Users from './collections/Users'
+import PostCategories from './collections/posts/PostCategories'
+import Posts from './collections/posts/Posts'
 import { webpackBundler } from '@payloadcms/bundler-webpack'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { payloadCloud } from '@payloadcms/plugin-cloud'
@@ -28,6 +30,8 @@ export default buildConfig({
 		SecondaryMenu,
 		Contacts,
 		MenuItems,
+		Posts,
+		PostCategories,
 	],
 	typescript: {
 		outputFile: path.resolve(__dirname, 'payload-types.ts'),
