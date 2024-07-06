@@ -7,7 +7,9 @@ import { ItemTypes } from '../blocks/itemTypes'
 import { optionalCard } from '../blocks/optionalCard'
 import { packageOffers } from '../blocks/packageOffers'
 import { servicesCard } from '../blocks/servicesCard'
-import { optionalCard } from '../blocks/optionalCard'
+import { faq } from '../blocks/faq'
+import { table } from '../blocks/table'
+import { CollectionConfig } from 'payload/types'
 
 const Pages: CollectionConfig = {
 	slug: 'pages',
