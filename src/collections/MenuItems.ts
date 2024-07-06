@@ -42,7 +42,6 @@ const MenuItems: CollectionConfig = {
 					value: 'custom',
 				},
 			],
-			required: true,
 		},
 		{
 			name: 'page',
@@ -85,10 +84,36 @@ const MenuItems: CollectionConfig = {
 					required: true,
 				},
 				{
+					name: 'linkType',
+					label: 'Тип ссылки',
+					type: 'select',
+					options: [
+						{
+							label: 'Страница',
+							value: 'page',
+						},
+						{
+							label: 'Произвольная ссылка',
+							value: 'custom',
+						},
+					],
+				},
+				{
 					name: 'page',
 					label: 'Страница',
 					type: 'relationship',
 					relationTo: 'pages',
+					admin: {
+						condition: (data, siblingData) => siblingData.linkType === 'page',
+					},
+				},
+				{
+					name: 'freeLink',
+					label: 'Произвольная ссылка',
+					type: 'text',
+					admin: {
+						condition: (data, siblingData) => siblingData.linkType === 'custom',
+					},
 				},
 				{
 					name: 'menuItems',

@@ -1,13 +1,14 @@
 import { Hero } from '../blocks/Hero'
 import { NumeratedCard } from '../blocks/NumeratedCard'
-import { CollectionConfig } from 'payload/types'
-import { ItemTypes } from '../blocks/itemTypes'
-import { table } from '../blocks/table'
-import { detailsCoin } from '../blocks/detailsCoin'
-import { packageOffers } from '../blocks/packageOffers'
+import SliderHeroWithCardsBlock from '../blocks/SliderHeroWithCardsBlock'
 import { advantageCard } from '../blocks/advantageCard'
-import { servicesCard } from '../blocks/servicesCard'
+import { detailsCoin } from '../blocks/detailsCoin'
+import { ItemTypes } from '../blocks/itemTypes'
 import { optionalCard } from '../blocks/optionalCard'
+import { packageOffers } from '../blocks/packageOffers'
+import { servicesCard } from '../blocks/servicesCard'
+import { table } from '../blocks/table'
+import { CollectionConfig } from 'payload/types'
 
 const Pages: CollectionConfig = {
 	slug: 'pages',
@@ -48,6 +49,7 @@ const Pages: CollectionConfig = {
 				advantageCard,
 				servicesCard,
 				optionalCard,
+				SliderHeroWithCardsBlock,
 			],
 		},
 	],
