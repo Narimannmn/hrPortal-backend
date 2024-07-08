@@ -7,11 +7,11 @@ import SliderHeroWithCardsBlock from '../blocks/SliderHeroWithCardsBlock'
 import { advantageCard } from '../blocks/advantageCard'
 import { detailsCoin } from '../blocks/detailsCoin'
 import { ItemTypes } from '../blocks/itemTypes'
-import { optionalCard } from '../blocks/optionalCard'
 import { packageOffers } from '../blocks/packageOffers'
 import { servicesCard } from '../blocks/servicesCard'
 import { faq } from '../blocks/faq'
 import { table } from '../blocks/table'
+import { form } from '../blocks/form'
 import { CollectionConfig } from 'payload/types'
 
 const extractSlug = data => {
@@ -71,12 +71,12 @@ const Pages: CollectionConfig = {
 				packageOffers,
 				advantageCard,
 				servicesCard,
-				optionalCard,
 				faq,
 				SliderHeroWithCardsBlock,
 				PageHeaderBlock,
 				PostsBlock,
 				ProductCardsBlock,
+				form,
 			],
 		},
 	],

@@ -1,3 +1,4 @@
+import { colorPickerField } from '@innovixx/payload-color-picker-field'
 import { Block } from 'payload/types'
 
 export const Hero: Block = {
@@ -61,30 +62,24 @@ export const Hero: Block = {
 			relationTo: 'media',
 			required: true,
 		},
-		{
+		colorPickerField({
 			name: 'backgroundColor',
 			label: 'Цвет фона',
-			type: 'select',
-			options: [
-				{
-					label: 'Ярко-голубой',
-					value: 'light-blue',
-				},
-				{
-					label: 'Голубой',
-					value: 'blue-background',
-				},
-				{
-					label: 'Серый',
-					value: 'gray',
-				},
-				{
-					label: 'Градиент (голубой - ярко-голубой)',
-					value: 'gradient-blue',
-				},
-			],
 			required: true,
-		},
+			admin: {
+				position: 'sidebar',
+				description: 'Выберите цвет фона',
+			},
+		}),
+		colorPickerField({
+			name: 'secondaryColor',
+			label: 'Второй цвет для градиента',
+			required: false,
+			admin: {
+				position: 'sidebar',
+				description: 'Выберите второй цвет для градиента, если требуется',
+			},
+		}),
 		{
 			name: 'bgType',
 			label: 'Тип фонового изображения',
