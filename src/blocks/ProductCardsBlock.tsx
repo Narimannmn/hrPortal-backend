@@ -145,6 +145,18 @@ const ProductCardsBlock: Block = {
 						description: 'Выберите цвет фона для карточки продукта',
 					},
 				}),
+				{
+					name: 'imageOffsetBottom',
+					label: 'Отступ снизу изображения',
+					type: 'number',
+					required: false,
+				},
+				{
+					name: 'imageOffsetRight',
+					label: 'Отступ справа изображения',
+					type: 'number',
+					required: false,
+				},
 			],
 		},
 	],

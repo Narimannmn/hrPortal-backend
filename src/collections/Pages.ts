@@ -4,6 +4,7 @@ import PageHeaderBlock from '../blocks/PageHeaderBlock'
 import { PostsBlock } from '../blocks/PostsBlock'
 import ProductCardsBlock from '../blocks/ProductCardsBlock'
 import SliderHeroWithCardsBlock from '../blocks/SliderHeroWithCardsBlock'
+import VerticalCardBlock from '../blocks/VerticalCardBlock'
 import { advantageCard } from '../blocks/advantageCard'
 import { detailsCoin } from '../blocks/detailsCoin'
 import { ItemTypes } from '../blocks/itemTypes'
@@ -25,6 +26,14 @@ const extractSlug = data => {
 			}
 			if (item.cards) {
 				item.cards = extractSlug(item.cards)
+			}
+			if (
+				item.footerLnk &&
+				item.footerLnk.pageSlug &&
+				typeof item.footerLnk.pageSlug === 'object' &&
+				item.footerLnk.pageSlug.slug
+			) {
+				item.footerLnk.pageSlug = item.footerLnk.pageSlug.slug
 			}
 			return item
 		})
@@ -75,6 +84,7 @@ const Pages: CollectionConfig = {
 				PageHeaderBlock,
 				PostsBlock,
 				ProductCardsBlock,
+				VerticalCardBlock,
 			],
 		},
 	],
@@ -89,7 +99,10 @@ const Pages: CollectionConfig = {
 						if (block.blockType === 'SliderHeroWithCardsBlock' && block.cards) {
 							block.cards = extractSlug(block.cards)
 						}
-						if (block.blockType === 'ProductCardsBlock' && block.cards) {
+						if (block.blockType === 'productCards' && block.cards) {
+							block.cards = extractSlug(block.cards)
+						}
+						if (block.blockType === 'VerticalCardBlock' && block.cards) {
 							block.cards = extractSlug(block.cards)
 						}
 						return block
