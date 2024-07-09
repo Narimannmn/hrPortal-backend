@@ -14,6 +14,10 @@ import { faq } from '../blocks/faq'
 import { table } from '../blocks/table'
 import { form } from '../blocks/form'
 import { CollectionConfig } from 'payload/types'
+import { horizontalStatisticCard } from '../blocks/horizontalStatisticCard'
+import { simpleCard } from '../blocks/simpleCard'
+import { warningCard } from '../blocks/warningCard'
+import { keyPointedCard } from '../blocks/keyPointedCard'
 
 const extractSlug = data => {
 	if (Array.isArray(data)) {
@@ -87,6 +91,10 @@ const Pages: CollectionConfig = {
 				ProductCardsBlock,
 				VerticalCardBlock,
 				form,
+				horizontalStatisticCard,
+				simpleCard,
+				warningCard,
+				keyPointedCard,
 			],
 		},
 	],
