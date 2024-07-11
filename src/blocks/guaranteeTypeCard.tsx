@@ -1,10 +1,10 @@
 import { Block } from 'payload/types'
 
-export const packageOffers: Block = {
-	slug: 'packageOffers',
+export const guaranteeTypeCard: Block = {
+	slug: 'guaranteeTypeCard',
 	labels: {
-		singular: 'Пакет предложений',
-		plural: 'Пакеты предложений',
+		singular: 'Карточка для показа подходящего вида',
+		plural: 'Карточки для показа подходящего вида',
 	},
 	fields: [
 		{
@@ -30,17 +30,10 @@ export const packageOffers: Block = {
 			],
 		},
 		{
-			name: 'packages',
-			label: 'Пакеты',
+			name: 'guarantees',
+			label: 'Гарантии',
 			type: 'array',
 			fields: [
-				{
-					name: 'icon',
-					label: 'Иконка',
-					type: 'upload',
-					relationTo: 'icons',
-					required: true,
-				},
 				{
 					name: 'title',
 					label: 'Заголовок',
@@ -67,71 +60,30 @@ export const packageOffers: Block = {
 					],
 				},
 				{
-					name: 'price',
-					label: 'Цена',
+					name: 'description',
+					label: 'Описание',
 					type: 'group',
 					fields: [
 						{
 							name: 'labelRu',
-							label: 'Цена (Рус)',
+							label: 'Описание (Рус)',
 							type: 'text',
-							required: true,
 						},
 						{
 							name: 'labelEn',
-							label: 'Цена (En)',
+							label: 'Описание (En)',
 							type: 'text',
-							required: true,
 						},
 						{
 							name: 'labelKz',
-							label: 'Цена (Қаз)',
+							label: 'Описание (Қаз)',
 							type: 'text',
-							required: true,
 						},
 					],
 				},
 				{
-					name: 'priceTooltip',
-					label: 'Тултип цены',
-					type: 'group',
-					fields: [
-						{
-							name: 'enabled',
-							label: 'Включен',
-							type: 'checkbox',
-							required: true,
-						},
-						{
-							name: 'richText',
-							label: 'Тултип',
-							type: 'group',
-							admin: {
-								condition: (_, siblingData) => siblingData.enabled,
-							},
-							fields: [
-								{
-									name: 'labelRu',
-									label: 'Тултип (Рус)',
-									type: 'richText',
-								},
-								{
-									name: 'labelEn',
-									label: 'Тултип (En)',
-									type: 'richText',
-								},
-								{
-									name: 'labelKz',
-									label: 'Тултип (Қаз)',
-									type: 'richText',
-								},
-							],
-						},
-					],
-				},
-				{
-					name: 'features',
-					label: 'Функции',
+					name: 'details',
+					label: 'Детали',
 					type: 'array',
 					fields: [
 						{
@@ -184,45 +136,14 @@ export const packageOffers: Block = {
 								},
 							],
 						},
-						{
-							name: 'tooltip',
-							label: 'Тултип',
-							type: 'group',
-							fields: [
-								{
-									name: 'enabled',
-									label: 'Включен',
-									type: 'checkbox',
-									required: true,
-								},
-								{
-									name: 'richText',
-									label: 'Тултип',
-									type: 'group',
-									admin: {
-										condition: (_, siblingData) => siblingData.enabled,
-									},
-									fields: [
-										{
-											name: 'labelRu',
-											label: 'Тултип (Рус)',
-											type: 'richText',
-										},
-										{
-											name: 'labelEn',
-											label: 'Тултип (En)',
-											type: 'richText',
-										},
-										{
-											name: 'labelKz',
-											label: 'Тултип (Қаз)',
-											type: 'richText',
-										},
-									],
-								},
-							],
-						},
 					],
+				},
+				{
+					name: 'image',
+					label: 'Изображение',
+					type: 'upload',
+					relationTo: 'media',
+					required: true,
 				},
 			],
 			required: true,

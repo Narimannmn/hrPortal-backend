@@ -18,6 +18,9 @@ import { horizontalStatisticCard } from '../blocks/horizontalStatisticCard'
 import { simpleCard } from '../blocks/simpleCard'
 import { warningCard } from '../blocks/warningCard'
 import { keyPointedCard } from '../blocks/keyPointedCard'
+import { descriptionWithRichtext } from '../blocks/descriptionWithRichtext'
+import { guaranteeTypeCard } from '../blocks/guaranteeTypeCard'
+import { tariffCard } from '../blocks/tariffCard'
 
 const extractSlug = data => {
 	if (Array.isArray(data)) {
@@ -95,6 +98,9 @@ const Pages: CollectionConfig = {
 				simpleCard,
 				warningCard,
 				keyPointedCard,
+				descriptionWithRichtext,
+				guaranteeTypeCard,
+				tariffCard,
 			],
 		},
 	],

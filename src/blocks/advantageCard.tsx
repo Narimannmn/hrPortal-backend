@@ -3,8 +3,8 @@ import { Block } from 'payload/types'
 export const advantageCard: Block = {
 	slug: 'advantageCard',
 	labels: {
-		singular: 'Advantage Block',
-		plural: 'Advantages Blocks',
+		singular: 'Блок карточки преимуществ',
+		plural: 'Блок карточек преимуществ',
 	},
 	fields: [
 		{
@@ -36,6 +36,8 @@ export const advantageCard: Block = {
 			name: 'advantages',
 			label: 'Преимущества',
 			type: 'array',
+			minRows: 3,
+			maxRows: 5,
 			fields: [
 				{
 					name: 'image',
@@ -78,19 +80,78 @@ export const advantageCard: Block = {
 							name: 'labelRu',
 							label: 'Описание (Рус)',
 							type: 'text',
-							required: true,
 						},
 						{
 							name: 'labelEn',
 							label: 'Описание (En)',
 							type: 'text',
-							required: true,
 						},
 						{
 							name: 'labelKz',
 							label: 'Описание (Қаз)',
 							type: 'text',
-							required: true,
+						},
+					],
+				},
+				{
+					name: 'alignImage',
+					label: 'Выравнивание изображения',
+					type: 'select',
+					options: [
+						{
+							label: 'Слева',
+							value: 'flex-start',
+						},
+						{
+							label: 'Справа',
+							value: 'flex-end',
+						},
+						{
+							label: 'По центру',
+							value: 'center',
+						},
+					],
+					required: true,
+				},
+				{
+					name: 'textAlign',
+					label: 'Выравнивание текста',
+					type: 'select',
+					options: [
+						{
+							label: 'Слева',
+							value: 'left',
+						},
+						{
+							label: 'По центру',
+							value: 'center',
+						},
+						{
+							label: 'Справа',
+							value: 'right',
+						},
+					],
+					required: true,
+				},
+				{
+					name: 'buttonText',
+					label: 'Текст кнопки',
+					type: 'group',
+					fields: [
+						{
+							name: 'labelRu',
+							label: 'Текст кнопки (Рус)',
+							type: 'text',
+						},
+						{
+							name: 'labelEn',
+							label: 'Текст кнопки (En)',
+							type: 'text',
+						},
+						{
+							name: 'labelKz',
+							label: 'Текст кнопки (Қаз)',
+							type: 'text',
 						},
 					],
 				},
