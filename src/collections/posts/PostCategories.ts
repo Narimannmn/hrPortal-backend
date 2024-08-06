@@ -11,6 +11,9 @@ const PostCategories: CollectionConfig = {
 		useAsTitle: 'labelRu',
 		group: 'Статьи',
 	},
+	access: {
+		read: () => true,
+	},
 	fields: [
 		{
 			name: 'labelEn',

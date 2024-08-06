@@ -2,28 +2,24 @@ import cors from 'cors'
 import express from 'express'
 import payload from 'payload'
 
-// Импортируем пакет cors
 
 require('dotenv').config()
 const app = express()
 
-// Настройка CORS
 app.use(
 	cors({
-		origin: 'http://localhost:3000', // URL вашего клиентского приложения
+		origin: 'http://localhost:3000', 
 		methods: 'GET,POST,PUT,DELETE,OPTIONS',
 		allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept',
 		credentials: true,
 	})
 )
 
-// Redirect root to Admin panel
 app.get('/', (_, res) => {
 	res.redirect('/admin')
 })
 
 const start = async () => {
-	// Initialize Payload
 	await payload.init({
 		secret: process.env.PAYLOAD_SECRET,
 		express: app,
@@ -32,7 +28,6 @@ const start = async () => {
 		},
 	})
 
-	// Add your own express routes here
 	app.get('/api/pages/:slug', async (req, res) => {
 		const { slug } = req.params
 
