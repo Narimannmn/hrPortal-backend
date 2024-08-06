@@ -10,8 +10,27 @@ export const servicesCard: Block = {
 		{
 			name: 'heading',
 			label: 'Заголовок',
-			type: 'text',
-			required: true,
+			type: 'group',
+			fields: [
+				{
+					name: 'labelRu',
+					label: 'Заголовок (Рус)',
+					type: 'text',
+					required: true,
+				},
+				{
+					name: 'labelEn',
+					label: 'Заголовок (En)',
+					type: 'text',
+					required: true,
+				},
+				{
+					name: 'labelKz',
+					label: 'Заголовок (Қаз)',
+					type: 'text',
+					required: true,
+				},
+			],
 		},
 		{
 			name: 'intro',
@@ -28,14 +47,52 @@ export const servicesCard: Block = {
 				{
 					name: 'title',
 					label: 'Заголовок введения',
-					type: 'text',
-					required: true,
+					type: 'group',
+					fields: [
+						{
+							name: 'labelRu',
+							label: 'Заголовок (Рус)',
+							type: 'text',
+							required: true,
+						},
+						{
+							name: 'labelEn',
+							label: 'Заголовок (En)',
+							type: 'text',
+							required: true,
+						},
+						{
+							name: 'labelKz',
+							label: 'Заголовок (Қаз)',
+							type: 'text',
+							required: true,
+						},
+					],
 				},
 				{
 					name: 'description',
 					label: 'Описание введения',
-					type: 'textarea',
-					required: true,
+					type: 'group',
+					fields: [
+						{
+							name: 'labelRu',
+							label: 'Описание (Рус)',
+							type: 'textarea',
+							required: true,
+						},
+						{
+							name: 'labelEn',
+							label: 'Описание (En)',
+							type: 'textarea',
+							required: true,
+						},
+						{
+							name: 'labelKz',
+							label: 'Описание (Қаз)',
+							type: 'textarea',
+							required: true,
+						},
+					],
 				},
 			],
 		},
@@ -49,8 +106,27 @@ export const servicesCard: Block = {
 				{
 					name: 'title',
 					label: 'Заголовок услуги',
-					type: 'text',
-					required: true,
+					type: 'group',
+					fields: [
+						{
+							name: 'labelRu',
+							label: 'Заголовок (Рус)',
+							type: 'text',
+							required: true,
+						},
+						{
+							name: 'labelEn',
+							label: 'Заголовок (En)',
+							type: 'text',
+							required: true,
+						},
+						{
+							name: 'labelKz',
+							label: 'Заголовок (Қаз)',
+							type: 'text',
+							required: true,
+						},
+					],
 				},
 				{
 					name: 'features',
@@ -60,8 +136,27 @@ export const servicesCard: Block = {
 						{
 							name: 'feature',
 							label: 'Особенность',
-							type: 'text',
-							required: true,
+							type: 'group',
+							fields: [
+								{
+									name: 'labelRu',
+									label: 'Особенность (Рус)',
+									type: 'text',
+									required: true,
+								},
+								{
+									name: 'labelEn',
+									label: 'Особенность (En)',
+									type: 'text',
+									required: true,
+								},
+								{
+									name: 'labelKz',
+									label: 'Особенность (Қаз)',
+									type: 'text',
+									required: true,
+								},
+							],
 						},
 					],
 					required: true,

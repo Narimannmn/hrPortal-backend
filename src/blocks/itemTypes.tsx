@@ -163,15 +163,19 @@ export const ItemTypes: Block = {
 							type: 'select',
 							options: [
 								{
-									label: 'Primary',
+									label: 'Розовый задний фон с белой надписью',
 									value: 'primary',
 								},
 								{
-									label: 'Secondary',
+									label: 'Белый задний фон с черной надписью',
 									value: 'secondary',
 								},
 								{
-									label: 'Ghost',
+									label: 'Прозрачный задний фон с розовой надписью',
+									value: 'tertiary',
+								},
+								{
+									label: 'Прозрачный задний фон с серой надписью',
 									value: 'ghost',
 								},
 							],

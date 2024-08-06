@@ -1,10 +1,10 @@
 import { Block } from 'payload/types'
 
-export const NumeratedCard: Block = {
-	slug: 'numeratedCard',
+export const horizontalStatisticCard: Block = {
+	slug: 'horizontalStatisticCard',
 	labels: {
-		singular: 'Numerated Card Block',
-		plural: 'Numerated Card Blocks',
+		singular: 'Статистическая карточка',
+		plural: 'Статистические карточки',
 	},
 	fields: [
 		{
@@ -34,38 +34,29 @@ export const NumeratedCard: Block = {
 		},
 		{
 			name: 'cards',
-			label: 'Карты',
+			label: 'Карточки',
 			type: 'array',
-			minRows: 3,
-			maxRows: 5,
 			fields: [
 				{
-					name: 'numberImage',
-					label: 'Изображение номера',
-					type: 'upload',
-					relationTo: 'media',
-					required: true,
-				},
-				{
-					name: 'title',
-					label: 'Заголовок карты',
+					name: 'statistic',
+					label: 'Статистика',
 					type: 'group',
 					fields: [
 						{
 							name: 'labelRu',
-							label: 'Заголовок (Рус)',
+							label: 'Статистика (Рус)',
 							type: 'text',
 							required: true,
 						},
 						{
 							name: 'labelEn',
-							label: 'Заголовок (En)',
+							label: 'Статистика (En)',
 							type: 'text',
 							required: true,
 						},
 						{
 							name: 'labelKz',
-							label: 'Заголовок (Қаз)',
+							label: 'Статистика (Қаз)',
 							type: 'text',
 							required: true,
 						},
@@ -73,7 +64,7 @@ export const NumeratedCard: Block = {
 				},
 				{
 					name: 'description',
-					label: 'Описание карты',
+					label: 'Описание',
 					type: 'group',
 					fields: [
 						{
@@ -97,19 +88,10 @@ export const NumeratedCard: Block = {
 					],
 				},
 				{
-					name: 'numberImageWidth',
-					label: 'Ширина изображения номера',
-					type: 'select',
-					options: [
-						{
-							label: 'Маленький',
-							value: 'small',
-						},
-						{
-							label: 'Обычный',
-							value: 'regular',
-						},
-					],
+					name: 'image',
+					label: 'Изображение',
+					type: 'upload',
+					relationTo: 'media',
 					required: true,
 				},
 			],

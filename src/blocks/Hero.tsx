@@ -1,3 +1,4 @@
+import { colorPickerField } from '@innovixx/payload-color-picker-field'
 import { Block } from 'payload/types'
 
 export const Hero: Block = {
@@ -61,49 +62,111 @@ export const Hero: Block = {
 			relationTo: 'media',
 			required: true,
 		},
-		{
+		colorPickerField({
 			name: 'backgroundColor',
 			label: 'Цвет фона',
+			required: true,
+			admin: {
+				position: 'sidebar',
+				description: 'Выберите цвет фона',
+			},
+		}),
+		colorPickerField({
+			name: 'secondaryColor',
+			label: 'Второй цвет для градиента',
+			required: false,
+			admin: {
+				position: 'sidebar',
+				description: 'Выберите второй цвет для градиента, если требуется',
+			},
+		}),
+		{
+			name: 'bgType',
+			label: 'Тип фонового изображения',
 			type: 'select',
 			options: [
 				{
-					label: 'Ярко-голубой',
-					value: 'light-gray',
+					label: 'Центр',
+					value: 'center',
 				},
 				{
-					label: 'Голубой',
-					value: 'blue-background',
+					label: 'Низ',
+					value: 'bottom',
 				},
 				{
-					label: 'Серый',
-					value: 'gray',
-				},
-				{
-					label: 'Градиент (голубой - ярко-голубой)',
-					value: 'gradient-blue',
+					label: 'По всем углам',
+					value: 'contain',
 				},
 			],
 			required: true,
 		},
 		{
-			name: 'justifyContent',
-			label: 'Выравнивание по вертикали',
-			type: 'select',
-			options: [
+			name: 'right',
+			label: 'Смещение справа',
+			type: 'number',
+			required: false,
+		},
+		{
+			name: 'backgroundSize',
+			label: 'Отступ по периметру',
+			type: 'number',
+			required: false,
+		},
+		{
+			name: 'buttons',
+			label: 'Кнопки',
+			type: 'array',
+			fields: [
 				{
-					label: 'Влево',
-					value: 'left',
+					name: 'label',
+					label: 'Надпись кнопки',
+					type: 'group',
+					fields: [
+						{
+							name: 'labelRu',
+							label: 'Надпись (Рус)',
+							type: 'text',
+							required: true,
+						},
+						{
+							name: 'labelEn',
+							label: 'Надпись (En)',
+							type: 'text',
+							required: true,
+						},
+						{
+							name: 'labelKz',
+							label: 'Надпись (Қаз)',
+							type: 'text',
+							required: true,
+						},
+					],
 				},
 				{
-					label: 'Вправо',
-					value: 'right',
-				},
-				{
-					label: 'По центру',
-					value: 'center',
+					name: 'variant',
+					label: 'Тип кнопки',
+					type: 'select',
+					options: [
+						{
+							label: 'Розовый задний фон с белой надписью',
+							value: 'primary',
+						},
+						{
+							label: 'Белый задний фон с черной надписью',
+							value: 'secondary',
+						},
+						{
+							label: 'Прозрачный задний фон с розовой надписью',
+							value: 'tertiary',
+						},
+						{
+							label: 'Прозрачный задний фон с серой надписью',
+							value: 'ghost',
+						},
+					],
+					required: true,
 				},
 			],
-			required: true,
 		},
 	],
 }

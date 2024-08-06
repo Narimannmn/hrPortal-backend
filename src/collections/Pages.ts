@@ -8,11 +8,19 @@ import VerticalCardBlock from '../blocks/VerticalCardBlock'
 import { advantageCard } from '../blocks/advantageCard'
 import { detailsCoin } from '../blocks/detailsCoin'
 import { ItemTypes } from '../blocks/itemTypes'
-import { optionalCard } from '../blocks/optionalCard'
 import { packageOffers } from '../blocks/packageOffers'
 import { servicesCard } from '../blocks/servicesCard'
+import { faq } from '../blocks/faq'
 import { table } from '../blocks/table'
+import { form } from '../blocks/form'
 import { CollectionConfig } from 'payload/types'
+import { horizontalStatisticCard } from '../blocks/horizontalStatisticCard'
+import { simpleCard } from '../blocks/simpleCard'
+import { warningCard } from '../blocks/warningCard'
+import { keyPointedCard } from '../blocks/keyPointedCard'
+import { descriptionWithRichtext } from '../blocks/descriptionWithRichtext'
+import { guaranteeTypeCard } from '../blocks/guaranteeTypeCard'
+import { tariffCard } from '../blocks/tariffCard'
 
 const extractSlug = data => {
 	if (Array.isArray(data)) {
@@ -79,12 +87,20 @@ const Pages: CollectionConfig = {
 				packageOffers,
 				advantageCard,
 				servicesCard,
-				optionalCard,
+				faq,
 				SliderHeroWithCardsBlock,
 				PageHeaderBlock,
 				PostsBlock,
 				ProductCardsBlock,
 				VerticalCardBlock,
+				form,
+				horizontalStatisticCard,
+				simpleCard,
+				warningCard,
+				keyPointedCard,
+				descriptionWithRichtext,
+				guaranteeTypeCard,
+				tariffCard,
 			],
 		},
 	],
