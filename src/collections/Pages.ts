@@ -21,6 +21,7 @@ import { keyPointedCard } from '../blocks/keyPointedCard'
 import { descriptionWithRichtext } from '../blocks/descriptionWithRichtext'
 import { guaranteeTypeCard } from '../blocks/guaranteeTypeCard'
 import { tariffCard } from '../blocks/tariffCard'
+import { contactCenter } from '../blocks/contactCenter'
 
 const extractSlug = data => {
 	if (Array.isArray(data)) {
@@ -101,6 +102,7 @@ const Pages: CollectionConfig = {
 				descriptionWithRichtext,
 				guaranteeTypeCard,
 				tariffCard,
+				contactCenter,
 			],
 		},
 	],
