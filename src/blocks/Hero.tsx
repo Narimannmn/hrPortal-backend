@@ -4,8 +4,8 @@ import { Block } from 'payload/types'
 export const Hero: Block = {
 	slug: 'hero',
 	labels: {
-		singular: 'Hero Block',
-		plural: 'Hero Blocks',
+		singular: 'Баннер для страницы',
+		plural: 'Баннеры для страницы',
 	},
 	fields: [
 		{

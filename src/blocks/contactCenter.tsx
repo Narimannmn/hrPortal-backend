@@ -3,39 +3,15 @@ import { Block } from 'payload/types'
 export const contactCenter: Block = {
 	slug: 'contactCenter',
 	labels: {
-		singular: 'Контакт-центр',
-		plural: 'Контакт-центры',
+		singular: 'Карточка контактов',
+		plural: 'Карточки контактов',
 	},
 	fields: [
-		{
-			name: 'heading',
-			label: 'Заголовок',
-			type: 'group',
-			fields: [
-				{
-					name: 'labelRu',
-					label: 'Заголовок (Рус)',
-					type: 'text',
-					required: false,
-				},
-				{
-					name: 'labelEn',
-					label: 'Заголовок (En)',
-					type: 'text',
-					required: false,
-				},
-				{
-					name: 'labelKz',
-					label: 'Заголовок (Қаз)',
-					type: 'text',
-					required: false,
-				},
-			],
-		},
 		{
 			name: 'cards',
 			label: 'Карты',
 			type: 'array',
+			required: true,
 			fields: [
 				{
 					name: 'title',

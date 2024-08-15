@@ -3,8 +3,8 @@ import { Block } from 'payload/types'
 export const warningCard: Block = {
 	slug: 'warningCard',
 	labels: {
-		singular: 'Карта предупреждения',
-		plural: 'Карты предупреждения',
+		singular: 'Карточка с предупреждением',
+		plural: 'Карточки с предупреждениями',
 	},
 	fields: [
 		{
@@ -38,19 +38,19 @@ export const warningCard: Block = {
 				{
 					name: 'labelRu',
 					type: 'text',
-					label: 'Описание (на русском)',
+					label: 'Описание (Ru)',
 					required: true,
 				},
 				{
 					name: 'labelEn',
 					type: 'text',
-					label: 'Описание (на английском)',
+					label: 'Описание (En)',
 					required: true,
 				},
 				{
 					name: 'labelKz',
 					type: 'text',
-					label: 'Описание (на казахском)',
+					label: 'Описание (Kz)',
 					required: true,
 				},
 			],
@@ -62,19 +62,19 @@ export const warningCard: Block = {
 				{
 					name: 'labelRu',
 					type: 'text',
-					label: 'Текст предупреждения (на русском)',
+					label: 'Текст предупреждения (Ru)',
 					required: true,
 				},
 				{
 					name: 'labelEn',
 					type: 'text',
-					label: 'Текст предупреждения (на английском)',
+					label: 'Текст предупреждения (En)',
 					required: true,
 				},
 				{
 					name: 'labelKz',
 					type: 'text',
-					label: 'Текст предупреждения (на казахском)',
+					label: 'Текст предупреждения (Kz)',
 					required: true,
 				},
 			],

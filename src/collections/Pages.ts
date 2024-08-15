@@ -1,27 +1,27 @@
+import { CollectionConfig } from 'payload/types'
 import { Hero } from '../blocks/Hero'
-import { NumeratedCard } from '../blocks/NumeratedCard'
 import PageHeaderBlock from '../blocks/PageHeaderBlock'
 import { PostsBlock } from '../blocks/PostsBlock'
 import ProductCardsBlock from '../blocks/ProductCardsBlock'
 import SliderHeroWithCardsBlock from '../blocks/SliderHeroWithCardsBlock'
 import VerticalCardBlock from '../blocks/VerticalCardBlock'
-import { advantageCard } from '../blocks/advantageCard'
+import { contactCenter } from '../blocks/contactCenter'
+import { descriptionWithRichtext } from '../blocks/descriptionWithRichtext'
 import { detailsCoin } from '../blocks/detailsCoin'
+import { faq } from '../blocks/faq'
+import { form } from '../blocks/form'
+import { guaranteeTypeCard } from '../blocks/guaranteeTypeCard'
+import { horizontalStatisticCard } from '../blocks/horizontalStatisticCard'
+import { information } from '../blocks/information'
+import { informationCard } from '../blocks/informationCard'
 import { ItemTypes } from '../blocks/itemTypes'
+import { keyPointedCard } from '../blocks/keyPointedCard'
 import { packageOffers } from '../blocks/packageOffers'
 import { servicesCard } from '../blocks/servicesCard'
-import { faq } from '../blocks/faq'
-import { table } from '../blocks/table'
-import { form } from '../blocks/form'
-import { CollectionConfig } from 'payload/types'
-import { horizontalStatisticCard } from '../blocks/horizontalStatisticCard'
 import { simpleCard } from '../blocks/simpleCard'
-import { warningCard } from '../blocks/warningCard'
-import { keyPointedCard } from '../blocks/keyPointedCard'
-import { descriptionWithRichtext } from '../blocks/descriptionWithRichtext'
-import { guaranteeTypeCard } from '../blocks/guaranteeTypeCard'
+import { table } from '../blocks/table'
 import { tariffCard } from '../blocks/tariffCard'
-import { contactCenter } from '../blocks/contactCenter'
+import { warningCard } from '../blocks/warningCard'
 
 const extractSlug = data => {
 	if (Array.isArray(data)) {
@@ -81,12 +81,10 @@ const Pages: CollectionConfig = {
 			type: 'blocks',
 			blocks: [
 				Hero,
-				NumeratedCard,
 				ItemTypes,
 				table,
 				detailsCoin,
 				packageOffers,
-				advantageCard,
 				servicesCard,
 				faq,
 				SliderHeroWithCardsBlock,
@@ -103,6 +101,8 @@ const Pages: CollectionConfig = {
 				guaranteeTypeCard,
 				tariffCard,
 				contactCenter,
+				informationCard,
+				information,
 			],
 		},
 	],

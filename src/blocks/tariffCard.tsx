@@ -8,28 +8,6 @@ export const tariffCard: Block = {
 	},
 	fields: [
 		{
-			name: 'heading',
-			label: 'Заголовок',
-			type: 'group',
-			fields: [
-				{
-					name: 'labelRu',
-					label: 'Заголовок (Рус)',
-					type: 'text',
-				},
-				{
-					name: 'labelEn',
-					label: 'Заголовок (En)',
-					type: 'text',
-				},
-				{
-					name: 'labelKz',
-					label: 'Заголовок (Қаз)',
-					type: 'text',
-				},
-			],
-		},
-		{
 			name: 'rates',
 			label: 'Тарифы',
 			type: 'array',

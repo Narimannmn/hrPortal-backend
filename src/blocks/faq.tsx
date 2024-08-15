@@ -3,35 +3,10 @@ import { Block } from 'payload/types'
 export const faq: Block = {
 	slug: 'faq',
 	labels: {
-		singular: 'FAQ Block',
-		plural: 'FAQ Blocks',
+		singular: 'Ответ на частые вопросы',
+		plural: 'Ответы на частые вопросы',
 	},
 	fields: [
-		{
-			name: 'heading',
-			label: 'Заголовок',
-			type: 'group',
-			fields: [
-				{
-					name: 'labelRu',
-					label: 'Заголовок (Рус)',
-					type: 'text',
-					required: true,
-				},
-				{
-					name: 'labelEn',
-					label: 'Заголовок (En)',
-					type: 'text',
-					required: true,
-				},
-				{
-					name: 'labelKz',
-					label: 'Заголовок (Қаз)',
-					type: 'text',
-					required: true,
-				},
-			],
-		},
 		{
 			name: 'faqs',
 			label: 'Часто задаваемые вопросы',

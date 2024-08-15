@@ -3,39 +3,15 @@ import { Block } from 'payload/types'
 export const simpleCard: Block = {
 	slug: 'simpleCard',
 	labels: {
-		singular: 'Категория продуктов (простые карточки)',
-		plural: 'Категории продуктов (простые карточки)',
+		singular: 'Простая карточка',
+		plural: 'Простые карточки',
 	},
 	fields: [
-		{
-			name: 'heading',
-			label: 'Заголовок',
-			type: 'group',
-			fields: [
-				{
-					name: 'labelRu',
-					label: 'Заголовок (Рус)',
-					type: 'text',
-					required: true,
-				},
-				{
-					name: 'labelEn',
-					label: 'Заголовок (En)',
-					type: 'text',
-					required: true,
-				},
-				{
-					name: 'labelKz',
-					label: 'Заголовок (Қаз)',
-					type: 'text',
-					required: true,
-				},
-			],
-		},
 		{
 			name: 'categories',
 			label: 'Категории',
 			type: 'array',
+			required: true,
 			fields: [
 				{
 					name: 'title',
@@ -66,6 +42,7 @@ export const simpleCard: Block = {
 					name: 'products',
 					label: 'Продукты',
 					type: 'array',
+					required: true,
 					fields: [
 						{
 							name: 'name',

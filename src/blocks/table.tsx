@@ -8,31 +8,6 @@ export const table: Block = {
 	},
 	fields: [
 		{
-			name: 'heading',
-			label: 'Заголовок',
-			type: 'group',
-			fields: [
-				{
-					name: 'labelRu',
-					label: 'Заголовок (Рус)',
-					type: 'text',
-					required: true,
-				},
-				{
-					name: 'labelEn',
-					label: 'Заголовок (En)',
-					type: 'text',
-					required: true,
-				},
-				{
-					name: 'labelKz',
-					label: 'Заголовок (Қаз)',
-					type: 'text',
-					required: true,
-				},
-			],
-		},
-		{
 			name: 'headers',
 			label: 'Заголовки столбцов',
 			type: 'array',

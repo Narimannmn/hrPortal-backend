@@ -3,32 +3,10 @@ import { Block } from 'payload/types'
 export const packageOffers: Block = {
 	slug: 'packageOffers',
 	labels: {
-		singular: 'Пакет предложений',
-		plural: 'Пакеты предложений',
+		singular: 'Пакетное предложение',
+		plural: 'Пакетные предложения',
 	},
 	fields: [
-		{
-			name: 'heading',
-			label: 'Заголовок',
-			type: 'group',
-			fields: [
-				{
-					name: 'labelRu',
-					label: 'Заголовок (Рус)',
-					type: 'text',
-				},
-				{
-					name: 'labelEn',
-					label: 'Заголовок (En)',
-					type: 'text',
-				},
-				{
-					name: 'labelKz',
-					label: 'Заголовок (Қаз)',
-					type: 'text',
-				},
-			],
-		},
 		{
 			name: 'packages',
 			label: 'Пакеты',
@@ -93,7 +71,7 @@ export const packageOffers: Block = {
 				},
 				{
 					name: 'priceTooltip',
-					label: 'Тултип цены',
+					label: 'Подсказка для цены?',
 					type: 'group',
 					fields: [
 						{
@@ -104,7 +82,7 @@ export const packageOffers: Block = {
 						},
 						{
 							name: 'richText',
-							label: 'Тултип',
+							label: 'Подсказка цены',
 							type: 'group',
 							admin: {
 								condition: (_, siblingData) => siblingData.enabled,
@@ -112,17 +90,17 @@ export const packageOffers: Block = {
 							fields: [
 								{
 									name: 'labelRu',
-									label: 'Тултип (Рус)',
+									label: 'Текст подсказки цены (Рус)',
 									type: 'richText',
 								},
 								{
 									name: 'labelEn',
-									label: 'Тултип (En)',
+									label: 'Текст подсказки цены (En)',
 									type: 'richText',
 								},
 								{
 									name: 'labelKz',
-									label: 'Тултип (Қаз)',
+									label: 'Текст подсказки цены (Қаз)',
 									type: 'richText',
 								},
 							],
@@ -131,8 +109,9 @@ export const packageOffers: Block = {
 				},
 				{
 					name: 'features',
-					label: 'Функции',
+					label: 'Особенности',
 					type: 'array',
+					required: true,
 					fields: [
 						{
 							name: 'label',
@@ -186,7 +165,7 @@ export const packageOffers: Block = {
 						},
 						{
 							name: 'tooltip',
-							label: 'Тултип',
+							label: 'Подсказка для метки?',
 							type: 'group',
 							fields: [
 								{
@@ -197,7 +176,7 @@ export const packageOffers: Block = {
 								},
 								{
 									name: 'richText',
-									label: 'Тултип',
+									label: 'Подсказка метки',
 									type: 'group',
 									admin: {
 										condition: (_, siblingData) => siblingData.enabled,
@@ -205,17 +184,17 @@ export const packageOffers: Block = {
 									fields: [
 										{
 											name: 'labelRu',
-											label: 'Тултип (Рус)',
+											label: 'Текст подсказки метки (Рус)',
 											type: 'richText',
 										},
 										{
 											name: 'labelEn',
-											label: 'Тултип (En)',
+											label: 'Текст подсказки метки (En)',
 											type: 'richText',
 										},
 										{
 											name: 'labelKz',
-											label: 'Тултип (Қаз)',
+											label: 'Текст подсказки метки (Қаз)',
 											type: 'richText',
 										},
 									],

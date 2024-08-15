@@ -3,14 +3,15 @@ import { Block } from 'payload/types'
 export const ItemTypes: Block = {
 	slug: 'itemTypes',
 	labels: {
-		singular: 'Item Type Block',
-		plural: 'Item Type Blocks',
+		singular: 'Карточка товара',
+		plural: 'Карточки товара',
 	},
 	fields: [
 		{
 			name: 'items',
-			label: 'Элементы',
+			label: 'Товары',
 			type: 'array',
+			required: true,
 			fields: [
 				{
 					name: 'image',

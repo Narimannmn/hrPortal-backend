@@ -8,53 +8,6 @@ export const descriptionWithRichtext: Block = {
 	},
 	fields: [
 		{
-			name: 'heading',
-			label: 'Заголовок',
-			type: 'group',
-			fields: [
-				{
-					name: 'labelRu',
-					label: 'Заголовок (Рус)',
-					type: 'text',
-				},
-				{
-					name: 'labelEn',
-					label: 'Заголовок (En)',
-					type: 'text',
-				},
-				{
-					name: 'labelKz',
-					label: 'Заголовок (Қаз)',
-					type: 'text',
-				},
-			],
-		},
-		{
-			name: 'description',
-			label: 'Описание',
-			type: 'group',
-			fields: [
-				{
-					name: 'labelRu',
-					label: 'Описание (Рус)',
-					type: 'text',
-					required: true,
-				},
-				{
-					name: 'labelEn',
-					label: 'Описание (En)',
-					type: 'text',
-					required: true,
-				},
-				{
-					name: 'labelKz',
-					label: 'Описание (Қаз)',
-					type: 'text',
-					required: true,
-				},
-			],
-		},
-		{
 			name: 'richText',
 			label: 'Текст',
 			type: 'group',

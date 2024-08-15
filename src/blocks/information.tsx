@@ -1,60 +1,58 @@
 import { Block } from 'payload/types'
 
-export const guaranteeTypeCard: Block = {
-	slug: 'guaranteeTypeCard',
+export const information: Block = {
+	slug: 'information',
 	labels: {
-		singular: 'Карточка для показа подходящего вида',
-		plural: 'Карточки для показа подходящего вида',
+		singular: 'Информация',
+		plural: 'Информации',
 	},
 	fields: [
 		{
-			name: 'guarantees',
-			label: 'Гарантии',
+			name: 'heading',
+			label: 'Заголовок',
+			type: 'group',
+			fields: [
+				{
+					name: 'labelRu',
+					label: 'Заголовок (Рус)',
+					type: 'text',
+				},
+				{
+					name: 'labelEn',
+					label: 'Заголовок (En)',
+					type: 'text',
+				},
+				{
+					name: 'labelKz',
+					label: 'Заголовок (Қаз)',
+					type: 'text',
+				},
+			],
+		},
+		{
+			name: 'sections',
+			label: 'Секции',
 			type: 'array',
+			required: true,
 			fields: [
 				{
 					name: 'title',
-					label: 'Заголовок',
+					label: 'Заголовок секции',
 					type: 'group',
 					fields: [
 						{
 							name: 'labelRu',
-							label: 'Заголовок (Рус)',
-							type: 'text',
-							required: true,
-						},
-						{
-							name: 'labelEn',
-							label: 'Заголовок (En)',
-							type: 'text',
-							required: true,
-						},
-						{
-							name: 'labelKz',
-							label: 'Заголовок (Қаз)',
-							type: 'text',
-							required: true,
-						},
-					],
-				},
-				{
-					name: 'description',
-					label: 'Описание',
-					type: 'group',
-					fields: [
-						{
-							name: 'labelRu',
-							label: 'Описание (Рус)',
+							label: 'Заголовок секции (Рус)',
 							type: 'text',
 						},
 						{
 							name: 'labelEn',
-							label: 'Описание (En)',
+							label: 'Заголовок секции (En)',
 							type: 'text',
 						},
 						{
 							name: 'labelKz',
-							label: 'Описание (Қаз)',
+							label: 'Заголовок секции (Қаз)',
 							type: 'text',
 						},
 					],
@@ -63,6 +61,7 @@ export const guaranteeTypeCard: Block = {
 					name: 'details',
 					label: 'Детали',
 					type: 'array',
+					required: true,
 					fields: [
 						{
 							name: 'label',
@@ -97,34 +96,26 @@ export const guaranteeTypeCard: Block = {
 								{
 									name: 'labelRu',
 									label: 'Значение (Рус)',
-									type: 'text',
+									type: 'richText',
 									required: true,
 								},
 								{
 									name: 'labelEn',
 									label: 'Значение (En)',
-									type: 'text',
+									type: 'richText',
 									required: true,
 								},
 								{
 									name: 'labelKz',
 									label: 'Значение (Қаз)',
-									type: 'text',
+									type: 'richText',
 									required: true,
 								},
 							],
 						},
 					],
 				},
-				{
-					name: 'image',
-					label: 'Изображение',
-					type: 'upload',
-					relationTo: 'media',
-					required: true,
-				},
 			],
-			required: true,
 		},
 	],
 }

@@ -1,61 +1,39 @@
 import { Block } from 'payload/types'
 
-export const guaranteeTypeCard: Block = {
-	slug: 'guaranteeTypeCard',
+export const informationCard: Block = {
+	slug: 'informationCard',
 	labels: {
-		singular: 'Карточка для показа подходящего вида',
-		plural: 'Карточки для показа подходящего вида',
+		singular: 'Карточка со списком информации',
+		plural: 'Карточки со списком информации',
 	},
 	fields: [
 		{
-			name: 'guarantees',
-			label: 'Гарантии',
+			name: 'cards',
+			label: 'Карточки',
 			type: 'array',
 			fields: [
 				{
 					name: 'title',
-					label: 'Заголовок',
+					label: 'Название',
 					type: 'group',
 					fields: [
 						{
 							name: 'labelRu',
-							label: 'Заголовок (Рус)',
+							label: 'Название (Рус)',
 							type: 'text',
 							required: true,
 						},
 						{
 							name: 'labelEn',
-							label: 'Заголовок (En)',
+							label: 'Название (En)',
 							type: 'text',
 							required: true,
 						},
 						{
 							name: 'labelKz',
-							label: 'Заголовок (Қаз)',
+							label: 'Название (Қаз)',
 							type: 'text',
 							required: true,
-						},
-					],
-				},
-				{
-					name: 'description',
-					label: 'Описание',
-					type: 'group',
-					fields: [
-						{
-							name: 'labelRu',
-							label: 'Описание (Рус)',
-							type: 'text',
-						},
-						{
-							name: 'labelEn',
-							label: 'Описание (En)',
-							type: 'text',
-						},
-						{
-							name: 'labelKz',
-							label: 'Описание (Қаз)',
-							type: 'text',
 						},
 					],
 				},
@@ -63,7 +41,15 @@ export const guaranteeTypeCard: Block = {
 					name: 'details',
 					label: 'Детали',
 					type: 'array',
+					required: true,
 					fields: [
+						{
+							name: 'logo',
+							label: 'Лого',
+							type: 'upload',
+							relationTo: 'icons',
+							required: true,
+						},
 						{
 							name: 'label',
 							label: 'Метка',
@@ -97,34 +83,26 @@ export const guaranteeTypeCard: Block = {
 								{
 									name: 'labelRu',
 									label: 'Значение (Рус)',
-									type: 'text',
+									type: 'richText',
 									required: true,
 								},
 								{
 									name: 'labelEn',
 									label: 'Значение (En)',
-									type: 'text',
+									type: 'richText',
 									required: true,
 								},
 								{
 									name: 'labelKz',
 									label: 'Значение (Қаз)',
-									type: 'text',
+									type: 'richText',
 									required: true,
 								},
 							],
 						},
 					],
 				},
-				{
-					name: 'image',
-					label: 'Изображение',
-					type: 'upload',
-					relationTo: 'media',
-					required: true,
-				},
 			],
-			required: true,
 		},
 	],
 }

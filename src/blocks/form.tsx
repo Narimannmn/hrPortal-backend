@@ -12,7 +12,7 @@ export const form: Block = {
 			label: 'Вкладки',
 			type: 'array',
 			minRows: 1,
-			maxRows: 10,
+			maxRows: 5,
 			fields: [
 				{
 					name: 'tabName',
