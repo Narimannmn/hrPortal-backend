@@ -21,6 +21,7 @@ import { servicesCard } from '../blocks/servicesCard'
 import { simpleCard } from '../blocks/simpleCard'
 import { table } from '../blocks/table'
 import { tariffCard } from '../blocks/tariffCard'
+import { videoPlayer } from '../blocks/videoPlayer'
 import { warningCard } from '../blocks/warningCard'
 
 const extractSlug = data => {
@@ -103,6 +104,7 @@ const Pages: CollectionConfig = {
 				contactCenter,
 				informationCard,
 				information,
+				videoPlayer,
 			],
 		},
 	],

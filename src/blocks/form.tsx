@@ -3,8 +3,8 @@ import { Block } from 'payload/types'
 export const form: Block = {
 	slug: 'form',
 	labels: {
-		singular: 'Блок формы',
-		plural: 'Блоки формы',
+		singular: 'Форма заполнения',
+		plural: 'Формы заполнения',
 	},
 	fields: [
 		{
@@ -13,6 +13,7 @@ export const form: Block = {
 			type: 'array',
 			minRows: 1,
 			maxRows: 5,
+			required: true,
 			fields: [
 				{
 					name: 'tabName',
@@ -63,6 +64,10 @@ export const form: Block = {
 						{
 							label: 'Форма с текстовым сообщением',
 							value: 'formWithTextMessage',
+						},
+						{
+							label: 'Форма с выбором вида карты',
+							value: 'formCardSelection',
 						},
 					],
 					required: true,

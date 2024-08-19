@@ -9,14 +9,53 @@ const PageHeaderBlock: Block = {
 	fields: [
 		{
 			name: 'title',
-			label: 'Title',
-			type: 'text',
-			required: true,
+			label: 'Заголовок',
+			type: 'group',
+			fields: [
+				{
+					name: 'labelRu',
+					label: 'Заголовок (Рус)',
+					type: 'text',
+					required: false,
+				},
+				{
+					name: 'labelEn',
+					label: 'Заголовок (En)',
+					type: 'text',
+					required: false,
+				},
+				{
+					name: 'labelKz',
+					label: 'Заголовок (Қаз)',
+					type: 'text',
+					required: false,
+				},
+			],
 		},
 		{
 			name: 'subtitle',
-			label: 'Subtitle',
-			type: 'text',
+			label: 'Подзаголовок',
+			type: 'group',
+			fields: [
+				{
+					name: 'labelRu',
+					label: 'Подзаголовок (Рус)',
+					type: 'text',
+					required: false,
+				},
+				{
+					name: 'labelEn',
+					label: 'Подзаголовок (En)',
+					type: 'text',
+					required: false,
+				},
+				{
+					name: 'labelKz',
+					label: 'Подзаголовок (Қаз)',
+					type: 'text',
+					required: false,
+				},
+			],
 		},
 	],
 }
