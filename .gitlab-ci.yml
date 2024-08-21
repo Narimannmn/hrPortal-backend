@@ -2,7 +2,7 @@ stages:
   - deploy_backend
 
 deploy_backend:
-  tags: deploy
+  tags: "deploy"
   stage: deploy_backend
 #  before_script:
   script:
