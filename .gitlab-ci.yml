@@ -7,7 +7,7 @@ deploy_backend:
   script:
     - ls
     - pwd 
-    -nginx-test 
+    - nginx-test 
 #nginx-restart  
   only:
     - main
