@@ -3,8 +3,8 @@ import { Block } from 'payload/types'
 export const table: Block = {
 	slug: 'table',
 	labels: {
-		singular: 'Table Block',
-		plural: 'Table Blocks',
+		singular: 'Простая таблица',
+		plural: 'Простые таблицы',
 	},
 	fields: [
 		{

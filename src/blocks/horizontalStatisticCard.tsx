@@ -3,8 +3,8 @@ import { Block } from 'payload/types'
 export const horizontalStatisticCard: Block = {
 	slug: 'horizontalStatisticCard',
 	labels: {
-		singular: 'Статистическая карточка',
-		plural: 'Статистические карточки',
+		singular: 'Карточка для указания статистики',
+		plural: 'Карточки для указания статистики',
 	},
 	fields: [
 		{

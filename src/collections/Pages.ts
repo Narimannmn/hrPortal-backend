@@ -18,7 +18,6 @@ import { ItemTypes } from '../blocks/itemTypes'
 import { keyPointedCard } from '../blocks/keyPointedCard'
 import { packageOffers } from '../blocks/packageOffers'
 import { servicesCard } from '../blocks/servicesCard'
-import { simpleCard } from '../blocks/simpleCard'
 import { table } from '../blocks/table'
 import { tariffCard } from '../blocks/tariffCard'
 import { videoPlayer } from '../blocks/videoPlayer'
@@ -95,7 +94,6 @@ const Pages: CollectionConfig = {
 				VerticalCardBlock,
 				form,
 				horizontalStatisticCard,
-				simpleCard,
 				warningCard,
 				keyPointedCard,
 				descriptionWithRichtext,

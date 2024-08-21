@@ -3,8 +3,8 @@ import { Block } from 'payload/types'
 export const servicesCard: Block = {
 	slug: 'servicesCard',
 	labels: {
-		singular: 'Service Block',
-		plural: 'Service Blocks',
+		singular: 'Карточка с услугами',
+		plural: 'Карточки с услугами',
 	},
 	fields: [
 		{
