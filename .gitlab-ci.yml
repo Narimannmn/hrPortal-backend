@@ -6,7 +6,8 @@ deploy_backend:
   stage: deploy_backend
   script:
     - ls
-    - pwd 
+    - pwd
+    - cd ..
     - nginx-test 
 #nginx-restart  
   only:
