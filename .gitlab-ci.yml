@@ -1,0 +1,12 @@
+stages:
+  - deploy_backend
+
+deploy_backend:
+  tags: deploy
+  stage: deploy_backend
+#  before_script:
+  script:
+    - ls
+    - pwd 
+  only:
+    - main
