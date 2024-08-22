@@ -2,10 +2,15 @@ stages:
   - deploy_backend
 
 deploy_backend:
-  tags: ["deploy"]  
+  tags: ["deploy"]
   stage: deploy_backend
   script:
-    - docker service rm eu_payload
+    - |
+      if docker service rm eu_payload; then
+        echo "Service removed successfully."
+      else
+        echo "Service not found, continuing..."
+      fi
     - sudo rm -rf /home/EUB/dshevche/eu-bank/Test/backend/
     - cd ..
     - cp -r backend/ /home/EUB/dshevche/eu-bank/Test
@@ -17,4 +22,3 @@ deploy_backend:
     - nginx-restart
   only:
     - main
-
