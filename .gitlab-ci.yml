@@ -6,10 +6,11 @@ deploy_backend:
   stage: deploy_backend
   script:
     - docker service rm eu_payload
-    - rm -rf /home/EUB/dshevche/eu-bank/Test/backend/
+    - sudo rm -rf /home/EUB/dshevche/eu-bank/Test/backend/
+    - cd ..
     - cp -r backend/ /home/EUB/dshevche/eu-bank/Test
     - cd /home/EUB/dshevche/
-    - rm -rf builds/
+    - sudo rm -rf builds/
     - cd /home/EUB/dshevche/eu-bank
     - docker service update --force eu_payload
     - nginx-test
