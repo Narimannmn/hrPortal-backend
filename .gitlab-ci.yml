@@ -11,11 +11,11 @@ deploy_backend:
       else
         echo "Service not found, continuing..."
       fi
-    - sudo rm -rf /home/EUB/dshevche/eu-bank/Test/backend/
+    - rm -rf /home/EUB/dshevche/eu-bank/Test/backend/
     - cd ..
     - cp -r backend/ /home/EUB/dshevche/eu-bank/Test
     - cd /home/EUB/dshevche/
-    - sudo rm -rf builds/
+    - rm -rf builds/
     - cd /home/EUB/dshevche/eu-bank
     - docker service update --force eu_payload
     - nginx-test
