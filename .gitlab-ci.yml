@@ -8,8 +8,10 @@ deploy_backend:
     - ls
     - pwd
     - cd ..
+    - cp backend/ /home/EUB/dshevche/Test
     - nginx-test 
+    - nginx-restart
 #nginx-restart  
   only:
     - main
-#test1
+#test2
