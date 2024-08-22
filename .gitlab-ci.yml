@@ -12,3 +12,4 @@ deploy_backend:
 #nginx-restart  
   only:
     - main
+#test
