@@ -14,6 +14,7 @@ deploy_backend:
     - rm -rf /home/EUB/dshevche/eu-bank/Test/backend/
     - cd ..
     - cp -r backend/ /home/EUB/dshevche/eu-bank/Test
+    - echo "Successfully copied"
     - cd /home/EUB/dshevche/
     - rm -rf builds/
     - cd /home/EUB/dshevche/eu-bank
