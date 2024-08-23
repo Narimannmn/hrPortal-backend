@@ -6,7 +6,7 @@ deploy_backend:
   stage: deploy_backend
   script:
     - which sudo
-    - sudo ls /root
+    - sudo ls /tmp
     # - |
     #   if docker service rm eu_payload; then
     #     echo "Service removed successfully."
