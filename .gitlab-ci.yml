@@ -5,6 +5,7 @@ deploy_backend:
   tags: ["deploy"]
   stage: deploy_backend
   script:
+    - ls
     - sudo whoami
     - sudo ls /tmp
     # - |
