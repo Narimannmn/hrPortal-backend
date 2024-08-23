@@ -5,26 +5,23 @@ deploy_backend:
   tags: ["deploy"]
   stage: deploy_backend
   script:
-    - ls
-    - whoami
-    - ls /tmp
-    # - |
-    #   if docker service rm eu_payload; then
-    #     echo "Service removed successfully."
-    #   else
-    #     echo "Service not found, continuing..."
-    #   fi
-    # - sudo rm -rf /home/EUB/dshevche/eu-bank/Test/backend/
-    # - cd ..
-    # - cp -r backend/ /home/EUB/dshevche/eu-bank/Test
-    # - echo "Successfully copied"
-    # - cd /home/EUB/dshevche/
-    # - sudo rm -rf builds/
-    # - cd /home/EUB/dshevche/eu-bank
-    # - docker stack deploy -c docker-compose.yml eu
-    # - docker service logs eu_payload
-    # - nginx-test
-    # - nginx-restart
+    - |
+      if docker service rm eu_payload; then
+        echo "Service removed successfully."
+      else
+        echo "Service not found, continuing..."
+      fi
+    - rm -rf /home/EUB/dshevche/eu-bank/Test/backend/
+    - cd ..
+    - cp -r backend/ /home/EUB/dshevche/eu-bank/Test
+    - echo "Successfully copied"
+    - cd /home/EUB/dshevche/
+    - rm -rf builds/
+    - cd /home/EUB/dshevche/eu-bank
+    - docker stack deploy -c docker-compose.yml eu
+    - docker service logs eu_payload
+    - nginx-test
+    - nginx-restart
   only:
     - main
 
