@@ -5,7 +5,7 @@ deploy_backend:
   tags: ["deploy"]
   stage: deploy_backend
   script:
-    - which sudo
+    - sudo whoami
     - sudo ls /tmp
     # - |
     #   if docker service rm eu_payload; then
