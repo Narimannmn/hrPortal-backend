@@ -18,7 +18,8 @@ deploy_backend:
     - cd /home/EUB/dshevche/
     - sudo rm -rf builds/
     - cd /home/EUB/dshevche/eu-bank
-    - docker service update --force eu_payload
+    - docker stack deploy -c docker-compose.yml eu
+    - docker service logs eu_payload
     - nginx-test
     - nginx-restart
   only:
