@@ -52,6 +52,7 @@ export default buildConfig({
 				media: {
 					adapter: s3Adapter({
 						config: {
+							region: process.env.S3_REGION,
 							endpoint: process.env.S3_ENDPOINT,
 							credentials: {
 								accessKeyId: process.env.S3_ACCESS_KEY,
