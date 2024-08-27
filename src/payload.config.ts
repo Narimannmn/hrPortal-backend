@@ -6,10 +6,8 @@ import MenuItems from './collections/MenuItems'
 import Pages from './collections/Pages'
 import SecondaryMenu from './collections/SecondaryMenu'
 import Users from './collections/Users'
-import Categories from './collections/marketplace/categories'
+import Filters from './collections/marketplace/filters'
 import ForSaleItems from './collections/marketplace/marketplace'
-import Regions from './collections/marketplace/region'
-import ServiceTypes from './collections/marketplace/service-types'
 import PostCategories from './collections/posts/PostCategories'
 import Posts from './collections/posts/Posts'
 import { webpackBundler } from '@payloadcms/bundler-webpack'
@@ -39,9 +37,7 @@ export default buildConfig({
 		Posts,
 		PostCategories,
 		ForSaleItems,
-		Regions,
-		Categories,
-		ServiceTypes,
+		Filters,
 	],
 	typescript: {
 		outputFile: path.resolve(__dirname, 'payload-types.ts'),
