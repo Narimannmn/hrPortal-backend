@@ -6,7 +6,6 @@ const PostCategories: CollectionConfig = {
 		singular: 'Категория статьи',
 		plural: 'Категории статей',
 	},
-
 	admin: {
 		useAsTitle: 'labelRu',
 		group: 'Статьи',
