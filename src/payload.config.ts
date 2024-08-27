@@ -53,11 +53,12 @@ export default buildConfig({
 					adapter: s3Adapter({
 						config: {
 							region: process.env.S3_REGION,
-							endpoint: process.env.S3_ENDPOINT,
+							endpoint: 'http://172.25.43.42:9000',
 							credentials: {
 								accessKeyId: process.env.S3_ACCESS_KEY,
 								secretAccessKey: process.env.S3_SECRET_KEY,
 							},
+							forcePathStyle: true,
 						},
 						bucket: process.env.S3_BUCKET_NAME,
 					}),
