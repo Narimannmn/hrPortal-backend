@@ -54,11 +54,11 @@ export default buildConfig({
 						config: {
 							endpoint: process.env.S3_ENDPOINT,
 							credentials: {
-								accessKeyId: process.env.S3_ACCESS_KEY_ID,
-								secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
+								accessKeyId: process.env.S3_ACCESS_KEY,
+								secretAccessKey: process.env.S3_SECRET_KEY,
 							},
 						},
-						bucket: process.env.S3_BUCKET,
+						bucket: process.env.S3_BUCKET_NAME,
 					}),
 				},
 			},
