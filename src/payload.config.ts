@@ -10,6 +10,7 @@ import Filters from './collections/marketplace/filters'
 import ForSaleItems from './collections/marketplace/marketplace'
 import PostCategories from './collections/posts/PostCategories'
 import Posts from './collections/posts/Posts'
+import { S3Client } from '@aws-sdk/client-s3'
 import { webpackBundler } from '@payloadcms/bundler-webpack'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { payloadCloud } from '@payloadcms/plugin-cloud'
@@ -17,6 +18,7 @@ import { cloudStorage } from '@payloadcms/plugin-cloud-storage'
 import { s3Adapter } from '@payloadcms/plugin-cloud-storage/s3'
 import { slateEditor } from '@payloadcms/richtext-slate'
 import path from 'path'
+import s3Upload from 'payload-s3-upload'
 import { buildConfig } from 'payload/config'
 
 export default buildConfig({
@@ -46,23 +48,15 @@ export default buildConfig({
 		schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
 	},
 	plugins: [
-		payloadCloud(),
-		cloudStorage({
-			collections: {
-				media: {
-					adapter: s3Adapter({
-						config: {
-							region: process.env.S3_REGION,
-							credentials: {
-								accessKeyId: process.env.S3_ACCESS_KEY,
-								secretAccessKey: process.env.S3_SECRET_KEY,
-							},
-						},
-						bucket: process.env.S3_BUCKET_NAME,
-					}),
+		s3Upload(
+			new S3Client({
+				region: process.env.S3_REGION,
+				credentials: {
+					accessKeyId: process.env.S3_ACCESS_KEY,
+					secretAccessKey: process.env.S3_SECRET_KEY,
 				},
-			},
-		}),
+			})
+		),
 	],
 	db: postgresAdapter({
 		pool: {
