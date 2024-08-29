@@ -8,6 +8,21 @@ const PageHeaderBlock: Block = {
 	},
 	fields: [
 		{
+			name: 'theme',
+			label: 'Тема',
+			type: 'radio',
+			options: [
+				{
+					label: 'Светлая',
+					value: 'light',
+				},
+				{
+					label: 'Темная',
+					value: 'dark',
+				}
+			]
+		},
+		{
 			name: 'title',
 			label: 'Заголовок',
 			type: 'group',

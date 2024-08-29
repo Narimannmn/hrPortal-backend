@@ -23,6 +23,10 @@ import { tariffCard } from '../blocks/tariffCard'
 import { videoPlayer } from '../blocks/videoPlayer'
 import { warningCard } from '../blocks/warningCard'
 import { CollectionConfig } from 'payload/types'
+import CardBlockWithIcon from "../blocks/CardBlockWithIcon";
+import Partners from "../blocks/Partners";
+import ServicePrivilege from "../blocks/ServicePrivilege";
+import PrivateSlider from "../blocks/PrivateSlider";
 
 const extractSlug = data => {
 	if (Array.isArray(data)) {
@@ -105,6 +109,10 @@ const Pages: CollectionConfig = {
 				information,
 				videoPlayer,
 				ForSale,
+				CardBlockWithIcon,
+				Partners,
+				ServicePrivilege,
+				PrivateSlider
 			],
 		},
 	],
