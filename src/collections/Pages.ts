@@ -1,3 +1,4 @@
+import { CollectionConfig } from 'payload/types'
 import { ForSale } from '../blocks/ForSale'
 import { Hero } from '../blocks/Hero'
 import PageHeaderBlock from '../blocks/PageHeaderBlock'
@@ -22,7 +23,6 @@ import { table } from '../blocks/table'
 import { tariffCard } from '../blocks/tariffCard'
 import { videoPlayer } from '../blocks/videoPlayer'
 import { warningCard } from '../blocks/warningCard'
-import { CollectionConfig } from 'payload/types'
 
 const extractSlug = data => {
 	if (Array.isArray(data)) {
@@ -51,6 +51,7 @@ const extractSlug = data => {
 	return data
 }
 
+// Blocks
 const Pages: CollectionConfig = {
 	slug: 'pages',
 	labels: {
