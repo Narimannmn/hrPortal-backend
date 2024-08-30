@@ -69,6 +69,10 @@ export const form: Block = {
 							label: 'Форма с выбором вида карты',
 							value: 'formCardSelection',
 						},
+						{
+							label: 'Форма для заказа звонка',
+							value: 'formForOrderingCall',
+						},
 					],
 					required: true,
 				},

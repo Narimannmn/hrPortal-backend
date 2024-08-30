@@ -1,4 +1,4 @@
-import { S3UploadCollectionConfig } from 'payload-s3-upload'
+import { CollectionConfig } from 'payload/types'
 
 const validateFileName = (value: string) => {
 	if (value && /\s/.test(value)) {
@@ -7,7 +7,7 @@ const validateFileName = (value: string) => {
 	return true
 }
 
-const Media: S3UploadCollectionConfig = {
+const Media: CollectionConfig = {
 	slug: 'media',
 	labels: {
 		singular: 'Media',
@@ -17,16 +17,8 @@ const Media: S3UploadCollectionConfig = {
 		read: () => true,
 	},
 	upload: {
-		staticURL: process.env.S3_ENDPOINT,
-		s3: {
-			bucket: 'my-bucket',
-			prefix: 'images/xyz',
-			commandInput: {
-				ACL: 'public-read',
-			},
-		},
-		adminThumbnail: ({ doc }) =>
-			`${process.env.S3_ENDPOINT}/images/xyz/${doc.filename}`,
+		staticURL: '/media',
+		staticDir: 'media',
 	},
 	fields: [
 		{
@@ -45,12 +37,6 @@ const Media: S3UploadCollectionConfig = {
 			},
 		},
 	],
-	hooks: {
-		afterRead: [
-			({ doc }) =>
-				`${process.env.S3_ENDPOINT}/images/${doc.type}/${doc.filename}`,
-		],
-	},
 }
 
 export default Media
