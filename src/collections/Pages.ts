@@ -55,7 +55,6 @@ const extractSlug = data => {
 	return data
 }
 
-// Blocks
 const Pages: CollectionConfig = {
 	slug: 'pages',
 	labels: {
