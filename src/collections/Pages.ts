@@ -1,9 +1,13 @@
+import CardBlockWithIcon from '../blocks/CardBlockWithIcon'
 import { debitCards } from '../blocks/DebitCard'
 import { ForSale } from '../blocks/ForSale'
 import { Hero } from '../blocks/Hero'
 import PageHeaderBlock from '../blocks/PageHeaderBlock'
+import Partners from '../blocks/Partners'
 import { PostsBlock } from '../blocks/PostsBlock'
+import PrivateSlider from '../blocks/PrivateSlider'
 import ProductCardsBlock from '../blocks/ProductCardsBlock'
+import ServicePrivilege from '../blocks/ServicePrivilege'
 import SliderHeroWithCardsBlock from '../blocks/SliderHeroWithCardsBlock'
 import VerticalCardBlock from '../blocks/VerticalCardBlock'
 import { contactCenter } from '../blocks/contactCenter'
@@ -106,7 +110,10 @@ const Pages: CollectionConfig = {
 				information,
 				videoPlayer,
 				ForSale,
-				debitCards,
+				CardBlockWithIcon,
+				Partners,
+				ServicePrivilege,
+				PrivateSlider,
 			],
 		},
 	],
