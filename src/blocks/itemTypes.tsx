@@ -54,19 +54,19 @@ export const ItemTypes: Block = {
 							name: 'labelRu',
 							label: 'Описание (Рус)',
 							type: 'text',
-							required: true,
+							required: false,
 						},
 						{
 							name: 'labelEn',
 							label: 'Описание (En)',
 							type: 'text',
-							required: true,
+							required: false,
 						},
 						{
 							name: 'labelKz',
 							label: 'Описание (Қаз)',
 							type: 'text',
-							required: true,
+							required: false,
 						},
 					],
 				},
@@ -132,6 +132,7 @@ export const ItemTypes: Block = {
 					name: 'buttons',
 					label: 'Кнопки',
 					type: 'array',
+					maxRows: 2,
 					fields: [
 						{
 							name: 'label',
@@ -182,7 +183,42 @@ export const ItemTypes: Block = {
 							],
 							required: true,
 						},
+						{
+							name: 'linkType',
+							label: 'Тип ссылки',
+							type: 'select',
+							options: [
+								{
+									label: 'Произвольная ссылка',
+									value: 'custom',
+								},
+								{
+									label: 'Ссылка на страницу',
+									value: 'page',
+								},
+							],
+							required: true,
+						},
+						{
+							name: 'customLink',
+							label: 'Произвольная ссылка',
+							type: 'text',
+							admin: {
+								condition: (_, siblingData) =>
+									siblingData.linkType === 'custom',
+							},
+						},
+						{
+							name: 'pageSlug',
+							label: 'Ссылка на страницу',
+							type: 'relationship',
+							relationTo: 'pages',
+							admin: {
+								condition: (_, siblingData) => siblingData.linkType === 'page',
+							},
+						},
 					],
+					required: false,
 				},
 			],
 		},
