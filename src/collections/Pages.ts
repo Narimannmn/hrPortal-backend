@@ -1,3 +1,4 @@
+import { debitCards } from '../blocks/DebitCard'
 import { ForSale } from '../blocks/ForSale'
 import { Hero } from '../blocks/Hero'
 import PageHeaderBlock from '../blocks/PageHeaderBlock'
@@ -105,6 +106,7 @@ const Pages: CollectionConfig = {
 				information,
 				videoPlayer,
 				ForSale,
+				debitCards,
 			],
 		},
 	],

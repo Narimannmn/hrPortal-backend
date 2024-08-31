@@ -2,13 +2,12 @@ import cors from 'cors'
 import express from 'express'
 import payload from 'payload'
 
-
 require('dotenv').config()
 const app = express()
 
 app.use(
 	cors({
-		origin: 'http://localhost:3000', 
+		origin: 'http://192.168.1.181:3000',
 		methods: 'GET,POST,PUT,DELETE,OPTIONS',
 		allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept',
 		credentials: true,
