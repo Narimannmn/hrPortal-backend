@@ -20,8 +20,9 @@ deploy_backend:
     - cd /home/EUB/dshevche/eu-bank
     - cp /home/EUB/dshevche/eu-bank/backend-main/.env /home/EUB/dshevche/eu-bank/Test/backend
     - docker stack deploy -c docker-compose.yml eu
+    - sleep 10
     - docker service logs eu_payload
   only:
     - main
 
-#Test3
+#Test4
