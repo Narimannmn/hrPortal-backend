@@ -1,14 +1,21 @@
+import AdditionalBonusSection from '../blocks/AdditionalBonusSection'
+import { BankLocation } from '../blocks/BankLocations'
+import BonusSection from '../blocks/BonusSection'
 import CardBlockWithIcon from '../blocks/CardBlockWithIcon'
-import { debitCards } from '../blocks/DebitCard'
+import CategoryBonusSection from '../blocks/CategoryBonusSection'
+import DigitalCardSection from '../blocks/DigitalCardSection'
 import { ForSale } from '../blocks/ForSale'
 import { Hero } from '../blocks/Hero'
+import InsuranceSection from '../blocks/InsuranceSection'
 import PageHeaderBlock from '../blocks/PageHeaderBlock'
 import Partners from '../blocks/Partners'
 import { PostsBlock } from '../blocks/PostsBlock'
 import PrivateSlider from '../blocks/PrivateSlider'
 import ProductCardsBlock from '../blocks/ProductCardsBlock'
+import PromotionsSection from '../blocks/PromotionsSection'
 import ServicePrivilege from '../blocks/ServicePrivilege'
 import SliderHeroWithCardsBlock from '../blocks/SliderHeroWithCardsBlock'
+import TariffLimitsSection from '../blocks/TariffLimitsSection'
 import VerticalCardBlock from '../blocks/VerticalCardBlock'
 import { contactCenter } from '../blocks/contactCenter'
 import { descriptionWithRichtext } from '../blocks/descriptionWithRichtext'
@@ -114,6 +121,14 @@ const Pages: CollectionConfig = {
 				Partners,
 				ServicePrivilege,
 				PrivateSlider,
+				AdditionalBonusSection,
+				BonusSection,
+				CategoryBonusSection,
+				DigitalCardSection,
+				InsuranceSection,
+				PromotionsSection,
+				TariffLimitsSection,
+				BankLocation,
 			],
 		},
 	],
