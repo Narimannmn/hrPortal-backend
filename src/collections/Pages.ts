@@ -13,6 +13,7 @@ import { PostsBlock } from '../blocks/PostsBlock'
 import PrivateSlider from '../blocks/PrivateSlider'
 import ProductCardsBlock from '../blocks/ProductCardsBlock'
 import PromotionsSection from '../blocks/PromotionsSection'
+import ServicePackages from '../blocks/ServicePackages'
 import ServicePrivilege from '../blocks/ServicePrivilege'
 import SliderHeroWithCardsBlock from '../blocks/SliderHeroWithCardsBlock'
 import TariffLimitsSection from '../blocks/TariffLimitsSection'
@@ -129,6 +130,7 @@ const Pages: CollectionConfig = {
 				PromotionsSection,
 				TariffLimitsSection,
 				BankLocation,
+				ServicePackages,
 			],
 		},
 	],
