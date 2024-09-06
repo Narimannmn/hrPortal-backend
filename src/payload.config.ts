@@ -1,4 +1,5 @@
 import Contacts from './collections/Contacts'
+import Files from './collections/Files'
 import Icons from './collections/Icons'
 import Media from './collections/Media'
 import MenuItems from './collections/MenuItems'
@@ -47,6 +48,7 @@ export default buildConfig({
 		Terminals,
 		Offices,
 		ServiceList,
+		Files,
 	],
 	typescript: {
 		outputFile: path.resolve(__dirname, 'payload-types.ts'),
