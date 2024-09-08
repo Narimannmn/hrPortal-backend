@@ -3,8 +3,8 @@ import { Block } from 'payload/types'
 export const descriptionWithRichtext: Block = {
 	slug: 'descriptionWithRichtext',
 	labels: {
-		singular: 'Блок с информацией',
-		plural: 'Блок с информациями',
+		singular: 'Простая информация',
+		plural: 'Простые информации',
 	},
 	fields: [
 		{
@@ -31,6 +31,12 @@ export const descriptionWithRichtext: Block = {
 					required: true,
 				},
 			],
+		},
+		{
+			name: 'isWhiteBackground',
+			label: 'Белый задний фон',
+			type: 'checkbox',
+			required: false,
 		},
 	],
 }
