@@ -4,13 +4,19 @@ import { slateEditor } from '@payloadcms/richtext-slate'
 import path from 'path'
 import { buildConfig } from 'payload/config'
 import Contacts from './collections/Contacts'
-import DebitCardData from './collections/DebitCards'
+import Files from './collections/Files'
 import Icons from './collections/Icons'
 import Media from './collections/Media'
 import MenuItems from './collections/MenuItems'
 import Pages from './collections/Pages'
 import SecondaryMenu from './collections/SecondaryMenu'
 import Users from './collections/Users'
+import CompareCards from './collections/debit.cards/CardTable'
+import DebitCardCategories from './collections/debit.cards/DebitCards'
+import Banks from './collections/map/bank'
+import Offices from './collections/map/offices'
+import ServiceList from './collections/map/service.list'
+import Terminals from './collections/map/terminals'
 import Filters from './collections/marketplace/filters'
 import ForSaleItems from './collections/marketplace/marketplace'
 import PostCategories from './collections/posts/PostCategories'
@@ -27,7 +33,6 @@ export default buildConfig({
 		Pages,
 		Media,
 		Icons,
-		DebitCardData,
 		SecondaryMenu,
 		Contacts,
 		MenuItems,
@@ -35,6 +40,13 @@ export default buildConfig({
 		PostCategories,
 		ForSaleItems,
 		Filters,
+		DebitCardCategories,
+		CompareCards,
+		Banks,
+		Terminals,
+		Offices,
+		ServiceList,
+		Files,
 	],
 	typescript: {
 		outputFile: path.resolve(__dirname, 'payload-types.ts'),

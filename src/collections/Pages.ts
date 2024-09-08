@@ -15,7 +15,6 @@ import { descriptionWithRichtext } from '../blocks/descriptionWithRichtext'
 import { detailsCoin } from '../blocks/detailsCoin'
 import { faq } from '../blocks/faq'
 import { form } from '../blocks/form'
-import { govProgCard } from '../blocks/govProgCard'
 import { guaranteeTypeCard } from '../blocks/guaranteeTypeCard'
 import { horizontalStatisticCard } from '../blocks/horizontalStatisticCard'
 import { information } from '../blocks/information'
@@ -114,7 +113,6 @@ const Pages: CollectionConfig = {
 				Partners,
 				ServicePrivilege,
 				PrivateSlider,
-				govProgCard,
 			],
 		},
 	],
