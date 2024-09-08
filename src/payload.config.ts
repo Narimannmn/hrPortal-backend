@@ -28,53 +28,35 @@ import { slateEditor } from '@payloadcms/richtext-slate'
 import path from 'path'
 import { buildConfig } from 'payload/config'
 
-// JSONB field definition
-const JSONBField = {
-	name: 'dynamicData',
-	type: 'json',
-	label: 'Dynamic Data',
-}
-
-const addJSONBToAllCollections = collections => {
-	return collections.map(collection => ({
-		...collection,
-		fields: [...collection.fields, JSONBField],
-	}))
-}
-
-const collections = [
-	Users,
-	Pages,
-	Media,
-	Icons,
-	SecondaryMenu,
-	Contacts,
-	MenuItems,
-	Posts,
-	PostCategories,
-	ForSaleItems,
-	Filters,
-	DebitCardCategories,
-	CompareCards,
-	Banks,
-	Terminals,
-	Offices,
-	ServiceList,
-	Files,
-	Directors,
-	Employees,
-	History,
-]
-
-const collectionsWithJSONB = addJSONBToAllCollections(collections)
-
 export default buildConfig({
 	admin: {
 		user: Users.slug,
 		bundler: webpackBundler(),
 	},
 	editor: slateEditor({}),
-	collections: collectionsWithJSONB,
+	collections: [
+		Users,
+		Pages,
+		Media,
+		Icons,
+		SecondaryMenu,
+		Contacts,
+		MenuItems,
+		Posts,
+		PostCategories,
+		ForSaleItems,
+		Filters,
+		DebitCardCategories,
+		CompareCards,
+		Banks,
+		Terminals,
+		Offices,
+		ServiceList,
+		Files,
+		Directors,
+		Employees,
+		History,
+	],
 	typescript: {
 		outputFile: path.resolve(__dirname, 'payload-types.ts'),
 	},
@@ -84,21 +66,21 @@ export default buildConfig({
 	plugins: [
 		payloadCloud(),
 		// cloudStorage({
-		//   collections: {
-		//     media: {
-		//       adapter: s3Adapter({
-		//         config: {
-		//           region: process.env.S3_REGION,
-		//           endpoint: process.env.S3_ENDPOINT,
-		//           credentials: {
-		//             accessKeyId: process.env.S3_ACCESS_KEY,
-		//             secretAccessKey: process.env.S3_SECRET_KEY,
-		//           },
-		//         },
-		//         bucket: process.env.S3_BUCKET_NAME,
-		//       }),
-		//     },
-		//   },
+		// 	collections: {
+		// 		media: {
+		// 			adapter: s3Adapter({
+		// 				config: {
+		// 					region: process.env.S3_REGION,
+		// 					endpoint: process.env.S3_ENDPOINT,
+		// 					credentials: {
+		// 						accessKeyId: process.env.S3_ACCESS_KEY,
+		// 						secretAccessKey: process.env.S3_SECRET_KEY,
+		// 					},
+		// 				},
+		// 				bucket: process.env.S3_BUCKET_NAME,
+		// 			}),
+		// 		},
+		// 	},
 		// }),
 	],
 	db: postgresAdapter({

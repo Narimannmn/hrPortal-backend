@@ -1,6 +1,6 @@
 {
 	"name": "eubank",
-	"description": "A blank template to get started with Payload",
+	"description": "Корпоративный сайт",
 	"version": "1.0.0",
 	"main": "dist/server.js",
 	"license": "MIT",
