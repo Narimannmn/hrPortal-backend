@@ -11,7 +11,7 @@ const Contacts: CollectionConfig = {
 	},
 	fields: [
 		{
-			name: 'privaste',
+			name: 'private',
 			label: 'Частные контакты',
 			type: 'group',
 			fields: [

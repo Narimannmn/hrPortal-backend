@@ -35,7 +35,6 @@ const JSONBField = {
 	label: 'Dynamic Data',
 }
 
-// Automatically add the JSONB field to each collection
 const addJSONBToAllCollections = collections => {
 	return collections.map(collection => ({
 		...collection,
@@ -43,7 +42,6 @@ const addJSONBToAllCollections = collections => {
 	}))
 }
 
-// Array of collections
 const collections = [
 	Users,
 	Pages,
@@ -68,7 +66,6 @@ const collections = [
 	History,
 ]
 
-// Apply the JSONB field to all collections
 const collectionsWithJSONB = addJSONBToAllCollections(collections)
 
 export default buildConfig({
