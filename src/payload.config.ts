@@ -8,6 +8,9 @@ import SecondaryMenu from './collections/SecondaryMenu'
 import Users from './collections/Users'
 import CompareCards from './collections/debit.cards/CardTable'
 import DebitCardCategories from './collections/debit.cards/DebitCards'
+import Directors from './collections/directors'
+import Employees from './collections/employees'
+import History from './collections/history'
 import Banks from './collections/map/bank'
 import Offices from './collections/map/offices'
 import ServiceList from './collections/map/service.list'
@@ -49,6 +52,9 @@ export default buildConfig({
 		Offices,
 		ServiceList,
 		Files,
+		Directors,
+		Employees,
+		History,
 	],
 	typescript: {
 		outputFile: path.resolve(__dirname, 'payload-types.ts'),
@@ -57,23 +63,23 @@ export default buildConfig({
 		schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
 	},
 	plugins: [
-		cloudStorage({
-			collections: {
-				media: {
-					adapter: s3Adapter({
-						config: {
-							region: process.env.S3_REGION,
-							endpoint: process.env.S3_ENDPOINT,
-							credentials: {
-								accessKeyId: process.env.S3_ACCESS_KEY,
-								secretAccessKey: process.env.S3_SECRET_KEY,
-							},
-						},
-						bucket: process.env.S3_BUCKET_NAME,
-					}),
-				},
-			},
-		}),
+		// cloudStorage({
+		// 	collections: {
+		// 		media: {
+		// 			adapter: s3Adapter({
+		// 				config: {
+		// 					region: process.env.S3_REGION,
+		// 					endpoint: process.env.S3_ENDPOINT,
+		// 					credentials: {
+		// 						accessKeyId: process.env.S3_ACCESS_KEY,
+		// 						secretAccessKey: process.env.S3_SECRET_KEY,
+		// 					},
+		// 				},
+		// 				bucket: process.env.S3_BUCKET_NAME,
+		// 			}),
+		// 		},
+		// 	},
+		// }),
 	],
 	db: postgresAdapter({
 		pool: {
