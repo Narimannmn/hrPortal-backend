@@ -21,6 +21,7 @@ import PostCategories from './collections/posts/PostCategories'
 import Posts from './collections/posts/Posts'
 import { webpackBundler } from '@payloadcms/bundler-webpack'
 import { postgresAdapter } from '@payloadcms/db-postgres'
+import { payloadCloud } from '@payloadcms/plugin-cloud'
 import { cloudStorage } from '@payloadcms/plugin-cloud-storage'
 import { s3Adapter } from '@payloadcms/plugin-cloud-storage/s3'
 import { slateEditor } from '@payloadcms/richtext-slate'
@@ -63,6 +64,7 @@ export default buildConfig({
 		schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
 	},
 	plugins: [
+		payloadCloud(),
 		// cloudStorage({
 		// 	collections: {
 		// 		media: {
