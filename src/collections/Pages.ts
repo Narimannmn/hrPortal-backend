@@ -21,9 +21,11 @@ import VerticalCardBlock from '../blocks/VerticalCardBlock'
 import { contactCenter } from '../blocks/contactCenter'
 import { descriptionWithRichtext } from '../blocks/descriptionWithRichtext'
 import { detailsCoin } from '../blocks/detailsCoin'
+import { BoardOfDirectors } from '../blocks/directors'
 import { faq } from '../blocks/faq'
 import { form } from '../blocks/form'
 import { guaranteeTypeCard } from '../blocks/guaranteeTypeCard'
+import { HistoryBlock } from '../blocks/history'
 import { horizontalStatisticCard } from '../blocks/horizontalStatisticCard'
 import { information } from '../blocks/information'
 import { informationCard } from '../blocks/informationCard'
@@ -133,6 +135,8 @@ const Pages: CollectionConfig = {
 				TariffLimitsSection,
 				BankLocation,
 				ServicePackages,
+				BoardOfDirectors,
+				HistoryBlock,
 				ContactBannerCard,
 				PrivateCreditCards
 			],
