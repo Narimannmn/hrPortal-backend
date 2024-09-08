@@ -38,6 +38,8 @@ import { tariffCard } from '../blocks/tariffCard'
 import { videoPlayer } from '../blocks/videoPlayer'
 import { warningCard } from '../blocks/warningCard'
 import { CollectionConfig } from 'payload/types'
+import ContactBannerCard from "../blocks/ContactBannerCard";
+import {PrivateCreditCards} from "../blocks/PrivateCreditCards";
 
 const extractSlug = data => {
 	if (Array.isArray(data)) {
@@ -135,6 +137,8 @@ const Pages: CollectionConfig = {
 				ServicePackages,
 				BoardOfDirectors,
 				HistoryBlock,
+				ContactBannerCard,
+				PrivateCreditCards
 			],
 		},
 	],
