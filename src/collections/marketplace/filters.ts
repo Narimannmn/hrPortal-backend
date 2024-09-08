@@ -12,7 +12,7 @@ const Filters: CollectionConfig = {
 	},
 	fields: [
 		{
-			name: 'category',
+			name: 'categors',
 			label: 'Категория',
 			type: 'group',
 			fields: [
