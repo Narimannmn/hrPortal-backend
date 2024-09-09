@@ -17,9 +17,10 @@ proc handle_prompt {} {
             send -- "yes\r" 
         }
         timeout {
-            
+            puts "Timeout occurred"
         }
     }
 }
 
 interact
+
