@@ -4,7 +4,7 @@ puts "Starting auto_confirm.sh"
 
 set timeout -1
 
-spawn sh -c "ts-node src/server.ts -- -I --force"
+spawn ts-node src/server.ts -- -I --force
 
 proc handle_prompt {} {
     expect {
@@ -21,5 +21,6 @@ proc handle_prompt {} {
     }
 }
 
+handle_prompt
 interact
 
