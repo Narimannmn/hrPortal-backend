@@ -40,6 +40,9 @@ import { warningCard } from '../blocks/warningCard'
 import { CollectionConfig } from 'payload/types'
 import ContactBannerCard from "../blocks/ContactBannerCard";
 import {PrivateCreditCards} from "../blocks/PrivateCreditCards";
+import PrivateCardBanner from "../blocks/PrivateCardBanner";
+import ReminderForCardholders from "../blocks/ReminderForCardholders";
+import PrivateAdvantages from "../blocks/PrivateAdvantages";
 
 const extractSlug = data => {
 	if (Array.isArray(data)) {
@@ -138,7 +141,10 @@ const Pages: CollectionConfig = {
 				BoardOfDirectors,
 				HistoryBlock,
 				ContactBannerCard,
-				PrivateCreditCards
+				PrivateCreditCards,
+				PrivateCardBanner,
+				ReminderForCardholders,
+				PrivateAdvantages
 			],
 		},
 	],
