@@ -1,9 +1,11 @@
 import AdditionalBonusSection from '../blocks/AdditionalBonusSection'
+import AdvantagesDiffWidth from '../blocks/AdvantagesDiffWidth'
 import { AllStores } from '../blocks/AllStores'
 import { BankLocation } from '../blocks/BankLocations'
 import BonusSection from '../blocks/BonusSection'
 import CardBlockWithIcon from '../blocks/CardBlockWithIcon'
 import CategoryBonusSection from '../blocks/CategoryBonusSection'
+import ContactBannerCard from '../blocks/ContactBannerCard'
 import DigitalCardSection from '../blocks/DigitalCardSection'
 import { ForSale } from '../blocks/ForSale'
 import { Hero } from '../blocks/Hero'
@@ -11,9 +13,15 @@ import InsuranceSection from '../blocks/InsuranceSection'
 import PageHeaderBlock from '../blocks/PageHeaderBlock'
 import Partners from '../blocks/Partners'
 import { PostsBlock } from '../blocks/PostsBlock'
+import PrivateAdvantages from '../blocks/PrivateAdvantages'
+import PrivateAdvantagesWithDesc from '../blocks/PrivateAdvantagesWithDesc'
+import PrivateCardBanner from '../blocks/PrivateCardBanner'
+import { PrivateCreditCards } from '../blocks/PrivateCreditCards'
 import PrivateSlider from '../blocks/PrivateSlider'
+import PrivateTravelCards from '../blocks/PrivateTravelCards'
 import ProductCardsBlock from '../blocks/ProductCardsBlock'
 import PromotionsSection from '../blocks/PromotionsSection'
+import ReminderForCardholders from '../blocks/ReminderForCardholders'
 import ServicePackages from '../blocks/ServicePackages'
 import ServicePrivilege from '../blocks/ServicePrivilege'
 import SliderHeroWithCardsBlock from '../blocks/SliderHeroWithCardsBlock'
@@ -39,14 +47,6 @@ import { tariffCard } from '../blocks/tariffCard'
 import { videoPlayer } from '../blocks/videoPlayer'
 import { warningCard } from '../blocks/warningCard'
 import { CollectionConfig } from 'payload/types'
-import ContactBannerCard from "../blocks/ContactBannerCard";
-import {PrivateCreditCards} from "../blocks/PrivateCreditCards";
-import PrivateCardBanner from "../blocks/PrivateCardBanner";
-import ReminderForCardholders from "../blocks/ReminderForCardholders";
-import PrivateAdvantages from "../blocks/PrivateAdvantages";
-import PrivateAdvantagesWithDesc from "../blocks/PrivateAdvantagesWithDesc";
-import PrivateTravelCards from "../blocks/PrivateTravelCards";
-import AdvantagesDiffWidth from "../blocks/AdvantagesDiffWidth";
 
 const extractSlug = data => {
 	if (Array.isArray(data)) {
@@ -78,31 +78,32 @@ const extractSlug = data => {
 const Pages: CollectionConfig = {
 	slug: 'pages',
 	labels: {
-		singular: 'Page',
-		plural: 'Pages',
+		singular: 'Страница',
+		plural: 'Страницы',
 	},
 	access: {
 		read: () => true,
 	},
 	admin: {
 		useAsTitle: 'name',
+		group: 'Навигация',
 	},
 	fields: [
 		{
 			name: 'name',
-			label: 'Name',
+			label: 'Название',
 			type: 'text',
 			required: true,
 		},
 		{
 			name: 'slug',
-			label: 'Slug',
+			label: 'Слаг',
 			type: 'text',
 			required: true,
 		},
 		{
 			name: 'layout',
-			label: 'Layout',
+			label: 'Блоки',
 			type: 'blocks',
 			blocks: [
 				Hero,
@@ -153,7 +154,7 @@ const Pages: CollectionConfig = {
 				PrivateAdvantages,
 				PrivateAdvantagesWithDesc,
 				PrivateTravelCards,
-				AdvantagesDiffWidth
+				AdvantagesDiffWidth,
 			],
 		},
 	],

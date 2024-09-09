@@ -10,8 +10,8 @@ const validateFileName = (value: string) => {
 const Files: CollectionConfig = {
 	slug: 'files',
 	labels: {
-		singular: 'File',
-		plural: 'Files',
+		singular: 'Файл',
+		plural: 'Файлы',
 	},
 	access: {
 		read: () => true,
@@ -19,6 +19,10 @@ const Files: CollectionConfig = {
 	upload: {
 		staticURL: '/files',
 		staticDir: 'files',
+	},
+	admin: {
+		group: 'Общий медиа контент контент',
+		useAsTitle: 'alt',
 	},
 	fields: [
 		{

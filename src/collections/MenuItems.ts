@@ -3,11 +3,15 @@ import { CollectionConfig } from 'payload/types'
 const MenuItems: CollectionConfig = {
 	slug: 'menu-items',
 	labels: {
-		singular: 'Пункт меню',
-		plural: 'Пункты меню',
+		singular: 'Меню',
+		plural: 'Меню',
 	},
 	access: {
-		read: () => true, // Public read access
+		read: () => true,
+	},
+	admin: {
+		group: 'Навигация',
+		useAsTitle: 'labelRu',
 	},
 	fields: [
 		{

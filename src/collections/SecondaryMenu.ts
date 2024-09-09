@@ -9,6 +9,9 @@ const SecondaryMenu: CollectionConfig = {
 	access: {
 		read: () => true,
 	},
+	admin: {
+		group: 'Навигация',
+	},
 	fields: [
 		{
 			name: 'labels',

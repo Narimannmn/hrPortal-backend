@@ -4,6 +4,7 @@ import Files from './collections/Files'
 import Icons from './collections/Icons'
 import Media from './collections/Media'
 import MenuItems from './collections/MenuItems'
+import MenuOrder from './collections/MenuOrder'
 import Pages from './collections/Pages'
 import SecondaryMenu from './collections/SecondaryMenu'
 import ShoppingMalls from './collections/ShoppingMalls'
@@ -64,6 +65,7 @@ export default buildConfig({
 		StoresCategories,
 		ShoppingMalls,
 		Stores,
+		MenuOrder
 	],
 	typescript: {
 		outputFile: path.resolve(__dirname, 'payload-types.ts'),
