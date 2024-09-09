@@ -10,6 +10,7 @@ import DigitalCardSection from '../blocks/DigitalCardSection'
 import { ForSale } from '../blocks/ForSale'
 import { Hero } from '../blocks/Hero'
 import InsuranceSection from '../blocks/InsuranceSection'
+import { MobileAppCard } from '../blocks/MobileAppCard'
 import PageHeaderBlock from '../blocks/PageHeaderBlock'
 import Partners from '../blocks/Partners'
 import { PostsBlock } from '../blocks/PostsBlock'
@@ -21,6 +22,7 @@ import PrivateSlider from '../blocks/PrivateSlider'
 import PrivateTravelCards from '../blocks/PrivateTravelCards'
 import ProductCardsBlock from '../blocks/ProductCardsBlock'
 import PromotionsSection from '../blocks/PromotionsSection'
+import { QRCodeCard } from '../blocks/QRCodeCard'
 import ReminderForCardholders from '../blocks/ReminderForCardholders'
 import ServicePackages from '../blocks/ServicePackages'
 import ServicePrivilege from '../blocks/ServicePrivilege'
@@ -155,6 +157,8 @@ const Pages: CollectionConfig = {
 				PrivateAdvantagesWithDesc,
 				PrivateTravelCards,
 				AdvantagesDiffWidth,
+				QRCodeCard,
+				MobileAppCard,
 			],
 		},
 	],
