@@ -2,7 +2,7 @@ stages:
   - deploy_backend
 
 deploy_backend:
-  tags: ["deploy"]
+  tags: ['deploy']
   stage: deploy_backend
   script:
     - |
@@ -21,8 +21,7 @@ deploy_backend:
     - cp /home/EUB/dshevche/eu-bank/backend-main/.env /home/EUB/dshevche/eu-bank/Test/backend
     - docker stack deploy -c docker-compose.yml eu
     - sleep 10
-    - docker service logs eu_payload
+    - docker service logs --raw eu_payload
   only:
     - main
-
 #Test4
