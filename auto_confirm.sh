@@ -1,5 +1,7 @@
 #!/usr/bin/expect -f
 
+puts "Starting auto_confirm.sh"
+
 set timeout -1
 
 spawn ts-node src/server.ts -- -I --force
