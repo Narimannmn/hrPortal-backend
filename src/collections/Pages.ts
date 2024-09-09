@@ -12,10 +12,13 @@ import InsuranceSection from '../blocks/InsuranceSection'
 import PageHeaderBlock from '../blocks/PageHeaderBlock'
 import Partners from '../blocks/Partners'
 import { PostsBlock } from '../blocks/PostsBlock'
+import PrivateAdvantages from '../blocks/PrivateAdvantages'
+import PrivateCardBanner from '../blocks/PrivateCardBanner'
 import { PrivateCreditCards } from '../blocks/PrivateCreditCards'
 import PrivateSlider from '../blocks/PrivateSlider'
 import ProductCardsBlock from '../blocks/ProductCardsBlock'
 import PromotionsSection from '../blocks/PromotionsSection'
+import ReminderForCardholders from '../blocks/ReminderForCardholders'
 import ServicePackages from '../blocks/ServicePackages'
 import ServicePrivilege from '../blocks/ServicePrivilege'
 import SliderHeroWithCardsBlock from '../blocks/SliderHeroWithCardsBlock'
@@ -140,6 +143,9 @@ const Pages: CollectionConfig = {
 				HistoryBlock,
 				ContactBannerCard,
 				PrivateCreditCards,
+				PrivateCardBanner,
+				ReminderForCardholders,
+				PrivateAdvantages,
 				AllStores,
 			],
 		},
