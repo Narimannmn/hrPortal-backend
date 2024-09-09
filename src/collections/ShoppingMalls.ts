@@ -1,10 +1,10 @@
 import { CollectionConfig } from 'payload/types'
 
-const Stores: CollectionConfig = {
-	slug: 'stores',
+const ShoppingMalls: CollectionConfig = {
+	slug: 'ShoppingMalls',
 	labels: {
-		singular: 'Магазин',
-		plural: 'Магазины',
+		singular: 'Торговый центр',
+		plural: 'Торговые центры',
 	},
 	access: {
 		read: () => true,
@@ -63,26 +63,37 @@ const Stores: CollectionConfig = {
 			],
 		},
 		{
-			name: 'storesCategories',
-			label: 'Категории',
+			name: 'stores',
+			label: 'Магазины',
 			type: 'relationship',
-			relationTo: 'StoresCategories',
+			relationTo: 'stores',
 			hasMany: true,
 			required: true,
 		},
 		{
-			name: 'favouriteCategories',
-			label: 'Категории по личным интересам',
-			type: 'relationship',
-			relationTo: 'FavouriteCategories',
-			hasMany: true,
-			required: true,
-		},
-		{
-			name: 'storeName',
-			label: 'Название магазина',
-			type: 'text',
-			required: true,
+			name: 'mallName',
+			label: 'Название торгового центра',
+			type: 'group',
+			fields: [
+				{
+					name: 'labelRu',
+					label: 'Название (Рус)',
+					type: 'text',
+					required: true,
+				},
+				{
+					name: 'labelEn',
+					label: 'Название (En)',
+					type: 'text',
+					required: true,
+				},
+				{
+					name: 'labelKz',
+					label: 'Название (Қаз)',
+					type: 'text',
+					required: true,
+				},
+			],
 		},
 		{
 			name: 'logo',
@@ -94,4 +105,4 @@ const Stores: CollectionConfig = {
 	],
 }
 
-export default Stores
+export default ShoppingMalls

@@ -1,8 +1,10 @@
 import AdditionalBonusSection from '../blocks/AdditionalBonusSection'
+import { AllStores } from '../blocks/AllStores'
 import { BankLocation } from '../blocks/BankLocations'
 import BonusSection from '../blocks/BonusSection'
 import CardBlockWithIcon from '../blocks/CardBlockWithIcon'
 import CategoryBonusSection from '../blocks/CategoryBonusSection'
+import ContactBannerCard from '../blocks/ContactBannerCard'
 import DigitalCardSection from '../blocks/DigitalCardSection'
 import { ForSale } from '../blocks/ForSale'
 import { Hero } from '../blocks/Hero'
@@ -10,6 +12,7 @@ import InsuranceSection from '../blocks/InsuranceSection'
 import PageHeaderBlock from '../blocks/PageHeaderBlock'
 import Partners from '../blocks/Partners'
 import { PostsBlock } from '../blocks/PostsBlock'
+import { PrivateCreditCards } from '../blocks/PrivateCreditCards'
 import PrivateSlider from '../blocks/PrivateSlider'
 import ProductCardsBlock from '../blocks/ProductCardsBlock'
 import PromotionsSection from '../blocks/PromotionsSection'
@@ -38,8 +41,6 @@ import { tariffCard } from '../blocks/tariffCard'
 import { videoPlayer } from '../blocks/videoPlayer'
 import { warningCard } from '../blocks/warningCard'
 import { CollectionConfig } from 'payload/types'
-import ContactBannerCard from "../blocks/ContactBannerCard";
-import {PrivateCreditCards} from "../blocks/PrivateCreditCards";
 
 const extractSlug = data => {
 	if (Array.isArray(data)) {
@@ -138,7 +139,8 @@ const Pages: CollectionConfig = {
 				BoardOfDirectors,
 				HistoryBlock,
 				ContactBannerCard,
-				PrivateCreditCards
+				PrivateCreditCards,
+				AllStores,
 			],
 		},
 	],

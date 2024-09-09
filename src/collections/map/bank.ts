@@ -1,4 +1,3 @@
-import LocationField from '../../components/LocationField'
 import { CollectionConfig } from 'payload/types'
 
 const Banks: CollectionConfig = {

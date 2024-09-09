@@ -1,10 +1,10 @@
 import { CollectionConfig } from 'payload/types'
 
-const StoresCategories: CollectionConfig = {
-	slug: 'StoresCategories',
+const FavouriteCategories: CollectionConfig = {
+	slug: 'FavouriteCategories',
 	labels: {
-		singular: 'Категория',
-		plural: 'Категории',
+		singular: 'Категория по личным интересам',
+		plural: 'Категории по личным интересам',
 	},
 	access: {
 		read: () => true,
@@ -42,4 +42,4 @@ const StoresCategories: CollectionConfig = {
 	],
 }
 
-export default StoresCategories
+export default FavouriteCategories

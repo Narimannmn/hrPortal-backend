@@ -1,10 +1,14 @@
 import Contacts from './collections/Contacts'
+import FavouriteCategories from './collections/FavouriteCategories'
 import Files from './collections/Files'
 import Icons from './collections/Icons'
 import Media from './collections/Media'
 import MenuItems from './collections/MenuItems'
 import Pages from './collections/Pages'
 import SecondaryMenu from './collections/SecondaryMenu'
+import ShoppingMalls from './collections/ShoppingMalls'
+import StoresCategories from './collections/StoreCategories'
+import Stores from './collections/Stores'
 import Users from './collections/Users'
 import CompareCards from './collections/debit.cards/CardTable'
 import DebitCardCategories from './collections/debit.cards/DebitCards'
@@ -56,6 +60,10 @@ export default buildConfig({
 		Directors,
 		Employees,
 		History,
+		FavouriteCategories,
+		StoresCategories,
+		ShoppingMalls,
+		Stores,
 	],
 	typescript: {
 		outputFile: path.resolve(__dirname, 'payload-types.ts'),
@@ -65,23 +73,23 @@ export default buildConfig({
 	},
 	plugins: [
 		payloadCloud(),
-		cloudStorage({
-			collections: {
-				media: {
-					adapter: s3Adapter({
-						config: {
-							region: process.env.S3_REGION,
-							endpoint: process.env.S3_ENDPOINT,
-							credentials: {
-								accessKeyId: process.env.S3_ACCESS_KEY,
-								secretAccessKey: process.env.S3_SECRET_KEY,
-							},
-						},
-						bucket: process.env.S3_BUCKET_NAME,
-					}),
-				},
-			},
-		}),
+		// cloudStorage({
+		// 	collections: {
+		// 		media: {
+		// 			adapter: s3Adapter({
+		// 				config: {
+		// 					region: process.env.S3_REGION,
+		// 					endpoint: process.env.S3_ENDPOINT,
+		// 					credentials: {
+		// 						accessKeyId: process.env.S3_ACCESS_KEY,
+		// 						secretAccessKey: process.env.S3_SECRET_KEY,
+		// 					},
+		// 				},
+		// 				bucket: process.env.S3_BUCKET_NAME,
+		// 			}),
+		// 		},
+		// 	},
+		// }),
 	],
 	db: postgresAdapter({
 		pool: {
