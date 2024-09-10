@@ -50,6 +50,7 @@ import PrivateAdvantagesWithDesc from "../blocks/PrivateAdvantagesWithDesc";
 import PrivateTravelCards from "../blocks/PrivateTravelCards";
 import AdvantagesDiffWidth from "../blocks/AdvantagesDiffWidth";
 import PrivateProgramConditions from "../blocks/PrivateProgramConditions";
+import PrivateUsefulArticles from "../blocks/PrivateUsefulArticles";
 
 const extractSlug = data => {
 	if (Array.isArray(data)) {
@@ -103,6 +104,23 @@ const Pages: CollectionConfig = {
 			label: 'Слаг',
 			type: 'text',
 			required: true,
+		},
+		{
+			name: 'layoutTheme',
+			label: 'Тема Layout',
+			type: 'radio',
+			required: false,
+			defaultValue: 'light',
+			options: [
+				{
+					label: 'Светлая',
+					value: 'light',
+				},
+				{
+					label: 'Темная',
+					value: 'dark',
+				}
+			]
 		},
 		{
 			name: 'layout',
@@ -161,6 +179,7 @@ const Pages: CollectionConfig = {
 				PrivateProgramConditions,
 				QRCodeCard,
 				MobileAppCard,
+				PrivateUsefulArticles
 			],
 		},
 	],
