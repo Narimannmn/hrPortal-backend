@@ -13,6 +13,13 @@ import SecondaryMenu from './collections/SecondaryMenu'
 import Users from './collections/Users'
 import CompareCards from './collections/debit.cards/CardTable'
 import DebitCardCategories from './collections/debit.cards/DebitCards'
+import FormCardSelection from './collections/forms/formCardSelection'
+import FormForOrderingCall from './collections/forms/formForOrderingCall'
+import FormForPerson from './collections/forms/formForPerson'
+import FormWithAdditionalInfo from './collections/forms/formWithAdditionalInfo'
+import FormWithCity from './collections/forms/formWithCity'
+import FormWithCreditDelinquencies from './collections/forms/formWithCreditDelinquencies'
+import FormWithTextMessage from './collections/forms/formWithTextMessage'
 import Banks from './collections/map/bank'
 import Offices from './collections/map/offices'
 import ServiceList from './collections/map/service.list'
@@ -47,6 +54,13 @@ export default buildConfig({
 		Offices,
 		ServiceList,
 		Files,
+		FormWithTextMessage,
+		FormWithCity,
+		FormWithAdditionalInfo,
+		FormForPerson,
+		FormForOrderingCall,
+		FormWithCreditDelinquencies,
+		FormCardSelection,
 	],
 	typescript: {
 		outputFile: path.resolve(__dirname, 'payload-types.ts'),
