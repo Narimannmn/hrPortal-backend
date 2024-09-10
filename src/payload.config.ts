@@ -24,6 +24,8 @@ import Filters from './collections/marketplace/filters'
 import ForSaleItems from './collections/marketplace/marketplace'
 import PostCategories from './collections/posts/PostCategories'
 import Posts from './collections/posts/Posts'
+import PrivateCategory from './collections/private/PrivateCategory'
+import PrivateMap from './collections/private/PrivateMap'
 import { webpackBundler } from '@payloadcms/bundler-webpack'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { payloadCloud } from '@payloadcms/plugin-cloud'
@@ -66,6 +68,8 @@ export default buildConfig({
 		ShoppingMalls,
 		Stores,
 		MenuOrder,
+		PrivateCategory,
+		PrivateMap,
 	],
 	typescript: {
 		outputFile: path.resolve(__dirname, 'payload-types.ts'),

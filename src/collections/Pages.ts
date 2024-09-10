@@ -11,6 +11,7 @@ import { ForSale } from '../blocks/ForSale'
 import { Hero } from '../blocks/Hero'
 import InsuranceSection from '../blocks/InsuranceSection'
 import { MobileAppCard } from '../blocks/MobileAppCard'
+import { OfficeLocator } from '../blocks/OfficeLocator'
 import PageHeaderBlock from '../blocks/PageHeaderBlock'
 import Partners from '../blocks/Partners'
 import { PostsBlock } from '../blocks/PostsBlock'
@@ -159,6 +160,7 @@ const Pages: CollectionConfig = {
 				AdvantagesDiffWidth,
 				QRCodeCard,
 				MobileAppCard,
+				OfficeLocator,
 			],
 		},
 	],
