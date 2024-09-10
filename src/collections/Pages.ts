@@ -1,11 +1,9 @@
 import AdditionalBonusSection from '../blocks/AdditionalBonusSection'
-import AdvantagesDiffWidth from '../blocks/AdvantagesDiffWidth'
 import { AllStores } from '../blocks/AllStores'
 import { BankLocation } from '../blocks/BankLocations'
 import BonusSection from '../blocks/BonusSection'
 import CardBlockWithIcon from '../blocks/CardBlockWithIcon'
 import CategoryBonusSection from '../blocks/CategoryBonusSection'
-import ContactBannerCard from '../blocks/ContactBannerCard'
 import DigitalCardSection from '../blocks/DigitalCardSection'
 import { ForSale } from '../blocks/ForSale'
 import { Hero } from '../blocks/Hero'
@@ -14,16 +12,10 @@ import { MobileAppCard } from '../blocks/MobileAppCard'
 import PageHeaderBlock from '../blocks/PageHeaderBlock'
 import Partners from '../blocks/Partners'
 import { PostsBlock } from '../blocks/PostsBlock'
-import PrivateAdvantages from '../blocks/PrivateAdvantages'
-import PrivateAdvantagesWithDesc from '../blocks/PrivateAdvantagesWithDesc'
-import PrivateCardBanner from '../blocks/PrivateCardBanner'
-import { PrivateCreditCards } from '../blocks/PrivateCreditCards'
 import PrivateSlider from '../blocks/PrivateSlider'
-import PrivateTravelCards from '../blocks/PrivateTravelCards'
 import ProductCardsBlock from '../blocks/ProductCardsBlock'
 import PromotionsSection from '../blocks/PromotionsSection'
 import { QRCodeCard } from '../blocks/QRCodeCard'
-import ReminderForCardholders from '../blocks/ReminderForCardholders'
 import ServicePackages from '../blocks/ServicePackages'
 import ServicePrivilege from '../blocks/ServicePrivilege'
 import SliderHeroWithCardsBlock from '../blocks/SliderHeroWithCardsBlock'
@@ -49,6 +41,15 @@ import { tariffCard } from '../blocks/tariffCard'
 import { videoPlayer } from '../blocks/videoPlayer'
 import { warningCard } from '../blocks/warningCard'
 import { CollectionConfig } from 'payload/types'
+import ContactBannerCard from "../blocks/ContactBannerCard";
+import {PrivateCreditCards} from "../blocks/PrivateCreditCards";
+import PrivateCardBanner from "../blocks/PrivateCardBanner";
+import ReminderForCardholders from "../blocks/ReminderForCardholders";
+import PrivateAdvantages from "../blocks/PrivateAdvantages";
+import PrivateAdvantagesWithDesc from "../blocks/PrivateAdvantagesWithDesc";
+import PrivateTravelCards from "../blocks/PrivateTravelCards";
+import AdvantagesDiffWidth from "../blocks/AdvantagesDiffWidth";
+import PrivateProgramConditions from "../blocks/PrivateProgramConditions";
 
 const extractSlug = data => {
 	if (Array.isArray(data)) {
@@ -157,6 +158,7 @@ const Pages: CollectionConfig = {
 				PrivateAdvantagesWithDesc,
 				PrivateTravelCards,
 				AdvantagesDiffWidth,
+				PrivateProgramConditions,
 				QRCodeCard,
 				MobileAppCard,
 			],
