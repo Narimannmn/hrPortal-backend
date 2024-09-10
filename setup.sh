@@ -9,5 +9,5 @@ npm config set https-proxy 'http://MSansyzb:%21%40%23Eubank%40%21%23%23@proxy01.
 
 npm i --force
 
-echo "Running"
+echo "Running!"
 npm run dev
