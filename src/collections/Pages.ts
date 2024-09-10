@@ -19,8 +19,10 @@ import PrivateAdvantages from '../blocks/PrivateAdvantages'
 import PrivateAdvantagesWithDesc from '../blocks/PrivateAdvantagesWithDesc'
 import PrivateCardBanner from '../blocks/PrivateCardBanner'
 import { PrivateCreditCards } from '../blocks/PrivateCreditCards'
+import PrivateProgramConditions from '../blocks/PrivateProgramConditions'
 import PrivateSlider from '../blocks/PrivateSlider'
 import PrivateTravelCards from '../blocks/PrivateTravelCards'
+import PrivateUsefulArticles from '../blocks/PrivateUsefulArticles'
 import ProductCardsBlock from '../blocks/ProductCardsBlock'
 import PromotionsSection from '../blocks/PromotionsSection'
 import { QRCodeCard } from '../blocks/QRCodeCard'
@@ -105,6 +107,23 @@ const Pages: CollectionConfig = {
 			required: true,
 		},
 		{
+			name: 'layoutTheme',
+			label: 'Тема Layout',
+			type: 'radio',
+			required: false,
+			defaultValue: 'light',
+			options: [
+				{
+					label: 'Светлая',
+					value: 'light',
+				},
+				{
+					label: 'Темная',
+					value: 'dark',
+				},
+			],
+		},
+		{
 			name: 'layout',
 			label: 'Блоки',
 			type: 'blocks',
@@ -158,8 +177,10 @@ const Pages: CollectionConfig = {
 				PrivateAdvantagesWithDesc,
 				PrivateTravelCards,
 				AdvantagesDiffWidth,
+				PrivateProgramConditions,
 				QRCodeCard,
 				MobileAppCard,
+				PrivateUsefulArticles,
 				OfficeLocator,
 			],
 		},
