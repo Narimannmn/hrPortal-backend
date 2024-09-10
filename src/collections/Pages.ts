@@ -46,6 +46,7 @@ import { informationCard } from '../blocks/informationCard'
 import { ItemTypes } from '../blocks/itemTypes'
 import { keyPointedCard } from '../blocks/keyPointedCard'
 import { packageOffers } from '../blocks/packageOffers'
+import { Questions } from '../blocks/questions'
 import { servicesCard } from '../blocks/servicesCard'
 import { table } from '../blocks/table'
 import { tariffCard } from '../blocks/tariffCard'
@@ -182,6 +183,7 @@ const Pages: CollectionConfig = {
 				MobileAppCard,
 				PrivateUsefulArticles,
 				OfficeLocator,
+				Questions,
 			],
 		},
 	],
