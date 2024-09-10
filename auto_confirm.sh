@@ -23,4 +23,3 @@ proc handle_prompt {} {
 
 handle_prompt
 interact
-
