@@ -15,8 +15,8 @@ echo "HTTPS_PROXY: $HTTPS_PROXY"
 
 npm config list
 
-yarn install --force
-yarn add sharp
+npm i --force
+npm i sharp
 
 echo "Running!"
-yarn run dev
+npm run dev
