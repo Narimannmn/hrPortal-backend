@@ -37,7 +37,7 @@ export const form: Block = {
 			label: 'Вкладки',
 			type: 'array',
 			minRows: 1,
-			maxRows: 5,
+			maxRows: 3,
 			required: true,
 			fields: [
 				{
