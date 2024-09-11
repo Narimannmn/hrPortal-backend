@@ -16,7 +16,7 @@ echo "HTTPS_PROXY: $HTTPS_PROXY"
 npm config list
 
 npm i --force
-npm i sharp
+#npm i sharp
 
 echo "Running!"
 npm run dev
