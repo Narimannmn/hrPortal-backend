@@ -7,6 +7,7 @@ import CardBlockWithIcon from '../blocks/CardBlockWithIcon'
 import CategoryBonusSection from '../blocks/CategoryBonusSection'
 import ContactBannerCard from '../blocks/ContactBannerCard'
 import DigitalCardSection from '../blocks/DigitalCardSection'
+import { DocumentList } from '../blocks/DocumentList'
 import { ForSale } from '../blocks/ForSale'
 import { Hero } from '../blocks/Hero'
 import InsuranceSection from '../blocks/InsuranceSection'
@@ -26,6 +27,7 @@ import PrivateUsefulArticles from '../blocks/PrivateUsefulArticles'
 import ProductCardsBlock from '../blocks/ProductCardsBlock'
 import PromotionsSection from '../blocks/PromotionsSection'
 import { QRCodeCard } from '../blocks/QRCodeCard'
+import { Questions } from '../blocks/Questions'
 import ReminderForCardholders from '../blocks/ReminderForCardholders'
 import ServicePackages from '../blocks/ServicePackages'
 import ServicePrivilege from '../blocks/ServicePrivilege'
@@ -46,7 +48,6 @@ import { informationCard } from '../blocks/informationCard'
 import { ItemTypes } from '../blocks/itemTypes'
 import { keyPointedCard } from '../blocks/keyPointedCard'
 import { packageOffers } from '../blocks/packageOffers'
-import { Questions } from '../blocks/questions'
 import { servicesCard } from '../blocks/servicesCard'
 import { table } from '../blocks/table'
 import { tariffCard } from '../blocks/tariffCard'
@@ -184,6 +185,7 @@ const Pages: CollectionConfig = {
 				PrivateUsefulArticles,
 				OfficeLocator,
 				Questions,
+				DocumentList,
 			],
 		},
 	],

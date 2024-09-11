@@ -26,6 +26,28 @@ const Files: CollectionConfig = {
 	},
 	fields: [
 		{
+			name: 'fileLabels',
+			label: 'Название файла для отображения',
+			type: 'group',
+			fields: [
+				{
+					name: 'labelKz',
+					label: 'Казахский',
+					type: 'text',
+				},
+				{
+					name: 'labelRu',
+					label: 'Русский',
+					type: 'text',
+				},
+				{
+					name: 'labelEn',
+					label: 'Английский',
+					type: 'text',
+				},
+			],
+		},
+		{
 			name: 'alt',
 			label: 'Alt',
 			type: 'text',

@@ -10,6 +10,8 @@ import SecondaryMenu from './collections/SecondaryMenu'
 import ShoppingMalls from './collections/ShoppingMalls'
 import StoresCategories from './collections/StoreCategories'
 import Stores from './collections/Stores'
+import { TrackedLinks } from './collections/TrackedLinks'
+import { TrackedLinksClicks } from './collections/TrackedLinksClicks'
 import Users from './collections/Users'
 import CompareCards from './collections/debit.cards/CardTable'
 import DebitCardCategories from './collections/debit.cards/DebitCards'
@@ -70,6 +72,10 @@ export default buildConfig({
 		MenuOrder,
 		PrivateCategory,
 		PrivateMap,
+
+		// Link tracking
+		TrackedLinks,
+		TrackedLinksClicks,
 	],
 	typescript: {
 		outputFile: path.resolve(__dirname, 'payload-types.ts'),
