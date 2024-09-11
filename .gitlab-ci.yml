@@ -4,6 +4,9 @@ stages:
 deploy_backend:
   tags: ['deploy']
   stage: deploy_backend
+  before_script:
+    - git config --global http.postBuffer 524288000
+    - git fetch --depth=1000
   script:
     - |
       if docker service rm eu_payload; then
