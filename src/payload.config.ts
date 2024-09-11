@@ -4,6 +4,7 @@ import { slateEditor } from '@payloadcms/richtext-slate'
 import path from 'path'
 import { buildConfig } from 'payload/config'
 import Contacts from './collections/Contacts'
+import Documents from './collections/Documents'
 import Files from './collections/Files'
 import Icons from './collections/Icons'
 import Media from './collections/Media'
@@ -20,6 +21,7 @@ import FormWithAdditionalInfo from './collections/forms/formWithAdditionalInfo'
 import FormWithCity from './collections/forms/formWithCity'
 import FormWithCreditDelinquencies from './collections/forms/formWithCreditDelinquencies'
 import FormWithTextMessage from './collections/forms/formWithTextMessage'
+import FormWithUploadingDocument from './collections/forms/formWithUploadingDocument'
 import Banks from './collections/map/bank'
 import Offices from './collections/map/offices'
 import ServiceList from './collections/map/service.list'
@@ -41,6 +43,7 @@ export default buildConfig({
 		Media,
 		Icons,
 		SecondaryMenu,
+		Documents,
 		Contacts,
 		MenuItems,
 		Posts,
@@ -61,6 +64,7 @@ export default buildConfig({
 		FormForOrderingCall,
 		FormWithCreditDelinquencies,
 		FormCardSelection,
+		FormWithUploadingDocument,
 	],
 	typescript: {
 		outputFile: path.resolve(__dirname, 'payload-types.ts'),

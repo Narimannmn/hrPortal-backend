@@ -102,6 +102,10 @@ export const form: Block = {
 							label: 'Форма с уточнением кредитных просрочек',
 							value: 'formWithCreditDelinquencies',
 						},
+						{
+							label: 'Форма с загрузкой документа',
+							value: 'formWithUploadingDocument',
+						},
 					],
 					required: true,
 				},
