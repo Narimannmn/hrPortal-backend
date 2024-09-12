@@ -14,6 +14,13 @@ const SpaceFiller: Block = {
 			defaultValue: 10,
 			required: true,
 		},
+		{
+			name: 'mobileHeight',
+			label: 'Высота блока на мобилках',
+			type: 'number',
+			defaultValue: 10,
+			required: true,
+		},
 	],
 }
 
