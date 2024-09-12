@@ -8,15 +8,19 @@ spawn ts-node src/server.ts -- -I --force
 
 proc handle_prompt {} {
     expect {
-        -re "Is .* table created or renamed from another table?" {
+        -re ".*Is .* table created or renamed from another table\?" {
             send -- "\r"
-            handle_prompt  
+            exp_continue
         }
-        "Accept warnings and push schema to database?" {
-            send -- "yes\r" 
+        -re ".*Accept warnings and push schema to database\?" {
+            send -- "yes\r"
+            exp_continue
         }
         timeout {
             puts "Timeout occurred"
+        }
+        eof {
+            puts "Process completed"
         }
     }
 }
