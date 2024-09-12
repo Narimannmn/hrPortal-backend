@@ -9,6 +9,9 @@ const Icons: CollectionConfig = {
 	access: {
 		read: () => true,
 	},
+	admin: {
+		group: 'Общий медиа контент контент',
+	},
 	upload: {
 		staticURL: '/icons',
 		staticDir: 'icons',

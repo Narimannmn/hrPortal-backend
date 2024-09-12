@@ -10,8 +10,8 @@ const validateFileName = (value: string) => {
 const Files: CollectionConfig = {
 	slug: 'files',
 	labels: {
-		singular: 'File',
-		plural: 'Files',
+		singular: 'Файл',
+		plural: 'Файлы',
 	},
 	access: {
 		read: () => true,
@@ -20,7 +20,33 @@ const Files: CollectionConfig = {
 		staticURL: '/files',
 		staticDir: 'files',
 	},
+	admin: {
+		group: 'Общий медиа контент контент',
+		useAsTitle: 'alt',
+	},
 	fields: [
+		{
+			name: 'fileLabels',
+			label: 'Название файла для отображения',
+			type: 'group',
+			fields: [
+				{
+					name: 'labelKz',
+					label: 'Казахский',
+					type: 'text',
+				},
+				{
+					name: 'labelRu',
+					label: 'Русский',
+					type: 'text',
+				},
+				{
+					name: 'labelEn',
+					label: 'Английский',
+					type: 'text',
+				},
+			],
+		},
 		{
 			name: 'alt',
 			label: 'Alt',

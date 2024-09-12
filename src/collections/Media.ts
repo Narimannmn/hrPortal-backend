@@ -10,8 +10,8 @@ const validateFileName = (value: string) => {
 const Media: CollectionConfig = {
 	slug: 'media',
 	labels: {
-		singular: 'Media',
-		plural: 'Media',
+		singular: 'Картинка',
+		plural: 'Картинки',
 	},
 	access: {
 		read: () => true,
@@ -20,16 +20,20 @@ const Media: CollectionConfig = {
 		staticURL: '/media',
 		staticDir: 'media',
 	},
+	admin: {
+		group: 'Общий медиа контент контент',
+		useAsTitle: 'alt',
+	},
 	fields: [
 		{
 			name: 'alt',
-			label: 'Alt',
+			label: 'Альтернативный текст',
 			type: 'text',
 			required: true,
 		},
 		{
 			name: 'filename',
-			label: 'Filename',
+			label: 'Название файла, без пробелов',
 			type: 'text',
 			validate: validateFileName,
 			admin: {

@@ -1,6 +1,7 @@
 import cors from 'cors'
 import express from 'express'
 import payload from 'payload'
+import { UAParser } from 'ua-parser-js'
 
 require('dotenv').config()
 const app = express()
@@ -46,6 +47,41 @@ const start = async () => {
 			console.error('Error fetching page data', error)
 			res.status(500).json({ error: 'Failed to fetch page data' })
 		}
+	})
+
+	app.get('/:slug', async (req, res) => {
+		const { slug } = req.params
+
+		if (!req.payload) {
+			return res.status(500).send('Payload service not available')
+		}
+
+		const userAgentString = req.get('User-Agent')
+		let parser = new UAParser(userAgentString)
+		let parserResults = parser.getResult()
+
+		const linkDocs = await req.payload.find({
+			collection: 'trackedLinks',
+			where: { slug: { equals: slug } },
+		})
+
+		if (!linkDocs.docs || linkDocs.docs.length === 0) {
+			return res.status(404).send('Link not found')
+		}
+
+		const trackedLink = linkDocs.docs[0]
+
+		await req.payload.create({
+			collection: 'trackedLinksClicks',
+			data: {
+				trackedLink: trackedLink.id,
+				browser: parserResults.browser.name,
+				device: parserResults.device,
+				os: parserResults.os.name,
+			},
+		})
+
+		res.redirect(trackedLink.href.toString())
 	})
 
 	app.listen(4000, () => {

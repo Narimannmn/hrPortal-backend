@@ -9,6 +9,9 @@ const Contacts: CollectionConfig = {
 	access: {
 		read: () => true,
 	},
+	admin: {
+		group: 'Навигация',
+	},
 	fields: [
 		{
 			name: 'private',

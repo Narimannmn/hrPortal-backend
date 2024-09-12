@@ -8,6 +8,23 @@ export const faq: Block = {
 	},
 	fields: [
 		{
+			name: 'theme',
+			label: 'Тема',
+			type: 'radio',
+			required: false,
+			defaultValue: 'light',
+			options: [
+				{
+					label: 'Светлая',
+					value: 'light',
+				},
+				{
+					label: 'Темная',
+					value: 'dark',
+				}
+			]
+		},
+		{
 			name: 'faqs',
 			label: 'Часто задаваемые вопросы',
 			type: 'array',
