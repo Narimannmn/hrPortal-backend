@@ -8,6 +8,31 @@ export const guaranteeTypeCard: Block = {
 	},
 	fields: [
 		{
+			name: 'heading',
+			label: 'Заголовок',
+			type: 'group',
+			fields: [
+				{
+					name: 'labelRu',
+					label: 'Заголовок (Рус)',
+					type: 'text',
+					required: true,
+				},
+				{
+					name: 'labelEn',
+					label: 'Заголовок (En)',
+					type: 'text',
+					required: true,
+				},
+				{
+					name: 'labelKz',
+					label: 'Заголовок (Қаз)',
+					type: 'text',
+					required: true,
+				},
+			],
+		},
+		{
 			name: 'guarantees',
 			label: 'Гарантии',
 			type: 'array',
@@ -63,6 +88,8 @@ export const guaranteeTypeCard: Block = {
 					name: 'details',
 					label: 'Детали',
 					type: 'array',
+					minRows: 1,
+					maxRows: 3,
 					fields: [
 						{
 							name: 'label',

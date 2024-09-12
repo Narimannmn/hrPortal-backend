@@ -116,6 +116,7 @@ export const Hero: Block = {
 			name: 'buttons',
 			label: 'Кнопки',
 			type: 'array',
+			maxRows: 2,
 			fields: [
 				{
 					name: 'label',
@@ -166,7 +167,41 @@ export const Hero: Block = {
 					],
 					required: true,
 				},
+				{
+					name: 'linkType',
+					label: 'Тип ссылки',
+					type: 'select',
+					options: [
+						{
+							label: 'Произвольная ссылка',
+							value: 'custom',
+						},
+						{
+							label: 'Ссылка на страницу',
+							value: 'page',
+						},
+					],
+					required: true,
+				},
+				{
+					name: 'customLink',
+					label: 'Произвольная ссылка',
+					type: 'text',
+					admin: {
+						condition: (_, siblingData) => siblingData.linkType === 'custom',
+					},
+				},
+				{
+					name: 'pageSlug',
+					label: 'Ссылка на страницу',
+					type: 'relationship',
+					relationTo: 'pages',
+					admin: {
+						condition: (_, siblingData) => siblingData.linkType === 'page',
+					},
+				},
 			],
+			required: false,
 		},
 	],
 }

@@ -8,11 +8,36 @@ export const form: Block = {
 	},
 	fields: [
 		{
+			name: 'heading',
+			label: 'Заголовок',
+			type: 'group',
+			fields: [
+				{
+					name: 'labelRu',
+					label: 'Заголовок (Рус)',
+					type: 'text',
+					required: true,
+				},
+				{
+					name: 'labelEn',
+					label: 'Заголовок (En)',
+					type: 'text',
+					required: true,
+				},
+				{
+					name: 'labelKz',
+					label: 'Заголовок (Қаз)',
+					type: 'text',
+					required: true,
+				},
+			],
+		},
+		{
 			name: 'tabs',
 			label: 'Вкладки',
 			type: 'array',
 			minRows: 1,
-			maxRows: 5,
+			maxRows: 3,
 			required: true,
 			fields: [
 				{
@@ -72,6 +97,14 @@ export const form: Block = {
 						{
 							label: 'Форма для заказа звонка',
 							value: 'formForOrderingCall',
+						},
+						{
+							label: 'Форма с уточнением кредитных просрочек',
+							value: 'formWithCreditDelinquencies',
+						},
+						{
+							label: 'Форма с загрузкой документа',
+							value: 'formWithUploadingDocument',
 						},
 					],
 					required: true,

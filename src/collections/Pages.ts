@@ -1,8 +1,5 @@
-import AdditionalBonusSection from '../blocks/AdditionalBonusSection'
 import AdvantagesDiffWidth from '../blocks/AdvantagesDiffWidth'
 import { AllStores } from '../blocks/AllStores'
-import { BankLocation } from '../blocks/BankLocations'
-import BonusSection from '../blocks/BonusSection'
 import CardBlockWithIcon from '../blocks/CardBlockWithIcon'
 import CategoryBonusSection from '../blocks/CategoryBonusSection'
 import ContactBannerCard from '../blocks/ContactBannerCard'
@@ -32,7 +29,6 @@ import ReminderForCardholders from '../blocks/ReminderForCardholders'
 import ServicePackages from '../blocks/ServicePackages'
 import ServicePrivilege from '../blocks/ServicePrivilege'
 import SliderHeroWithCardsBlock from '../blocks/SliderHeroWithCardsBlock'
-import TariffLimitsSection from '../blocks/TariffLimitsSection'
 import VerticalCardBlock from '../blocks/VerticalCardBlock'
 import { contactCenter } from '../blocks/contactCenter'
 import { descriptionWithRichtext } from '../blocks/descriptionWithRichtext'
@@ -40,6 +36,7 @@ import { detailsCoin } from '../blocks/detailsCoin'
 import { BoardOfDirectors } from '../blocks/directors'
 import { faq } from '../blocks/faq'
 import { form } from '../blocks/form'
+import { govProgCard } from '../blocks/govProgCard'
 import { guaranteeTypeCard } from '../blocks/guaranteeTypeCard'
 import { HistoryBlock } from '../blocks/history'
 import { horizontalStatisticCard } from '../blocks/horizontalStatisticCard'
@@ -158,15 +155,7 @@ const Pages: CollectionConfig = {
 				Partners,
 				ServicePrivilege,
 				PrivateSlider,
-				AdditionalBonusSection,
-				BonusSection,
-				CategoryBonusSection,
-				DigitalCardSection,
-				InsuranceSection,
-				PromotionsSection,
-				TariffLimitsSection,
-				BankLocation,
-				ServicePackages,
+				govProgCard,
 				BoardOfDirectors,
 				HistoryBlock,
 				ContactBannerCard,
