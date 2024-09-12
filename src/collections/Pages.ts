@@ -1,5 +1,6 @@
 import AdvantagesDiffWidth from '../blocks/AdvantagesDiffWidth'
 import { AllStores } from '../blocks/AllStores'
+import { BankLocation } from '../blocks/BankLocations'
 import CardBlockWithIcon from '../blocks/CardBlockWithIcon'
 import CategoryBonusSection from '../blocks/CategoryBonusSection'
 import ContactBannerCard from '../blocks/ContactBannerCard'
@@ -175,6 +176,12 @@ const Pages: CollectionConfig = {
 				OfficeLocator,
 				Questions,
 				DocumentList,
+				BankLocation,
+				ServicePackages,
+				PromotionsSection,
+				InsuranceSection,
+				CategoryBonusSection,
+				DigitalCardSection,
 			],
 		},
 	],
