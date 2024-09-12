@@ -23,6 +23,25 @@ const PageHeaderBlock: Block = {
 			]
 		},
 		{
+			name: 'marginY',
+			label: 'Отступы по Y координате',
+			type: 'group',
+			fields: [
+				{
+					name: 'top',
+					label: 'Верх',
+					type: 'number',
+					defaultValue: 76
+				},
+				{
+					name: 'bottom',
+					label: 'Низ',
+					type: 'number',
+					defaultValue: 40
+				}
+			]
+		},
+		{
 			name: 'title',
 			label: 'Заголовок',
 			type: 'group',
