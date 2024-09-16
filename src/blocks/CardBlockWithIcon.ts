@@ -99,7 +99,7 @@ const CardBlockWithIcon: Block = {
 					admin: {
 						condition: (_, siblingData) => {
 							const { labelRu, labelKz, labelEn } = siblingData.subTitle
-							return labelRu || labelKz || labelEn;
+							return !!labelRu || !!labelKz || !!labelEn;
 						},
 					},
 					options: [
