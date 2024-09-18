@@ -107,6 +107,13 @@ const Pages: CollectionConfig = {
 			required: true,
 		},
 		{
+			name: 'index',
+			label: 'Главная страница',
+			type: 'checkbox',
+			required: false,
+			defaultValue: false,
+		},
+		{
 			name: 'layoutTheme',
 			label: 'Тема Layout',
 			type: 'radio',

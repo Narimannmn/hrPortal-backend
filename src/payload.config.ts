@@ -14,6 +14,7 @@ import Stores from './collections/Stores'
 import { TrackedLinks } from './collections/TrackedLinks'
 import { TrackedLinksClicks } from './collections/TrackedLinksClicks'
 import Users from './collections/Users'
+import { CreditBlock } from './collections/business.credits/BusinessCredits'
 import CompareCards from './collections/debit.cards/CardTable'
 import DebitCardCategories from './collections/debit.cards/DebitCards'
 import Directors from './collections/directors'
@@ -84,7 +85,7 @@ export default buildConfig({
 		PrivateCategory,
 		PrivateMap,
 		PageTemplates,
-
+		CreditBlock,
 		// Link tracking
 		TrackedLinks,
 		TrackedLinksClicks,
@@ -105,49 +106,49 @@ export default buildConfig({
 	},
 	plugins: [
 		payloadCloud(),
-		cloudStorage({
-			collections: {
-				media: {
-					adapter: s3Adapter({
-						config: {
-							region: process.env.S3_REGION,
-							endpoint: process.env.S3_ENDPOINT,
-							credentials: {
-								accessKeyId: process.env.S3_ACCESS_KEY,
-								secretAccessKey: process.env.S3_SECRET_KEY,
-							},
-						},
-						bucket: process.env.S3_BUCKET_NAME,
-					}),
-				},
-				icons: {
-					adapter: s3Adapter({
-						config: {
-							region: process.env.S3_REGION,
-							endpoint: process.env.S3_ENDPOINT,
-							credentials: {
-								accessKeyId: process.env.S3_ACCESS_KEY,
-								secretAccessKey: process.env.S3_SECRET_KEY,
-							},
-						},
-						bucket: process.env.S3_BUCKET_NAME,
-					}),
-				},
-				files: {
-					adapter: s3Adapter({
-						config: {
-							region: process.env.S3_REGION,
-							endpoint: process.env.S3_ENDPOINT,
-							credentials: {
-								accessKeyId: process.env.S3_ACCESS_KEY,
-								secretAccessKey: process.env.S3_SECRET_KEY,
-							},
-						},
-						bucket: process.env.S3_BUCKET_NAME,
-					}),
-				},
-			},
-		}),
+		// cloudStorage({
+		// collections: {
+		// 		media: {
+		// 			adapter: s3Adapter({
+		// 				config: {
+		// 					region: process.env.S3_REGION,
+		// 					endpoint: process.env.S3_ENDPOINT,
+		// 					credentials: {
+		// 						accessKeyId: process.env.S3_ACCESS_KEY,
+		// 						secretAccessKey: process.env.S3_SECRET_KEY,
+		// 					},
+		// 				},
+		// 				bucket: process.env.S3_BUCKET_NAME,
+		// 			}),
+		// 		},
+		// 		icons: {
+		// 			adapter: s3Adapter({
+		// 				config: {
+		// 					region: process.env.S3_REGION,
+		// 					endpoint: process.env.S3_ENDPOINT,
+		// 					credentials: {
+		// 						accessKeyId: process.env.S3_ACCESS_KEY,
+		// 						secretAccessKey: process.env.S3_SECRET_KEY,
+		// 					},
+		// 				},
+		// 				bucket: process.env.S3_BUCKET_NAME,
+		// 			}),
+		// 		},
+		// 		files: {
+		// 			adapter: s3Adapter({
+		// 				config: {
+		// 					region: process.env.S3_REGION,
+		// 					endpoint: process.env.S3_ENDPOINT,
+		// 					credentials: {
+		// 						accessKeyId: process.env.S3_ACCESS_KEY,
+		// 						secretAccessKey: process.env.S3_SECRET_KEY,
+		// 					},
+		// 				},
+		// 				bucket: process.env.S3_BUCKET_NAME,
+		// 			}),
+		// 		},
+		// 	},
+		// }),
 	],
 	db: postgresAdapter({
 		pool: {
