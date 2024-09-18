@@ -11,6 +11,7 @@ const PageHeaderBlock: Block = {
 			name: 'theme',
 			label: 'Тема',
 			type: 'radio',
+			defaultValue: 'light',
 			options: [
 				{
 					label: 'Светлая',
@@ -20,6 +21,41 @@ const PageHeaderBlock: Block = {
 					label: 'Темная',
 					value: 'dark',
 				}
+			]
+		},
+		{
+			name: 'marginY',
+			label: 'Отступы по Y координате',
+			type: 'group',
+			fields: [
+				{
+					name: 'top',
+					label: 'Верх',
+					type: 'number',
+					defaultValue: 76,
+					required: true
+				},
+				{
+					name: 'bottom',
+					label: 'Низ',
+					type: 'number',
+					defaultValue: 40,
+					required: true,
+				},
+				{
+					name: 'mobileTop',
+					label: 'Верх на мобилках',
+					type: 'number',
+					defaultValue: 48,
+					required: true,
+				},
+				{
+					name: 'mobileBottom',
+					label: 'Низ на мобилках',
+					type: 'number',
+					defaultValue: 20,
+					required: true,
+				},
 			]
 		},
 		{

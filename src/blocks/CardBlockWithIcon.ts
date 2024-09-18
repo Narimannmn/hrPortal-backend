@@ -8,6 +8,27 @@ const CardBlockWithIcon: Block = {
 	},
 	fields: [
 		{
+			name: 'maxColumnCount',
+			label: 'Максимальное число колонок по горизонтали',
+			type: 'radio',
+			defaultValue: '3',
+			options: [
+				{
+					label: '2',
+					value: '2',
+				},
+				{
+					label: '3',
+					value: '3',
+				},
+				{
+					label: '4',
+					value: '4',
+				},
+			],
+			required: false,
+		},
+		{
 			name: 'cards',
 			label: 'Карточки',
 			type: 'array',
@@ -52,22 +73,45 @@ const CardBlockWithIcon: Block = {
 						{
 							name: 'labelRu',
 							label: 'Значение (Рус)',
-							type: 'richText',
+							type: 'text',
 							required: false,
 						},
 						{
 							name: 'labelEn',
 							label: 'Значение (En)',
-							type: 'richText',
+							type: 'text',
 							required: false,
 						},
 						{
 							name: 'labelKz',
 							label: 'Значение (Қаз)',
-							type: 'richText',
+							type: 'text',
 							required: false,
 						},
 					],
+				},
+				{
+					name: 'subTitleColor',
+					label: 'Цвет текста описании',
+					type: 'radio',
+					required: false,
+					defaultValue: 'white',
+					admin: {
+						condition: (_, siblingData) => {
+							const { labelRu, labelKz, labelEn } = siblingData.subTitle
+							return !!labelRu || !!labelKz || !!labelEn;
+						},
+					},
+					options: [
+						{
+							label: 'Белый',
+							value: 'white',
+						},
+						{
+							label: 'Серый',
+							value: 'gray',
+						}
+					]
 				},
 			],
 		}

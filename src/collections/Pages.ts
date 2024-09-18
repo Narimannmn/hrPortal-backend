@@ -1,6 +1,8 @@
+import AdditionalBonusSection from '../blocks/AdditionalBonusSection'
 import AdvantagesDiffWidth from '../blocks/AdvantagesDiffWidth'
 import { AllStores } from '../blocks/AllStores'
 import { BankLocation } from '../blocks/BankLocations'
+import BonusSection from '../blocks/BonusSection'
 import CardBlockWithIcon from '../blocks/CardBlockWithIcon'
 import CategoryBonusSection from '../blocks/CategoryBonusSection'
 import ContactBannerCard from '../blocks/ContactBannerCard'
@@ -30,6 +32,7 @@ import ReminderForCardholders from '../blocks/ReminderForCardholders'
 import ServicePackages from '../blocks/ServicePackages'
 import ServicePrivilege from '../blocks/ServicePrivilege'
 import SliderHeroWithCardsBlock from '../blocks/SliderHeroWithCardsBlock'
+import TariffLimitsSection from '../blocks/TariffLimitsSection'
 import VerticalCardBlock from '../blocks/VerticalCardBlock'
 import { contactCenter } from '../blocks/contactCenter'
 import { descriptionWithRichtext } from '../blocks/descriptionWithRichtext'
@@ -52,6 +55,8 @@ import { tariffCard } from '../blocks/tariffCard'
 import { videoPlayer } from '../blocks/videoPlayer'
 import { warningCard } from '../blocks/warningCard'
 import { CollectionConfig } from 'payload/types'
+import SpaceFiller from "../blocks/SpaceFiller";
+import PrivateFavorableConditions from "../blocks/PrivateFavorableСonditions";
 
 const extractSlug = data => {
 	if (Array.isArray(data)) {
@@ -163,7 +168,10 @@ const Pages: CollectionConfig = {
 				Partners,
 				ServicePrivilege,
 				PrivateSlider,
-				govProgCard,
+				AdditionalBonusSection,
+				BonusSection,
+				TariffLimitsSection,
+                govProgCard,
 				BoardOfDirectors,
 				HistoryBlock,
 				ContactBannerCard,
@@ -182,6 +190,8 @@ const Pages: CollectionConfig = {
 				PrivateUsefulArticles,
 				OfficeLocator,
 				Questions,
+				SpaceFiller,
+				PrivateFavorableConditions,
 				DocumentList,
 				BankLocation,
 				ServicePackages,
