@@ -244,6 +244,22 @@ const VerticalCardBlock: Block = {
 					},
 					fields: [
 						{
+							name: 'btnType',
+							label: 'Тип кнопки',
+							type: 'select',
+							options: [
+								{
+									label: 'Кнопка',
+									value: 'full',
+								},
+								{
+									label: 'Иконка',
+									value: 'icon',
+								},
+							],
+							required: true,
+						},
+						{
 							name: 'lnkType',
 							label: 'Тип ссылки',
 							type: 'select',
@@ -257,7 +273,35 @@ const VerticalCardBlock: Block = {
 									value: 'page',
 								},
 							],
-							required: false,
+							required: true,
+						},
+						{
+							name: 'btnFullTxt',
+							label: 'Произвольная ссылка',
+							type: 'group',
+							admin: {
+								condition: (_, siblingData) => siblingData.btnType === 'full',
+							},
+							fields: [
+								{
+									name: 'labelKz',
+									label: 'Текст (Казахский)',
+									type: 'text',
+									required: true,
+								},
+								{
+									name: 'labelRu',
+									label: 'Текст (Русский)',
+									type: 'text',
+									required: true,
+								},
+								{
+									name: 'labelEn',
+									label: 'Текст (Английский)',
+									type: 'text',
+									required: true,
+								},
+							],
 						},
 						{
 							name: 'customLnk',
