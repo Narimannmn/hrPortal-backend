@@ -9,14 +9,14 @@ const Users: CollectionConfig = {
 	},
 	hooks: {
 		afterLogin: [
-			async ({ user }) => {
-				if (user.roles.includes('admin')) {
-					console.log(
-						'Администратор залогинен, начинаем конвертацию изображений...'
-					)
-					await convertImagesToWebP()
-				}
-			},
+			// async ({ user }) => {
+			// 	if (user.roles.includes('admin')) {
+			// 		console.log(
+			// 			'Администратор залогинен, начинаем конвертацию изображений...'
+			// 		)
+			// 		await convertImagesToWebP()
+			// 	}
+			// },
 		],
 	},
 	auth: true,
