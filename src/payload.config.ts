@@ -129,18 +129,18 @@ export default buildConfig({
 				files: {
 					adapter: storageAdapter,
 				},
-				videos: {
-					adapter: storageAdapter,
-				},
-				'marketplace-media': {
-					adapter: storageAdapter,
-				},
-				'employee-media': {
-					adapter: storageAdapter,
-				},
-				documents: {
-					adapter: storageAdapter,
-				},
+				// videos: {
+				// 	adapter: storageAdapter,
+				// },
+				// 'marketplace-media': {
+				// 	adapter: storageAdapter,
+				// },
+				// 'employee-media': {
+				// 	adapter: storageAdapter,
+				// },
+				// documents: {
+				// 	adapter: storageAdapter,
+				// },
 			},
 		}),
 	],
