@@ -23,7 +23,6 @@
 		"@payloadcms/plugin-cloud-storage": "^1.1.3",
 		"@payloadcms/richtext-slate": "^1.0.0",
 		"@swc/core": "^1.7.21",
-		"aws-sdk": "^2.1691.0",
 		"axios": "^1.7.7",
 		"cors": "^2.8.5",
 		"cross-env": "^7.0.3",
