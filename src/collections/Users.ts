@@ -1,3 +1,4 @@
+import { convertImagesToWebP } from '../convertToWebP'
 import { CollectionConfig } from 'payload/types'
 
 const Users: CollectionConfig = {
@@ -5,6 +6,18 @@ const Users: CollectionConfig = {
 	labels: {
 		singular: 'Пользователь',
 		plural: 'Пользователи',
+	},
+	hooks: {
+		afterLogin: [
+			async ({ user }) => {
+				if (user.roles.includes('admin')) {
+					console.log(
+						'Администратор залогинен, начинаем конвертацию изображений...'
+					)
+					await convertImagesToWebP()
+				}
+			},
+		],
 	},
 	auth: true,
 	access: {
