@@ -48,6 +48,18 @@ import { slateEditor } from '@payloadcms/richtext-slate'
 import path from 'path'
 import { buildConfig } from 'payload/config'
 
+const storageAdapter = s3Adapter({
+	config: {
+		region: process.env.S3_REGION,
+		endpoint: process.env.S3_ENDPOINT,
+		credentials: {
+			accessKeyId: process.env.S3_ACCESS_KEY,
+			secretAccessKey: process.env.S3_SECRET_KEY,
+		},
+	},
+	bucket: process.env.S3_BUCKET_NAME,
+})
+
 export default buildConfig({
 	admin: {
 		user: Users.slug,
@@ -109,43 +121,25 @@ export default buildConfig({
 		cloudStorage({
 			collections: {
 				media: {
-					adapter: s3Adapter({
-						config: {
-							region: process.env.S3_REGION,
-							endpoint: process.env.S3_ENDPOINT,
-							credentials: {
-								accessKeyId: process.env.S3_ACCESS_KEY,
-								secretAccessKey: process.env.S3_SECRET_KEY,
-							},
-						},
-						bucket: process.env.S3_BUCKET_NAME,
-					}),
+					adapter: storageAdapter,
 				},
 				icons: {
-					adapter: s3Adapter({
-						config: {
-							region: process.env.S3_REGION,
-							endpoint: process.env.S3_ENDPOINT,
-							credentials: {
-								accessKeyId: process.env.S3_ACCESS_KEY,
-								secretAccessKey: process.env.S3_SECRET_KEY,
-							},
-						},
-						bucket: process.env.S3_BUCKET_NAME,
-					}),
+					adapter: storageAdapter,
 				},
 				files: {
-					adapter: s3Adapter({
-						config: {
-							region: process.env.S3_REGION,
-							endpoint: process.env.S3_ENDPOINT,
-							credentials: {
-								accessKeyId: process.env.S3_ACCESS_KEY,
-								secretAccessKey: process.env.S3_SECRET_KEY,
-							},
-						},
-						bucket: process.env.S3_BUCKET_NAME,
-					}),
+					adapter: storageAdapter,
+				},
+				videos: {
+					adapter: storageAdapter,
+				},
+				'marketplace-media': {
+					adapter: storageAdapter,
+				},
+				'employee-media': {
+					adapter: storageAdapter,
+				},
+				documents: {
+					adapter: storageAdapter,
 				},
 			},
 		}),
