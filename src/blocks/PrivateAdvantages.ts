@@ -45,7 +45,7 @@ const PrivateAdvantages: Block = {
 					],
 				},
 			],
-		}
+		},
 	],
 }
 
