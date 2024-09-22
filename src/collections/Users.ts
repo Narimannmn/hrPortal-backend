@@ -1,4 +1,4 @@
-import { convertImagesToWebP } from '../convertToWebP'
+import convertImagesToWebP from '../convertToWebP'
 import { CollectionConfig } from 'payload/types'
 
 const Users: CollectionConfig = {
