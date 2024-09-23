@@ -96,12 +96,6 @@ const CardBlockWithIcon: Block = {
 					type: 'radio',
 					required: false,
 					defaultValue: 'white',
-					admin: {
-						condition: (_, siblingData) => {
-							const { labelRu, labelKz, labelEn } = siblingData.subTitle
-							return !!labelRu || !!labelKz || !!labelEn;
-						},
-					},
 					options: [
 						{
 							label: 'Белый',
