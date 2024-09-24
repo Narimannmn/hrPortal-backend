@@ -10,11 +10,12 @@ test_backend:
   script:
     - apk add --no-cache ca-certificates curl expect coreutils
     - wget http://ftp.gnu.org/gnu/coreutils/coreutils-8.32.tar.xz
-    - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | tee /etc/apt/keyrings/docker.asc
-    - echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu focal stable" | tee /etc/apt/sources.list.d/docker.list
-    - apk update
-    - apk add docker
-    - service docker start
+    - docker ps
+    # - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | tee /etc/apt/keyrings/docker.asc
+    # - echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu focal stable" | tee /etc/apt/sources.list.d/docker.list
+    # - apk update
+    # - apk add docker
+    # - service docker start
     - curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
     - apk add nodejs
     - npm install --force
