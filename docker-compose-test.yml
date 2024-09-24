@@ -1,4 +1,4 @@
-version '3.8'
+version: '3.8'
 
 services:
   backend:
@@ -15,15 +15,12 @@ services:
   db:
     image: postgres:latest
     environment:
-      POSTGRES_USER: {$PUSER}
-      POSTGRES_PASSWORD: {$PPASS}
-      POSTGRES_DB: {$PDB}
+      POSTGRES_USER: ${PUSER}
+      POSTGRES_PASSWORD: ${PPASS}
+      POSTGRES_DB: ${PDB}
     networks:
       - test-back
 
-
-
 networks:
   test-back:
-    driver:
-      - bridge
+    driver: bridge
