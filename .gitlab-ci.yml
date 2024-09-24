@@ -1,30 +1,37 @@
 stages:
-  - deploy_backend
+  - test_backend
+  # - deploy_backend
 
-deploy_backend:
-  tags: ['deploy']
-  stage: deploy_backend
-  before_script:
-    - git config --global http.postBuffer 524288000
-    - git fetch --depth=1000
+test_backend:
+  stage: test_backend
   script:
-    - |
-      if docker service rm eu_payload; then
-        echo "Service removed successfully."
-      else
-        echo "Service not found, continuing..."
-      fi
-    - rm -rf /home/EUB/dshevche/eu-bank/Test/backend/
-    - cd ..
-    - cp -r backend/ /home/EUB/dshevche/eu-bank/Test
-    - echo "Successfully copied"
-    - cd /home/EUB/dshevche/
-    - rm -rf builds/
-    - cd /home/EUB/dshevche/eu-bank
-    - cp /home/EUB/dshevche/eu-bank/backend-main/.env /home/EUB/dshevche/eu-bank/Test/backend
-    - docker stack deploy -c docker-compose.yml eu
-    - sleep 70
-    - docker service logs --raw eu_payload
-  only:
-    - main
+    - ls
+  
+
+# deploy_backend:
+#   tags: ['deploy']
+#   stage: deploy_backend
+#   before_script:
+#     - git config --global http.postBuffer 524288000
+#     - git fetch --depth=1000
+#   script:
+#     - |
+#       if docker service rm eu_payload; then
+#         echo "Service removed successfully."
+#       else
+#         echo "Service not found, continuing..."
+#       fi
+#     - rm -rf /home/EUB/dshevche/eu-bank/Test/backend/
+#     - cd ..
+#     - cp -r backend/ /home/EUB/dshevche/eu-bank/Test
+#     - echo "Successfully copied"
+#     - cd /home/EUB/dshevche/
+#     - rm -rf builds/
+#     - cd /home/EUB/dshevche/eu-bank
+#     - cp /home/EUB/dshevche/eu-bank/backend-main/.env /home/EUB/dshevche/eu-bank/Test/backend
+#     - docker stack deploy -c docker-compose.yml eu
+#     - sleep 70
+#     - docker service logs --raw eu_payload
+#   only:
+#     - main
 #Test4
