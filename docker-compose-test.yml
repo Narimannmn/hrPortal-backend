@@ -7,7 +7,7 @@ services:
     volumes:
       - .:/home/node/app/
     working_dir: /home/node/app/
-    command: sh -c "chmod +x /home/node/app/setup.sh && ./setup.sh"
+    command: sh -c "chmod +x /home/node/app/test.sh && ./test.sh"
     depends_on:
       - db
     networks:
