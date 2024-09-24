@@ -7,12 +7,13 @@ test_backend:
   script:
     - ls
     - apt-get update -y
+    - apt-get install -y expect
     - apt-get install -y curl
     - curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
     - apt-get install -y nodejs
     - npm i --force 
     - npm run dev
-    - sleep(15)
+    - sleep 15
   only:
     - main
 
