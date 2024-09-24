@@ -10,7 +10,9 @@ test_backend:
     - apt-get install -y curl
     - curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
     - apt-get install -y nodejs
-    - docker ps
+    - npm i --force 
+    - npm run dev
+    - sleep(15)
   only:
     - main
 
