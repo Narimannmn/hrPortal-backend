@@ -8,7 +8,8 @@ test_backend:
   services:
     - docker:dind
   script:
-    - apk add --no-cache ca-certificates curl sudo expect
+    - apk add --no-cache ca-certificates curl expect coreutils
+    - wget http://ftp.gnu.org/gnu/coreutils/coreutils-8.32.tar.xz
     - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | tee /etc/apt/keyrings/docker.asc
     - echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu focal stable" | tee /etc/apt/sources.list.d/docker.list
     - apk update
