@@ -11,26 +11,12 @@ test_backend:
     - apk add --no-cache ca-certificates curl expect coreutils
     - wget http://ftp.gnu.org/gnu/coreutils/coreutils-8.32.tar.xz
     - docker ps
-    # - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | tee /etc/apt/keyrings/docker.asc
-    # - echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu focal stable" | tee /etc/apt/sources.list.d/docker.list
-    # - apk update
-    # - apk add docker
-    # - service docker start
-    - curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
-    - apk add nodejs
-    - npm install --force
-    - docker pull postgres:latest
-    - |
-      docker run -d \
-        --name postgres_container \
-        -e POSTGRES_USER=${PUSER} \
-        -e POSTGRES_PASSWORD=${PPASS} \
-        -e POSTGRES_DB=${PDB} \
-        -p 5432:5432 \
-        postgres:latest
-    - sleep 15
     - echo "DATABASE_URI=postgres://${PUSER}:${PPASS}@db:5432/${PDB}" > .env
     - echo "PAYLOAD_SECRET={$PAYLOAD_SECRET}" >> .env
+    - docker pull postgres:latest
+    - docker pull node:18-alpine
+    - docker compose -f docker-compose-test.yml up -d
+    - sleep 15
     - npm run dev
     - sleep 15
   only:
