@@ -16,7 +16,7 @@ test_backend:
     - docker pull postgres:latest
     - docker pull node:18-alpine
     - docker compose -f docker-compose-test.yml up -d
-    - sleep 30
+    - sleep 60
     - docker logs test-back
   only:
     - main
