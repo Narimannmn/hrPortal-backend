@@ -1,22 +1,21 @@
 stages:
   - test_backend
-  # - deploy_backend
+#  - deploy_backend
 
 test_backend:
   stage: test_backend
+  image: docker:latest
+  services:
+    - docker:dind
   script:
-    - ls
-    - apt-get update -y
-    - apt-get install -y ca-certificates curl expect coreutils
-    - wget http://ftp.gnu.org/gnu/coreutils/coreutils-8.30.tar.xz
-    - install -m 0755 -d /etc/apt/keyrings
-    - curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-    - chmod a+r /etc/apt/keyrings/docker.asc
-    - echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu focal stable" | tee /etc/apt/sources.list.d/docker.list
-    - apt-get update
-    - apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+    - apk add --no-cache ca-certificates curl sudo expect
+    - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | tee /etc/apt/keyrings/docker.asc
+    - echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu focal stable" | tee /etc/apt/sources.list.d/docker.list
+    - apk update
+    - apk add docker
+    - service docker start
     - curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
-    - apt-get install -y nodejs
+    - apk add nodejs
     - npm install --force
     - docker pull postgres:latest
     - |
