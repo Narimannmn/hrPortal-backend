@@ -46,6 +46,7 @@ import { cloudStorage } from '@payloadcms/plugin-cloud-storage'
 import { s3Adapter } from '@payloadcms/plugin-cloud-storage/s3'
 import { slateEditor } from '@payloadcms/richtext-slate'
 import path from 'path'
+import { openapi, swaggerUI } from 'payload-oapi'
 import { buildConfig } from 'payload/config'
 
 const storageAdapter = s3Adapter({
@@ -98,6 +99,7 @@ export default buildConfig({
 		PrivateMap,
 		PageTemplates,
 		CreditBlock,
+
 		// Link tracking
 		TrackedLinks,
 		TrackedLinksClicks,
@@ -111,12 +113,19 @@ export default buildConfig({
 		FormWithUploadingDocument,
 	],
 	typescript: {
-		outputFile: path.resolve(__dirname, 'payload-types.ts'),
+		outputFile: path.resolve(__dirname, './generated-types.ts'),
 	},
 	graphQL: {
 		schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
 	},
 	plugins: [
+		openapi({
+			openapiVersion: '3.0',
+			metadata: { title: 'Dev API', version: '0.0.1' },
+		}),
+		swaggerUI({
+			docsUrl: '/api/docs',
+		}),
 		payloadCloud(),
 		cloudStorage({
 			collections: {
@@ -129,9 +138,9 @@ export default buildConfig({
 				files: {
 					adapter: storageAdapter,
 				},
-				// videos: {
-				// 	adapter: storageAdapter,
-				// },
+				videos: {
+					adapter: storageAdapter,
+				},
 				// 'marketplace-media': {
 				// 	adapter: storageAdapter,
 				// },

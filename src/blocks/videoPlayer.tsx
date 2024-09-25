@@ -11,7 +11,7 @@ export const videoPlayer: Block = {
 			name: 'video',
 			label: 'Видео',
 			type: 'upload',
-			relationTo: 'media',
+			relationTo: 'videos',
 			required: true,
 		},
 		{

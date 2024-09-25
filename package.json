@@ -31,6 +31,7 @@
 		"leaflet": "^1.9.4",
 		"moment": "^2.30.1",
 		"payload": "2.27.0",
+		"payload-oapi": "^0.1.0",
 		"recharts": "^2.12.7",
 		"ua-parser-js": "^1.0.38"
 	},
