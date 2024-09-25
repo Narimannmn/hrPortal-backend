@@ -58,9 +58,11 @@ import { videoPlayer } from '../blocks/videoPlayer'
 import { warningCard } from '../blocks/warningCard'
 import {SearchPages} from "../blocks/SearchPages";
 import { Block } from 'payload/types'
+import { CurrencyTabList } from "../blocks/CurrencyTabList";
+import { UsefulServices } from '../blocks/UsefulServices'
 
 export const PageBlocks: Block[] = [
-	Hero,
+  Hero,
 	ItemTypes,
 	table,
 	detailsCoin,
@@ -119,4 +121,6 @@ export const PageBlocks: Block[] = [
 	InsuranceSection,
 	CategoryBonusSection,
 	DigitalCardSection,
+  CurrencyTabList,
+  UsefulServices
 ]
