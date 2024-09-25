@@ -14,6 +14,7 @@ import Stores from './collections/Stores'
 import { TrackedLinks } from './collections/TrackedLinks'
 import { TrackedLinksClicks } from './collections/TrackedLinksClicks'
 import Users from './collections/Users'
+import Videos from './collections/Videos'
 import { CreditBlock } from './collections/business.credits/BusinessCredits'
 import CompareCards from './collections/debit.cards/CardTable'
 import DebitCardCategories from './collections/debit.cards/DebitCards'
@@ -99,6 +100,7 @@ export default buildConfig({
 		PrivateMap,
 		PageTemplates,
 		CreditBlock,
+		Videos,
 
 		// Link tracking
 		TrackedLinks,
