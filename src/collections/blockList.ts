@@ -56,6 +56,7 @@ import { table } from '../blocks/table'
 import { tariffCard } from '../blocks/tariffCard'
 import { videoPlayer } from '../blocks/videoPlayer'
 import { warningCard } from '../blocks/warningCard'
+import {SearchPages} from "../blocks/SearchPages";
 import { Block } from 'payload/types'
 
 export const PageBlocks: Block[] = [
@@ -69,6 +70,7 @@ export const PageBlocks: Block[] = [
 	SliderHeroWithCardsBlock,
 	PageHeaderBlock,
 	PostsBlock,
+	SearchPages,
 	ProductCardsBlock,
 	VerticalCardBlock,
 	form,
