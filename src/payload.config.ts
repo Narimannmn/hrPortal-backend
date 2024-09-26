@@ -35,11 +35,12 @@ import ServiceList from './collections/map/service.list'
 import Terminals from './collections/map/terminals'
 import Filters from './collections/marketplace/filters'
 import ForSaleItems from './collections/marketplace/marketplace'
-import { PageTemplates } from './collections/pageTemplates/PageTemplates'
 import PostCategories from './collections/posts/PostCategories'
 import Posts from './collections/posts/Posts'
 import PrivateCategory from './collections/private/PrivateCategory'
 import PrivateMap from './collections/private/PrivateMap'
+import { QuestionsSection } from './collections/questions/QuestionSections'
+import { Questions } from './collections/questions/Questions'
 import { webpackBundler } from '@payloadcms/bundler-webpack'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { payloadCloud } from '@payloadcms/plugin-cloud'
@@ -98,9 +99,10 @@ export default buildConfig({
 		MenuOrder,
 		PrivateCategory,
 		PrivateMap,
-		PageTemplates,
 		CreditBlock,
 		Videos,
+		Questions,
+		QuestionsSection,
 
 		// Link tracking
 		TrackedLinks,

@@ -28,8 +28,9 @@ import PrivateUsefulArticles from '../blocks/PrivateUsefulArticles'
 import ProductCardsBlock from '../blocks/ProductCardsBlock'
 import PromotionsSection from '../blocks/PromotionsSection'
 import { QRCodeCard } from '../blocks/QRCodeCard'
-import { Questions } from '../blocks/Questions'
+import { QuestionBlock } from '../blocks/Questions'
 import ReminderForCardholders from '../blocks/ReminderForCardholders'
+import { SearchPages } from '../blocks/SearchPages'
 import ServicePackages from '../blocks/ServicePackages'
 import ServicePrivilege from '../blocks/ServicePrivilege'
 import SliderHeroWithCardsBlock from '../blocks/SliderHeroWithCardsBlock'
@@ -56,7 +57,6 @@ import { table } from '../blocks/table'
 import { tariffCard } from '../blocks/tariffCard'
 import { videoPlayer } from '../blocks/videoPlayer'
 import { warningCard } from '../blocks/warningCard'
-import {SearchPages} from "../blocks/SearchPages";
 import { Block } from 'payload/types'
 
 export const PageBlocks: Block[] = [
@@ -109,7 +109,6 @@ export const PageBlocks: Block[] = [
 	MobileAppCard,
 	PrivateUsefulArticles,
 	OfficeLocator,
-	Questions,
 	SpaceFiller,
 	PrivateFavorableConditions,
 	DocumentList,
@@ -119,4 +118,5 @@ export const PageBlocks: Block[] = [
 	InsuranceSection,
 	CategoryBonusSection,
 	DigitalCardSection,
+	QuestionBlock,
 ]

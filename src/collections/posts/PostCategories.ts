@@ -3,12 +3,12 @@ import { CollectionConfig } from 'payload/types'
 const PostCategories: CollectionConfig = {
 	slug: 'post-categories',
 	labels: {
-		singular: 'Категория статьи',
-		plural: 'Категории статей',
+		singular: 'Категория новостей',
+		plural: 'Категории новостей',
 	},
 	admin: {
 		useAsTitle: 'labelRu',
-		group: 'Статьи',
+		group: 'Новости',
 	},
 	access: {
 		read: () => true,
@@ -16,19 +16,19 @@ const PostCategories: CollectionConfig = {
 	fields: [
 		{
 			name: 'labelEn',
-			label: 'Label (English)',
+			label: 'Название категории (Английский)',
 			type: 'text',
 			required: true,
 		},
 		{
 			name: 'labelRu',
-			label: 'Label (Russian)',
+			label: 'Название категории (Русский)',
 			type: 'text',
 			required: true,
 		},
 		{
 			name: 'labelKz',
-			label: 'Label (Kazakh)',
+			label: 'Название категории (Казахский)',
 			type: 'text',
 			required: true,
 		},
