@@ -6,6 +6,7 @@ import BonusSection from '../blocks/BonusSection'
 import CardBlockWithIcon from '../blocks/CardBlockWithIcon'
 import CategoryBonusSection from '../blocks/CategoryBonusSection'
 import ContactBannerCard from '../blocks/ContactBannerCard'
+import { CurrencyTabList } from '../blocks/CurrencyTabList'
 import DigitalCardSection from '../blocks/DigitalCardSection'
 import { DocumentList } from '../blocks/DocumentList'
 import { ForSale } from '../blocks/ForSale'
@@ -36,6 +37,7 @@ import ServicePrivilege from '../blocks/ServicePrivilege'
 import SliderHeroWithCardsBlock from '../blocks/SliderHeroWithCardsBlock'
 import SpaceFiller from '../blocks/SpaceFiller'
 import TariffLimitsSection from '../blocks/TariffLimitsSection'
+import { UsefulServices } from '../blocks/UsefulServices'
 import VerticalCardBlock from '../blocks/VerticalCardBlock'
 import { contactCenter } from '../blocks/contactCenter'
 import { descriptionWithRichtext } from '../blocks/descriptionWithRichtext'
@@ -119,4 +121,6 @@ export const PageBlocks: Block[] = [
 	CategoryBonusSection,
 	DigitalCardSection,
 	QuestionBlock,
+	CurrencyTabList,
+	UsefulServices,
 ]
