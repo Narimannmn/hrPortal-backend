@@ -37,6 +37,13 @@ export const Questions: CollectionConfig = {
 					type: 'text',
 					required: true,
 				},
+				{
+					name: 'icon',
+					label: 'Иконка',
+					type: 'upload',
+					relationTo: 'icons',
+					required: true,
+				},
 			],
 		},
 		{
