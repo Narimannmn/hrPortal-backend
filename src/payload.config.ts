@@ -131,7 +131,10 @@ export default buildConfig({
       			url: 'https://eub-web03-lt1.eub.kz', 
       			description: 'Production server'
     			}
-  			]
+  			],
+			schemes: [
+    			"https"
+  			],
 		}),
 		swaggerUI({
 			docsUrl: '/api/docs',
