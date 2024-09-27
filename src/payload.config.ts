@@ -138,6 +138,9 @@ export default buildConfig({
 		}),
 		swaggerUI({
 			docsUrl: '/api/docs',
+			schemes: [
+    			"https"
+  			],	
 		}),
 		payloadCloud(),
 		cloudStorage({
