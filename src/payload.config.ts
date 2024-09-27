@@ -126,6 +126,12 @@ export default buildConfig({
 		openapi({
 			openapiVersion: '3.0',
 			metadata: { title: 'Dev API', version: '0.0.1' },
+			servers: [
+    			{
+      			url: 'https://eub-web03-lt1.eub.kz', 
+      			description: 'Production server'
+    			}
+  			]
 		}),
 		swaggerUI({
 			docsUrl: '/api/docs',
