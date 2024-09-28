@@ -58,6 +58,7 @@ import AttributesHelper from './ui/AttributesHelper'
 import { CollectionConfig } from 'payload/types'
 import { CurrencyTabList } from "../../blocks/CurrencyTabList";
 import { UsefulServices } from '../../blocks/UsefulServices';
+import { CalculatorInstallment } from '../../blocks/CalculatorInstallment'
 
 export const PageTemplates: CollectionConfig = {
 	slug: 'pgt',
@@ -170,7 +171,8 @@ export const PageTemplates: CollectionConfig = {
         Questions,
         DocumentList,
         CurrencyTabList,
-        UsefulServices
+        UsefulServices,
+        CalculatorInstallment
       ],
     },
   ],

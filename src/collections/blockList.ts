@@ -60,6 +60,7 @@ import {SearchPages} from "../blocks/SearchPages";
 import { Block } from 'payload/types'
 import { CurrencyTabList } from "../blocks/CurrencyTabList";
 import { UsefulServices } from '../blocks/UsefulServices'
+import { CalculatorInstallment } from '../blocks/CalculatorInstallment'
 
 export const PageBlocks: Block[] = [
   Hero,
@@ -121,6 +122,7 @@ export const PageBlocks: Block[] = [
 	InsuranceSection,
 	CategoryBonusSection,
 	DigitalCardSection,
-  CurrencyTabList,
-  UsefulServices
+	CurrencyTabList,
+	UsefulServices,
+	CalculatorInstallment
 ]
