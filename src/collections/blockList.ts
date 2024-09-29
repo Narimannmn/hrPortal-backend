@@ -51,6 +51,7 @@ import { HistoryBlock } from '../blocks/history'
 import { horizontalStatisticCard } from '../blocks/horizontalStatisticCard'
 import { information } from '../blocks/information'
 import { informationCard } from '../blocks/informationCard'
+import { InnerPageBlock } from '../blocks/innerPageBlock'
 import { ItemTypes } from '../blocks/itemTypes'
 import { keyPointedCard } from '../blocks/keyPointedCard'
 import { packageOffers } from '../blocks/packageOffers'
@@ -123,4 +124,5 @@ export const PageBlocks: Block[] = [
 	QuestionBlock,
 	CurrencyTabList,
 	UsefulServices,
+	InnerPageBlock,
 ]

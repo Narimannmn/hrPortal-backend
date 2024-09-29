@@ -3,6 +3,7 @@ import Documents from './collections/Documents'
 import FavouriteCategories from './collections/FavouriteCategories'
 import Files from './collections/Files'
 import Icons from './collections/Icons'
+import InnerPage from './collections/InnterPage'
 import Media from './collections/Media'
 import MenuItems from './collections/MenuItems'
 import MenuOrder from './collections/MenuOrder'
@@ -67,6 +68,16 @@ export default buildConfig({
 	admin: {
 		user: Users.slug,
 		bundler: webpackBundler(),
+		webpack: config => ({
+			...config,
+			resolve: {
+				...config.resolve,
+				fallback: {
+					...config.resolve.fallback,
+					fs: false,
+				},
+			},
+		}),
 	},
 	editor: slateEditor({}),
 	collections: [
@@ -103,6 +114,7 @@ export default buildConfig({
 		Videos,
 		Questions,
 		QuestionsSection,
+		InnerPage,
 
 		// Link tracking
 		TrackedLinks,
