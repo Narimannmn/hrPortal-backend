@@ -12,6 +12,7 @@ import { DocumentList } from '../blocks/DocumentList'
 import { ForSale } from '../blocks/ForSale'
 import { Hero } from '../blocks/Hero'
 import InsuranceSection from '../blocks/InsuranceSection'
+import { MiniTable } from '../blocks/MiniTable'
 import { MobileAppCard } from '../blocks/MobileAppCard'
 import { OfficeLocator } from '../blocks/OfficeLocator'
 import PageHeaderBlock from '../blocks/PageHeaderBlock'
@@ -125,4 +126,5 @@ export const PageBlocks: Block[] = [
 	CurrencyTabList,
 	UsefulServices,
 	InnerPageBlock,
+	MiniTable,
 ]
