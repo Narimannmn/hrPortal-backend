@@ -61,6 +61,7 @@ import { Block } from 'payload/types'
 import { CurrencyTabList } from "../blocks/CurrencyTabList";
 import { UsefulServices } from '../blocks/UsefulServices'
 import { CalculatorInstallment } from '../blocks/CalculatorInstallment'
+import { InstallmentsToCredit } from '../blocks/InstallmentsToCredit'
 
 export const PageBlocks: Block[] = [
   Hero,
@@ -124,5 +125,6 @@ export const PageBlocks: Block[] = [
 	DigitalCardSection,
 	CurrencyTabList,
 	UsefulServices,
-	CalculatorInstallment
+	CalculatorInstallment,
+	InstallmentsToCredit
 ]
