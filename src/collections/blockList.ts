@@ -6,11 +6,13 @@ import BonusSection from '../blocks/BonusSection'
 import CardBlockWithIcon from '../blocks/CardBlockWithIcon'
 import CategoryBonusSection from '../blocks/CategoryBonusSection'
 import ContactBannerCard from '../blocks/ContactBannerCard'
+import { CurrencyTabList } from '../blocks/CurrencyTabList'
 import DigitalCardSection from '../blocks/DigitalCardSection'
 import { DocumentList } from '../blocks/DocumentList'
 import { ForSale } from '../blocks/ForSale'
 import { Hero } from '../blocks/Hero'
 import InsuranceSection from '../blocks/InsuranceSection'
+import { MiniTable } from '../blocks/MiniTable'
 import { MobileAppCard } from '../blocks/MobileAppCard'
 import { OfficeLocator } from '../blocks/OfficeLocator'
 import PageHeaderBlock from '../blocks/PageHeaderBlock'
@@ -28,13 +30,15 @@ import PrivateUsefulArticles from '../blocks/PrivateUsefulArticles'
 import ProductCardsBlock from '../blocks/ProductCardsBlock'
 import PromotionsSection from '../blocks/PromotionsSection'
 import { QRCodeCard } from '../blocks/QRCodeCard'
-import { Questions } from '../blocks/Questions'
+import { QuestionBlock } from '../blocks/Questions'
 import ReminderForCardholders from '../blocks/ReminderForCardholders'
+import { SearchPages } from '../blocks/SearchPages'
 import ServicePackages from '../blocks/ServicePackages'
 import ServicePrivilege from '../blocks/ServicePrivilege'
 import SliderHeroWithCardsBlock from '../blocks/SliderHeroWithCardsBlock'
 import SpaceFiller from '../blocks/SpaceFiller'
 import TariffLimitsSection from '../blocks/TariffLimitsSection'
+import { UsefulServices } from '../blocks/UsefulServices'
 import VerticalCardBlock from '../blocks/VerticalCardBlock'
 import { contactCenter } from '../blocks/contactCenter'
 import { descriptionWithRichtext } from '../blocks/descriptionWithRichtext'
@@ -48,6 +52,7 @@ import { HistoryBlock } from '../blocks/history'
 import { horizontalStatisticCard } from '../blocks/horizontalStatisticCard'
 import { information } from '../blocks/information'
 import { informationCard } from '../blocks/informationCard'
+import { InnerPageBlock } from '../blocks/innerPageBlock'
 import { ItemTypes } from '../blocks/itemTypes'
 import { keyPointedCard } from '../blocks/keyPointedCard'
 import { packageOffers } from '../blocks/packageOffers'
@@ -56,15 +61,12 @@ import { table } from '../blocks/table'
 import { tariffCard } from '../blocks/tariffCard'
 import { videoPlayer } from '../blocks/videoPlayer'
 import { warningCard } from '../blocks/warningCard'
-import {SearchPages} from "../blocks/SearchPages";
 import { Block } from 'payload/types'
-import { CurrencyTabList } from "../blocks/CurrencyTabList";
-import { UsefulServices } from '../blocks/UsefulServices'
 import { CalculatorInstallment } from '../blocks/CalculatorInstallment'
 import { InstallmentsToCredit } from '../blocks/InstallmentsToCredit'
 
 export const PageBlocks: Block[] = [
-  Hero,
+	Hero,
 	ItemTypes,
 	table,
 	detailsCoin,
@@ -113,7 +115,6 @@ export const PageBlocks: Block[] = [
 	MobileAppCard,
 	PrivateUsefulArticles,
 	OfficeLocator,
-	Questions,
 	SpaceFiller,
 	PrivateFavorableConditions,
 	DocumentList,
@@ -126,5 +127,10 @@ export const PageBlocks: Block[] = [
 	CurrencyTabList,
 	UsefulServices,
 	CalculatorInstallment,
-	InstallmentsToCredit
+	InstallmentsToCredit,
+	QuestionBlock,
+	CurrencyTabList,
+	UsefulServices,
+	InnerPageBlock,
+	MiniTable,
 ]

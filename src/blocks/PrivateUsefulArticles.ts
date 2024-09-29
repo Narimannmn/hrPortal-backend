@@ -3,8 +3,8 @@ import { Block } from 'payload/types'
 const PrivateUsefulArticles: Block = {
 	slug: 'PrivateUsefulArticles',
 	labels: {
-		singular: 'Полезные статьи',
-		plural: 'Полезные статьи',
+		singular: 'Полезные новости',
+		plural: 'Полезные новость',
 	},
 	fields: [
 		{
@@ -100,7 +100,7 @@ const PrivateUsefulArticles: Block = {
 					},
 				},
 			],
-		}
+		},
 	],
 }
 

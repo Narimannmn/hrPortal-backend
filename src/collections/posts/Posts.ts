@@ -3,12 +3,12 @@ import { CollectionConfig } from 'payload/types'
 const Posts: CollectionConfig = {
 	slug: 'posts',
 	labels: {
-		singular: 'Статья',
-		plural: 'Статьи',
+		singular: 'Новость',
+		plural: 'Новости',
 	},
 	admin: {
 		useAsTitle: 'titleEn',
-		group: 'Статьи',
+		group: 'Новости',
 	},
 	access: {
 		read: () => true,

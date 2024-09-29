@@ -287,19 +287,34 @@ const VerticalCardBlock: Block = {
 									name: 'labelKz',
 									label: 'Текст (Казахский)',
 									type: 'text',
-									required: true,
+									validate: (value, { siblingData }) => {
+										if (siblingData.btnType === 'full' && !value) {
+											return 'This field is required'
+										}
+										return true
+									},
 								},
 								{
 									name: 'labelRu',
 									label: 'Текст (Русский)',
 									type: 'text',
-									required: true,
+									validate: (value, { siblingData }) => {
+										if (siblingData.btnType === 'full' && !value) {
+											return 'This field is required'
+										}
+										return true
+									},
 								},
 								{
 									name: 'labelEn',
 									label: 'Текст (Английский)',
 									type: 'text',
-									required: true,
+									validate: (value, { siblingData }) => {
+										if (siblingData.btnType === 'full' && !value) {
+											return 'This field is required'
+										}
+										return true
+									},
 								},
 							],
 						},
