@@ -62,6 +62,8 @@ import { tariffCard } from '../blocks/tariffCard'
 import { videoPlayer } from '../blocks/videoPlayer'
 import { warningCard } from '../blocks/warningCard'
 import { Block } from 'payload/types'
+import { CalculatorInstallment } from '../blocks/CalculatorInstallment'
+import { InstallmentsToCredit } from '../blocks/InstallmentsToCredit'
 
 export const PageBlocks: Block[] = [
 	Hero,
@@ -122,6 +124,10 @@ export const PageBlocks: Block[] = [
 	InsuranceSection,
 	CategoryBonusSection,
 	DigitalCardSection,
+	CurrencyTabList,
+	UsefulServices,
+	CalculatorInstallment,
+	InstallmentsToCredit,
 	QuestionBlock,
 	CurrencyTabList,
 	UsefulServices,
