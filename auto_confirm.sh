@@ -8,11 +8,13 @@ spawn ts-node src/server.ts -- -I --force
 
 proc handle_prompt {} {
     expect {
-        -re ".*Is .* table created or renamed from another table\?" {
+        -re {Is .* table created or renamed from another table\?} {
+            puts "Prompt detected: Table creation or rename"
             send -- "\r"
             exp_continue
         }
-        -re ".*Accept warnings and push schema to database\?" {
+        -re {Accept warnings and push schema to database\?} {
+            puts "Prompt detected: Accept warnings"
             send -- "yes\r"
             exp_continue
         }
