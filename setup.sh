@@ -1,6 +1,6 @@
 #!/bin/sh
 
-apk add --no-cache expect
+apk add --no-cache expect vips vips-dev build-base
 
 chmod +x ./auto_confirm.sh
 chmod -R 755 /home/node/app/auto_confirm.sh
