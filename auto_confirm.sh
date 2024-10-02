@@ -10,7 +10,7 @@ puts "Server started..."
 
 proc handle_prompt {} {
     expect {
-        -re {Is .* table created or renamed from another table\?} {
+        -re {Is .* table created or renamed from another .*} {
             puts "Prompt detected: Table creation or rename"
             send -- "\r"
             exp_continue
