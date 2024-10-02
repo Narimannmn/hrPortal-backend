@@ -1,8 +1,6 @@
 #!/usr/bin/expect -f
 
 puts "Starting auto_confirm.sh"
-
-cd /home/node/app
 puts "Current directory: [pwd]"
 
 set timeout -1

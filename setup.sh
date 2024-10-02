@@ -1,6 +1,6 @@
 #!/bin/sh
 
-apk add --no-cache expect vips vips-dev build-base python3
+apk add --no-cache expect
 
 chmod +x ./auto_confirm.sh
 chmod -R 755 /home/node/app/auto_confirm.sh
