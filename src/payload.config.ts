@@ -17,8 +17,8 @@ import { TrackedLinksClicks } from './collections/TrackedLinksClicks'
 import Users from './collections/Users'
 import Videos from './collections/Videos'
 import { CreditBlock } from './collections/business.credits/BusinessCredits'
-import CompareCards from './collections/debit.cards/CardTable'
-import DebitCardCategories from './collections/debit.cards/DebitCards'
+import DebitCardCategories from './collections/debit.cards/DebitCardCategories'
+import DebitCards from './collections/debit.cards/DebitCards'
 import Directors from './collections/directors'
 import Employees from './collections/employees'
 import FormCardSelection from './collections/forms/formCardSelection'
@@ -34,7 +34,7 @@ import Banks from './collections/map/bank'
 import Offices from './collections/map/offices'
 import ServiceList from './collections/map/service.list'
 import Terminals from './collections/map/terminals'
-import Filters from './collections/marketplace/filters'
+import Filters from './collections/marketplace/categories'
 import ForSaleItems from './collections/marketplace/marketplace'
 import PostCategories from './collections/posts/PostCategories'
 import Posts from './collections/posts/Posts'
@@ -83,6 +83,8 @@ export default buildConfig({
 	collections: [
 		Users,
 		Pages,
+		// DebitCards,
+		// DebitCardCategories,
 		Media,
 		Icons,
 		SecondaryMenu,
@@ -93,8 +95,6 @@ export default buildConfig({
 		PostCategories,
 		ForSaleItems,
 		Filters,
-		DebitCardCategories,
-		CompareCards,
 		Banks,
 		Terminals,
 		Offices,
@@ -115,10 +115,6 @@ export default buildConfig({
 		Questions,
 		QuestionsSection,
 		InnerPage,
-
-		// Link tracking
-		TrackedLinks,
-		TrackedLinksClicks,
 		FormWithTextMessage,
 		FormWithCity,
 		FormWithAdditionalInfo,
@@ -127,6 +123,10 @@ export default buildConfig({
 		FormWithCreditDelinquencies,
 		FormCardSelection,
 		FormWithUploadingDocument,
+
+		// Link tracking
+		TrackedLinks,
+		TrackedLinksClicks,
 	],
 	typescript: {
 		outputFile: path.resolve(__dirname, './generated-types.ts'),

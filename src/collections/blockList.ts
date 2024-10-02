@@ -7,7 +7,7 @@ import CardBlockWithIcon from '../blocks/CardBlockWithIcon'
 import CategoryBonusSection from '../blocks/CategoryBonusSection'
 import ContactBannerCard from '../blocks/ContactBannerCard'
 import { CurrencyTabList } from '../blocks/CurrencyTabList'
-import DigitalCardSection from '../blocks/DigitalCardSection'
+import { DebitCards } from '../blocks/DebitBlock'
 import { DocumentList } from '../blocks/DocumentList'
 import { ForSale } from '../blocks/ForSale'
 import { Hero } from '../blocks/Hero'
@@ -121,10 +121,10 @@ export const PageBlocks: Block[] = [
 	PromotionsSection,
 	InsuranceSection,
 	CategoryBonusSection,
-	DigitalCardSection,
 	QuestionBlock,
 	CurrencyTabList,
 	UsefulServices,
 	InnerPageBlock,
 	MiniTable,
+	DebitCards,
 ]
