@@ -9,7 +9,6 @@ test_backend:
     - docker:dind
   script:
     - apk add --no-cache ca-certificates curl expect coreutils
-    - wget http://ftp.gnu.org/gnu/coreutils/coreutils-8.32.tar.xz
     - docker ps
     - echo "DATABASE_URI=postgres://${PUSER}:${PPASS}@db:5432/${PDB}" > .env
     - echo "PAYLOAD_SECRET={$PAYLOAD_SECRET}" >> .env

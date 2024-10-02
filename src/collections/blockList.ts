@@ -3,6 +3,7 @@ import AdvantagesDiffWidth from '../blocks/AdvantagesDiffWidth'
 import { AllStores } from '../blocks/AllStores'
 import { BankLocation } from '../blocks/BankLocations'
 import BonusSection from '../blocks/BonusSection'
+import { CalculatorInstallment } from '../blocks/CalculatorInstallment'
 import CardBlockWithIcon from '../blocks/CardBlockWithIcon'
 import CategoryBonusSection from '../blocks/CategoryBonusSection'
 import ContactBannerCard from '../blocks/ContactBannerCard'
@@ -11,6 +12,7 @@ import { DebitCards } from '../blocks/DebitBlock'
 import { DocumentList } from '../blocks/DocumentList'
 import { ForSale } from '../blocks/ForSale'
 import { Hero } from '../blocks/Hero'
+import { InstallmentsToCredit } from '../blocks/InstallmentsToCredit'
 import InsuranceSection from '../blocks/InsuranceSection'
 import { MiniTable } from '../blocks/MiniTable'
 import { MobileAppCard } from '../blocks/MobileAppCard'
@@ -121,6 +123,10 @@ export const PageBlocks: Block[] = [
 	PromotionsSection,
 	InsuranceSection,
 	CategoryBonusSection,
+	CurrencyTabList,
+	UsefulServices,
+	CalculatorInstallment,
+	InstallmentsToCredit,
 	QuestionBlock,
 	CurrencyTabList,
 	UsefulServices,
