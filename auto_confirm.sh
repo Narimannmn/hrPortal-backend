@@ -2,9 +2,13 @@
 
 puts "Starting auto_confirm.sh"
 
+cd /home/node/app
+puts "Current directory: [pwd]"
+
 set timeout -1
 
 spawn ts-node src/server.ts -- -I --force
+puts "Server started..."
 
 proc handle_prompt {} {
     expect {
