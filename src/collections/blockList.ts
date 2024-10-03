@@ -11,6 +11,7 @@ import { CurrencyTabList } from '../blocks/CurrencyTabList'
 import { DebitCards } from '../blocks/DebitBlock'
 import { DocumentList } from '../blocks/DocumentList'
 import { ForSale } from '../blocks/ForSale'
+import GridContentCard from '../blocks/GridContentCard'
 import { Hero } from '../blocks/Hero'
 import { InstallmentsToCredit } from '../blocks/InstallmentsToCredit'
 import InsuranceSection from '../blocks/InsuranceSection'
@@ -133,4 +134,5 @@ export const PageBlocks: Block[] = [
 	InnerPageBlock,
 	MiniTable,
 	DebitCards,
+	GridContentCard
 ]
