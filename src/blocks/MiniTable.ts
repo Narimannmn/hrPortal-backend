@@ -32,6 +32,17 @@ export const MiniTable: Block = {
 						{ name: 'labelEn', type: 'text', label: 'Английский' },
 					],
 				},
+				{
+					name: 'additionValue',
+					label: 'Дополнительное значение',
+					type: 'array',
+					required: false,
+					fields: [
+						{ name: 'labelKz', type: 'text', label: 'Казахский' },
+						{ name: 'labelRu', type: 'text', label: 'Русский' },
+						{ name: 'labelEn', type: 'text', label: 'Английский' },
+					],
+				},
 			],
 		},
 	],
