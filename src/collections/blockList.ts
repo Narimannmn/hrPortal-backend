@@ -4,6 +4,7 @@ import { AllStores } from '../blocks/AllStores'
 import { BankLocation } from '../blocks/BankLocations'
 import BonusSection from '../blocks/BonusSection'
 import { CalculatorInstallment } from '../blocks/CalculatorInstallment'
+import { CalculatorTurbo } from '../blocks/CalculatorTurbo'
 import CardBlockWithIcon from '../blocks/CardBlockWithIcon'
 import CategoryBonusSection from '../blocks/CategoryBonusSection'
 import ContactBannerCard from '../blocks/ContactBannerCard'
@@ -134,5 +135,6 @@ export const PageBlocks: Block[] = [
 	InnerPageBlock,
 	MiniTable,
 	DebitCards,
-	GridContentCard
+	GridContentCard,
+	CalculatorTurbo
 ]
