@@ -16,6 +16,8 @@ import GridContentCard from '../blocks/GridContentCard'
 import { Hero } from '../blocks/Hero'
 import { InstallmentsToCredit } from '../blocks/InstallmentsToCredit'
 import InsuranceSection from '../blocks/InsuranceSection'
+import { MapInfoCard } from '../blocks/MapInfoCard'
+import { MapQRCard } from '../blocks/MapQRCard'
 import { MiniTable } from '../blocks/MiniTable'
 import { MobileAppCard } from '../blocks/MobileAppCard'
 import { OfficeLocator } from '../blocks/OfficeLocator'
@@ -136,5 +138,7 @@ export const PageBlocks: Block[] = [
 	MiniTable,
 	DebitCards,
 	GridContentCard,
-	CalculatorTurbo
+	CalculatorTurbo,
+	MapQRCard,
+	MapInfoCard
 ]
