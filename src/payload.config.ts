@@ -51,7 +51,7 @@ import { slateEditor } from '@payloadcms/richtext-slate'
 import path from 'path'
 import { openapi, swaggerUI } from 'payload-oapi'
 import { buildConfig } from 'payload/config'
-import search from '@payloadcms/plugin-search'
+
 
 const storageAdapter = s3Adapter({
 	config: {
@@ -142,10 +142,6 @@ export default buildConfig({
 		}),
 		swaggerUI({
 			docsUrl: '/api/docs',
-		}),
-		search({
-			collections: ['posts', 'Questions', 'history'],
-			syncDrafts: true
 		}),
 		payloadCloud(),
 		cloudStorage({

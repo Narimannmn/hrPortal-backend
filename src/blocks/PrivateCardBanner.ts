@@ -128,28 +128,7 @@ const PrivateCardBanner: Block = {
             type: 'upload',
             relationTo: 'media',
             required: true,
-        },
-        {
-            name: 'backgroundPosition',
-            label: 'Расположение размытого заднего фона',
-            type: 'radio',
-            required: false,
-            defaultValue: "center",
-            options: [
-                {
-                    label: 'Слева',
-                    value: 'left',
-                },
-                {
-                    label: 'По центру',
-                    value: 'center',
-                },
-                {
-                    label: 'Справа',
-                    value: 'right',
-                }
-            ]
-        },
+        }
     ],
 }
 
