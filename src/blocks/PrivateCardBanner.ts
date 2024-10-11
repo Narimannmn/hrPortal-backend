@@ -90,66 +90,12 @@ const PrivateCardBanner: Block = {
             ],
         },
         {
-            name: 'linkType',
-            label: 'Тип ссылки',
-            type: 'select',
-            options: [
-                {
-                    label: 'Страница',
-                    value: 'page',
-                },
-                {
-                    label: 'Произвольная ссылка',
-                    value: 'custom',
-                },
-            ],
-            required: false,
-        },
-        {
-            name: 'pageSlug',
-            label: 'Ссылка на страницу',
-            type: 'relationship',
-            relationTo: 'pages',
-            admin: {
-                condition: (_, siblingData) => siblingData.linkType === 'page',
-            },
-        },
-        {
-            name: 'customLink',
-            label: 'Произвольная ссылка',
-            type: 'text',
-            admin: {
-                condition: (_, siblingData) => siblingData.linkType === 'custom',
-            },
-        },
-        {
             name: 'imageUrl',
             label: 'Ссылка на изображение',
             type: 'upload',
             relationTo: 'media',
             required: true,
-        },
-        {
-            name: 'backgroundPosition',
-            label: 'Расположение размытого заднего фона',
-            type: 'radio',
-            required: false,
-            defaultValue: "center",
-            options: [
-                {
-                    label: 'Слева',
-                    value: 'left',
-                },
-                {
-                    label: 'По центру',
-                    value: 'center',
-                },
-                {
-                    label: 'Справа',
-                    value: 'right',
-                }
-            ]
-        },
+        }
     ],
 }
 

@@ -31,6 +31,7 @@ import Employees from './collections/employees'
 import FormCardSelection from './collections/forms/formCardSelection'
 import FormForOrderingCall from './collections/forms/formForOrderingCall'
 import FormForPerson from './collections/forms/formForPerson'
+import FormForSms from './collections/forms/formForSms'
 import FormWithAdditionalInfo from './collections/forms/formWithAdditionalInfo'
 import FormWithCity from './collections/forms/formWithCity'
 import FormWithCreditDelinquencies from './collections/forms/formWithCreditDelinquencies'
@@ -126,6 +127,7 @@ export default buildConfig({
 		FormWithCity,
 		FormWithAdditionalInfo,
 		FormForPerson,
+		FormForSms,
 		FormForOrderingCall,
 		FormWithCreditDelinquencies,
 		FormCardSelection,

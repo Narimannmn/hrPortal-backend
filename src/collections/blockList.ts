@@ -4,15 +4,19 @@ import { AllStores } from '../blocks/AllStores'
 import { BankLocation } from '../blocks/BankLocations'
 import BonusSection from '../blocks/BonusSection'
 import { CalculatorInstallment } from '../blocks/CalculatorInstallment'
+import { CalculatorTurbo } from '../blocks/CalculatorTurbo'
 import CardBlockWithIcon from '../blocks/CardBlockWithIcon'
 import CategoryBonusSection from '../blocks/CategoryBonusSection'
 import ContactBannerCard from '../blocks/ContactBannerCard'
 import { CurrencyTabList } from '../blocks/CurrencyTabList'
 import { DocumentList } from '../blocks/DocumentList'
 import { ForSale } from '../blocks/ForSale'
+import GridContentCard from '../blocks/GridContentCard'
 import { Hero } from '../blocks/Hero'
 import { InstallmentsToCredit } from '../blocks/InstallmentsToCredit'
 import InsuranceSection from '../blocks/InsuranceSection'
+import { MapInfoCard } from '../blocks/MapInfoCard'
+import { MapQRCard } from '../blocks/MapQRCard'
 import { MiniTable } from '../blocks/MiniTable'
 import { MobileAppCard } from '../blocks/MobileAppCard'
 import { OfficeLocator } from '../blocks/OfficeLocator'
@@ -131,4 +135,8 @@ export const PageBlocks: Block[] = [
 	UsefulServices,
 	InnerPageBlock,
 	MiniTable,
+	GridContentCard,
+	CalculatorTurbo,
+	MapQRCard,
+	MapInfoCard,
 ]
