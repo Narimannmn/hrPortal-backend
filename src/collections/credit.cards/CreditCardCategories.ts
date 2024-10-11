@@ -1,14 +1,14 @@
 import { CollectionConfig } from 'payload/types'
 
-const DebitCardCategories: CollectionConfig = {
-	slug: 'debit-cards-categories',
+const CreditCardCategories: CollectionConfig = {
+	slug: 'credit-cards-categories',
 	labels: {
-		singular: 'Категория - дебетовая карта',
-		plural: 'Категории - дебетовые карты',
+		singular: 'Категория - кредитные карта',
+		plural: 'Категории - кредитные карты',
 	},
 	admin: {
 		useAsTitle: 'label.labelRu',
-		group: 'Дебетовые карты',
+		group: 'Кредитные карты',
 	},
 	access: {
 		read: () => true,
@@ -42,4 +42,4 @@ const DebitCardCategories: CollectionConfig = {
 	],
 }
 
-export default DebitCardCategories
+export default CreditCardCategories

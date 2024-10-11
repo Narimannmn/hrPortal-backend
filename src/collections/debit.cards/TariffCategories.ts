@@ -1,10 +1,10 @@
 import { CollectionConfig } from 'payload/types'
 
-const DebitCardCategories: CollectionConfig = {
-	slug: 'debit-cards-categories',
+const TariffCategories: CollectionConfig = {
+	slug: 'tariff-categories-debit-cards',
 	labels: {
-		singular: 'Категория - дебетовая карта',
-		plural: 'Категории - дебетовые карты',
+		singular: 'Тарифы - раздел дебетовая карта',
+		plural: 'Тариф - раздел дебетовых карт',
 	},
 	admin: {
 		useAsTitle: 'label.labelRu',
@@ -16,7 +16,7 @@ const DebitCardCategories: CollectionConfig = {
 	fields: [
 		{
 			name: 'label',
-			label: 'Добавить категорию',
+			label: 'Добавить раздел',
 			type: 'group',
 			fields: [
 				{
@@ -42,4 +42,4 @@ const DebitCardCategories: CollectionConfig = {
 	],
 }
 
-export default DebitCardCategories
+export default TariffCategories

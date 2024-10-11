@@ -19,6 +19,12 @@ const Media: CollectionConfig = {
 	upload: {
 		staticURL: '/media',
 		staticDir: 'media',
+		formatOptions: {
+			format: 'webp',
+			options: {
+				quality: 70,
+			},
+		},
 	},
 	admin: {
 		group: 'Общий медиа контент контент',

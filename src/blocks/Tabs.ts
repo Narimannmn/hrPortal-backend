@@ -45,6 +45,15 @@ const PageTabs: Block = {
 			],
 		},
 		{
+			name: 'heading_type',
+			label: 'Расположение таба',
+			type: 'select',
+			options: [
+				{ label: 'По умолчанию', value: '' },
+				{ label: 'Справа', value: 'right' },
+			],
+		},
+		{
 			name: 'tabs',
 			label: 'Табы',
 			type: 'array',

@@ -1,14 +1,14 @@
 import { CollectionConfig } from 'payload/types'
 
-const DebitCards: CollectionConfig = {
-	slug: 'debit-cards',
+const CreditCards: CollectionConfig = {
+	slug: 'credit-cards',
 	labels: {
-		singular: 'Дебетовая карта',
-		plural: 'Дебетовые карты',
+		singular: 'Кредитная карта',
+		plural: 'Кредитные карты',
 	},
 	admin: {
 		useAsTitle: 'title.labelRu',
-		group: 'Дебетовые карты',
+		group: 'Кредитные карты',
 	},
 	access: {
 		read: () => true,
@@ -18,7 +18,7 @@ const DebitCards: CollectionConfig = {
 			name: 'category',
 			label: 'Выбрать категорию',
 			type: 'relationship',
-			relationTo: 'debit-cards-categories',
+			relationTo: 'credit-cards-categories',
 			required: true,
 		},
 		{
@@ -140,4 +140,4 @@ const DebitCards: CollectionConfig = {
 	],
 }
 
-export default DebitCards
+export default CreditCards

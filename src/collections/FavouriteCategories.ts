@@ -10,7 +10,7 @@ const FavouriteCategories: CollectionConfig = {
 		read: () => true,
 	},
 	admin: {
-		group: 'Магазин',
+		group: 'Партнеры',
 		useAsTitle: 'labels.labelRu',
 	},
 	fields: [
