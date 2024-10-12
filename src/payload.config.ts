@@ -56,7 +56,6 @@ import { postgresAdapter } from '@payloadcms/db-postgres'
 import { payloadCloud } from '@payloadcms/plugin-cloud'
 import { cloudStorage } from '@payloadcms/plugin-cloud-storage'
 import { s3Adapter } from '@payloadcms/plugin-cloud-storage/s3'
-import search from '@payloadcms/plugin-search'
 import { slateEditor } from '@payloadcms/richtext-slate'
 import path from 'path'
 import { openapi, swaggerUI } from 'payload-oapi'
@@ -160,10 +159,6 @@ export default buildConfig({
 		}),
 		swaggerUI({
 			docsUrl: '/api/docs',
-		}),
-		search({
-			collections: ['posts', 'Questions', 'history'],
-			syncDrafts: true,
 		}),
 		payloadCloud(),
 		cloudStorage({
