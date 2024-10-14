@@ -24,6 +24,38 @@ const FormForSms: CollectionConfig = {
 			type: 'text',
 			required: true,
 		},
+		{
+			name: 'utms',
+			label: 'Метки (UTM)',
+			type: 'group',
+			fields: [
+				{
+					name: 'utm_source',
+					label: 'UTM Source',
+					type: 'text',
+				},
+				{
+					name: 'utm_medium',
+					label: 'UTM Medium',
+					type: 'text',
+				},
+				{
+					name: 'utm_campaign',
+					label: 'UTM Campaign',
+					type: 'text',
+				},
+				{
+					name: 'utm_content',
+					label: 'UTM Content',
+					type: 'text',
+				},
+				{
+					name: 'utm_term',
+					label: 'UTM Term',
+					type: 'text',
+				},
+			],
+		},
 	],
 }
 
