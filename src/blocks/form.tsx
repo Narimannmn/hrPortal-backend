@@ -1,4 +1,4 @@
-import { Block } from 'payload/types'
+import { Block } from "payload/types";
 
 export const form: Block = {
   slug: "form",
@@ -92,6 +92,10 @@ export const form: Block = {
             {
               label: "Форма для физического лица",
               value: "formForPerson",
+            },
+            {
+              label: "Форма для льготного кредитования",
+              value: "formPreferentialLoan",
             },
             {
               label: "Форма для отправки SMS",
