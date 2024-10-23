@@ -89,7 +89,11 @@ export default buildConfig({
 			},
 		}),
 	},
-	editor: slateEditor({}),
+	editor: slateEditor({
+		// admin: {
+		// 	leaves: ['bold', 'code', 'italic', 'strikethrough', 'underline', HighlightedText]
+		// }
+	}),
 	collections: [
 		Users,
 		Pages,

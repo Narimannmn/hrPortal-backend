@@ -32,6 +32,9 @@ import PrivateProgramConditions from '../blocks/PrivateProgramConditions'
 import PrivateSlider from '../blocks/PrivateSlider'
 import PrivateTravelCards from '../blocks/PrivateTravelCards'
 import PrivateUsefulArticles from '../blocks/PrivateUsefulArticles'
+import PrivateInsuranceAdvantages from "../blocks/PrivateInsuranceAdvantages";
+import PrivateConciergeAdvantages from "../blocks/PrivateConciergeAdvantages";
+import PrivateLoungeKeyCard from "../blocks/PrivateLoungeKeyCard";
 import ProductCardsBlock from '../blocks/ProductCardsBlock'
 import PromotionsSection from '../blocks/PromotionsSection'
 import { QRCodeCard } from '../blocks/QRCodeCard'
@@ -139,4 +142,7 @@ export const PageBlocks: Block[] = [
 	CalculatorTurbo,
 	MapQRCard,
 	MapInfoCard,
+	PrivateInsuranceAdvantages,
+	PrivateConciergeAdvantages,
+	PrivateLoungeKeyCard
 ]
