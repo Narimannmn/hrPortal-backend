@@ -15,17 +15,17 @@ const FormPreferentialLoan: CollectionConfig = {
 	admin: {
 		useAsTitle: 'Заполненные формы для льготного кредитования',
 		group: 'Заполненные формы',
-		defaultColumns: ['familyName', 'name', 'phone', 'iin', 'carBrand', 'carPrice', 'downPaymentInPercent', 'downPaymentPrice', 'creditSum', 'circulationCity'],
+		defaultColumns: ['lastName', 'firstName', 'phone', 'iin', 'carBrand', 'carPrice', 'downPaymentInPercent', 'downPaymentPrice', 'creditSum', 'circulationCity'],
 	},
 	fields: [
 		{
-			name: 'familyName',
+			name: 'lastName',
 			label: 'Фамилия',
 			type: 'text',
 			required: true,
 		},
         {
-			name: 'name',
+			name: 'firstName',
 			label: 'Имя',
 			type: 'text',
 			required: true,
