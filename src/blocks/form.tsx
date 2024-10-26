@@ -132,6 +132,16 @@ export const form: Block = {
           ],
           required: true,
         },
+        {
+          name: 'isCityIncluded',
+          label: 'Включить город',
+          type: 'checkbox',
+          defaultValue: true,
+          required: false,
+          admin: {
+            condition: (_, siblingData) => siblingData.formVariant === 'formForOrderingCall',
+          },
+        },
       ],
     },
   ],

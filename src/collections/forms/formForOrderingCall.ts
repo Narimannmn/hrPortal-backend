@@ -34,7 +34,7 @@ const FormForOrderingCall: CollectionConfig = {
 			name: 'city',
 			label: 'Город',
 			type: 'text',
-			required: true,
+			required: false,
 		},
 		{
 			name: 'utms',

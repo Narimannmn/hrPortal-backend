@@ -69,6 +69,7 @@ import { table } from '../blocks/table'
 import { tariffCard } from '../blocks/tariffCard'
 import { videoPlayer } from '../blocks/videoPlayer'
 import { warningCard } from '../blocks/warningCard'
+import {ButtonBlock} from "../blocks/ButtonBlock";
 import { Block } from 'payload/types'
 
 export const PageBlocks: Block[] = [
@@ -144,5 +145,6 @@ export const PageBlocks: Block[] = [
 	MapInfoCard,
 	PrivateInsuranceAdvantages,
 	PrivateConciergeAdvantages,
-	PrivateLoungeKeyCard
+	PrivateLoungeKeyCard,
+	ButtonBlock
 ]

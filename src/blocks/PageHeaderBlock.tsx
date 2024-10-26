@@ -24,6 +24,22 @@ const PageHeaderBlock: Block = {
 			]
 		},
 		{
+			name: 'size',
+			label: 'Размер текста',
+			type: 'radio',
+			defaultValue: 'lg',
+			options: [
+				{
+					label: 'Большой',
+					value: 'lg',
+				},
+				{
+					label: 'Средний',
+					value: 'md',
+				}
+			]
+		},
+		{
 			name: 'marginY',
 			label: 'Отступы по Y координате',
 			type: 'group',
