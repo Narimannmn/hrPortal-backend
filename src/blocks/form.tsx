@@ -1,4 +1,4 @@
-import { Block } from 'payload/types'
+import { Block } from "payload/types";
 
 export const form: Block = {
   slug: "form",
@@ -94,6 +94,10 @@ export const form: Block = {
               value: "formForPerson",
             },
             {
+              label: "Форма для льготного кредитования",
+              value: "formPreferentialLoan",
+            },
+            {
               label: "Форма для отправки SMS",
               value: "formSendSMS",
             },
@@ -127,6 +131,16 @@ export const form: Block = {
             },
           ],
           required: true,
+        },
+        {
+          name: 'isCityIncluded',
+          label: 'Включить город',
+          type: 'checkbox',
+          defaultValue: true,
+          required: false,
+          admin: {
+            condition: (_, siblingData) => siblingData.formVariant === 'formForOrderingCall',
+          },
         },
       ],
     },

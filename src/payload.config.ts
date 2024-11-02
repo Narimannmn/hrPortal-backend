@@ -32,6 +32,7 @@ import Employees from './collections/employees'
 import FormCardSelection from './collections/forms/formCardSelection'
 import FormForOrderingCall from './collections/forms/formForOrderingCall'
 import FormForPerson from './collections/forms/formForPerson'
+import FormPreferentialLoan from './collections/forms/formPreferentialLoan'
 import FormForSms from './collections/forms/formForSms'
 import FormWithAdditionalInfo from './collections/forms/formWithAdditionalInfo'
 import FormWithCity from './collections/forms/formWithCity'
@@ -60,7 +61,6 @@ import { postgresAdapter } from '@payloadcms/db-postgres'
 import { payloadCloud } from '@payloadcms/plugin-cloud'
 import { cloudStorage } from '@payloadcms/plugin-cloud-storage'
 import { s3Adapter } from '@payloadcms/plugin-cloud-storage/s3'
-import search from '@payloadcms/plugin-search'
 import { slateEditor } from '@payloadcms/richtext-slate'
 import path from 'path'
 import { openapi, swaggerUI } from 'payload-oapi'
@@ -93,7 +93,11 @@ export default buildConfig({
 			},
 		}),
 	},
-	editor: slateEditor({}),
+	editor: slateEditor({
+		// admin: {
+		// 	leaves: ['bold', 'code', 'italic', 'strikethrough', 'underline', HighlightedText]
+		// }
+	}),
 	collections: [
 		Users,
 		Pages,
@@ -129,6 +133,7 @@ export default buildConfig({
 		FormWithCity,
 		FormWithAdditionalInfo,
 		FormForPerson,
+		FormPreferentialLoan,
 		FormForSms,
 		FormForOrderingCall,
 		FormWithCreditDelinquencies,
@@ -170,10 +175,6 @@ export default buildConfig({
 		}),
 		swaggerUI({
 			docsUrl: '/api/docs',
-		}),
-		search({
-			collections: ['posts', 'Questions', 'history'],
-			syncDrafts: true,
 		}),
 		payloadCloud(),
 		// cloudStorage({

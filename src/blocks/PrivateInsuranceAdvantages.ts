@@ -1,10 +1,10 @@
 import { Block } from 'payload/types'
 
-const PrivateTravelCards: Block = {
-	slug: 'PrivateTravelCards',
+const PrivateInsuranceAdvantages: Block = {
+	slug: 'PrivateInsuranceAdvantages',
 	labels: {
-		singular: 'Карточки для путешествии',
-		plural: 'Карточки для путешествии',
+		singular: 'Приват Карточки для преимущества странховании',
+		plural: 'Приват Карточки для преимущества странховании',
 	},
 	fields: [
 		{
@@ -52,59 +52,26 @@ const PrivateTravelCards: Block = {
 						{
 							name: 'labelRu',
 							label: 'Название (Рус)',
-							type: 'text',
-							required: false,
+							type: 'richText',
+							required: true,
 						},
 						{
 							name: 'labelEn',
 							label: 'Название (En)',
-							type: 'text',
-							required: false,
+							type: 'richText',
+							required: true,
 						},
 						{
 							name: 'labelKz',
 							label: 'Название (Қаз)',
-							type: 'text',
-							required: false,
+							type: 'richText',
+							required: true,
 						},
 					],
-				},
-				{
-					name: 'linkType',
-					label: 'Тип ссылки',
-					type: 'select',
-					options: [
-						{
-							label: 'Страница',
-							value: 'page',
-						},
-						{
-							label: 'Произвольная ссылка',
-							value: 'custom',
-						},
-					],
-					required: true,
-				},
-				{
-					name: 'pageSlug',
-					label: 'Ссылка на страницу',
-					type: 'relationship',
-					relationTo: 'pages',
-					admin: {
-						condition: (_, siblingData) => siblingData.linkType === 'page',
-					},
-				},
-				{
-					name: 'customLink',
-					label: 'Произвольная ссылка',
-					type: 'text',
-					admin: {
-						condition: (_, siblingData) => siblingData.linkType === 'custom',
-					},
-				},
+				}
 			],
 		}
 	],
 }
 
-export default PrivateTravelCards
+export default PrivateInsuranceAdvantages
