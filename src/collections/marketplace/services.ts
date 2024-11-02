@@ -1,42 +1,42 @@
 import { CollectionConfig } from 'payload/types'
 
-const MarketplaceCategories: CollectionConfig = {
-	slug: 'marketplace_categories',
+const MarketplaceServices: CollectionConfig = {
+	slug: 'marketplace_services',
 	labels: {
-		singular: 'Категория маркетплейса',
-		plural: 'Категория маркетплейса',
+		singular: 'Тип услуги маркетплейса',
+		plural: 'Тип услуги Категория маркетплейса',
 	},
 	admin: {
 		useAsTitle: 'labelRu',
-		group: 'Имущество на продажу',
+		group: 'Имущество на продажу - Админ',
 	},
 	fields: [
 		{
 			name: 'category',
-			label: 'Категория',
+			label: 'Тип услуги',
 			type: 'group',
 			fields: [
 				{
 					name: 'labelKz',
-					label: 'Санат',
+					label: 'Тип услуги на казахском',
 					type: 'text',
-					required: false,
+					required: true,
 				},
 				{
 					name: 'labelRu',
-					label: 'Категория',
+					label: 'Тип услуги на русском',
 					type: 'text',
-					required: false,
+					required: true,
 				},
 				{
 					name: 'labelEn',
-					label: 'Category',
+					label: 'Type of service',
 					type: 'text',
-					required: false,
+					required: true,
 				},
 			],
 		},
 	],
 }
 
-export default MarketplaceCategories
+export default MarketplaceServices

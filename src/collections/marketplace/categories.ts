@@ -8,7 +8,7 @@ const MarketplaceCategories: CollectionConfig = {
 	},
 	admin: {
 		useAsTitle: 'labelRu',
-		group: 'Имущество на продажу',
+		group: 'Имущество на продажу - Админ',
 	},
 	fields: [
 		{
@@ -20,19 +20,19 @@ const MarketplaceCategories: CollectionConfig = {
 					name: 'labelKz',
 					label: 'Санат',
 					type: 'text',
-					required: false,
+					required: true,
 				},
 				{
 					name: 'labelRu',
 					label: 'Категория',
 					type: 'text',
-					required: false,
+					required: true,
 				},
 				{
 					name: 'labelEn',
 					label: 'Category',
 					type: 'text',
-					required: false,
+					required: true,
 				},
 			],
 		},

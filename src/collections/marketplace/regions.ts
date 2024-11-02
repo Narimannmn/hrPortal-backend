@@ -1,6 +1,6 @@
 import { CollectionConfig } from 'payload/types'
 
-const MarketplaceCategories: CollectionConfig = {
+const MarketplaceRegions: CollectionConfig = {
 	slug: 'marketplace_regions',
 	labels: {
 		singular: 'Регионы маркетплейса',
@@ -8,35 +8,35 @@ const MarketplaceCategories: CollectionConfig = {
 	},
 	admin: {
 		useAsTitle: 'labelRu',
-		group: 'Имущество на продажу',
+		group: 'Имущество на продажу - Админ',
 	},
 	fields: [
 		{
 			name: 'regions',
-			label: 'Категория',
+			label: 'Регионы',
 			type: 'group',
 			fields: [
 				{
 					name: 'labelKz',
-					label: 'Санат',
+					label: 'Регион на казахском',
 					type: 'text',
-					required: false,
+					required: true,
 				},
 				{
 					name: 'labelRu',
-					label: 'Категория',
+					label: 'Регион на русском',
 					type: 'text',
-					required: false,
+					required: true,
 				},
 				{
 					name: 'labelEn',
-					label: 'Category',
+					label: 'Регион на английском',
 					type: 'text',
-					required: false,
+					required: true,
 				},
 			],
 		},
 	],
 }
 
-export default MarketplaceCategories
+export default MarketplaceRegions

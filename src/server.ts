@@ -1,3 +1,4 @@
+import { mediaMigration } from '../mediaMigration'
 import cors from 'cors'
 import express from 'express'
 import payload from 'payload'
@@ -84,8 +85,37 @@ const start = async () => {
 		res.redirect(trackedLink.href.toString())
 	})
 
+	app.get('/api/marketplace-data', async (req, res) => {
+		try {
+			const categories = await payload.find({
+				collection: 'marketplace_categories',
+				limit: 1000,
+			})
+
+			const regions = await payload.find({
+				collection: 'marketplace_regions',
+				limit: 1000,
+			})
+
+			const services = await payload.find({
+				collection: 'marketplace_services',
+				limit: 1000,
+			})
+
+			res.status(200).json({
+				categories: categories.docs,
+				regions: regions.docs,
+				services: services.docs,
+			})
+		} catch (error) {
+			console.error('Ошибка при получении данных маркетплейса:', error)
+			res.status(500).json({ error: 'Не удалось получить данные маркетплейса' })
+		}
+	})
+
 	app.listen(4000, () => {
 		console.log('Server is running on port 4000')
+		mediaMigration()
 	})
 }
 

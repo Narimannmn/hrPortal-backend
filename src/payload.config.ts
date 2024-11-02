@@ -4,6 +4,7 @@ import FavouriteCategories from './collections/FavouriteCategories'
 import Files from './collections/Files'
 import Icons from './collections/Icons'
 import InnerPage from './collections/InnterPage'
+import MarketplaceMedia from './collections/MarketPlaceMedia'
 import Media from './collections/Media'
 import MenuItems from './collections/MenuItems'
 import MenuOrder from './collections/MenuOrder'
@@ -42,8 +43,11 @@ import Banks from './collections/map/bank'
 import Offices from './collections/map/offices'
 import ServiceList from './collections/map/service.list'
 import Terminals from './collections/map/terminals'
-import Filters from './collections/marketplace/categories'
+import MarketplaceCategories from './collections/marketplace/categories'
+import HotSale from './collections/marketplace/hot.sale'
 import ForSaleItems from './collections/marketplace/marketplace'
+import MarketplaceRegions from './collections/marketplace/regions'
+import MarketplaceServices from './collections/marketplace/services'
 import Promotions from './collections/partners/discounts'
 import PostCategories from './collections/posts/PostCategories'
 import Posts from './collections/posts/Posts'
@@ -62,17 +66,17 @@ import path from 'path'
 import { openapi, swaggerUI } from 'payload-oapi'
 import { buildConfig } from 'payload/config'
 
-const storageAdapter = s3Adapter({
-	config: {
-		region: process.env.S3_REGION,
-		endpoint: process.env.S3_ENDPOINT,
-		credentials: {
-			accessKeyId: process.env.S3_ACCESS_KEY,
-			secretAccessKey: process.env.S3_SECRET_KEY,
-		},
-	},
-	bucket: process.env.S3_BUCKET_NAME,
-})
+// const storageAdapter = s3Adapter({
+// 	config: {
+// 		region: process.env.S3_REGION,
+// 		endpoint: process.env.S3_ENDPOINT,
+// 		credentials: {
+// 			accessKeyId: process.env.S3_ACCESS_KEY,
+// 			secretAccessKey: process.env.S3_SECRET_KEY,
+// 		},
+// 	},
+// 	bucket: process.env.S3_BUCKET_NAME,
+// })
 
 export default buildConfig({
 	admin: {
@@ -101,8 +105,6 @@ export default buildConfig({
 		MenuItems,
 		Posts,
 		PostCategories,
-		ForSaleItems,
-		Filters,
 		Banks,
 		Terminals,
 		Offices,
@@ -146,6 +148,14 @@ export default buildConfig({
 		// Link tracking
 		TrackedLinks,
 		TrackedLinksClicks,
+
+		// Marketplace
+		HotSale,
+		MarketplaceMedia,
+		ForSaleItems,
+		MarketplaceRegions,
+		MarketplaceServices,
+		MarketplaceCategories,
 	],
 	typescript: {
 		outputFile: path.resolve(__dirname, './generated-types.ts'),
@@ -166,31 +176,31 @@ export default buildConfig({
 			syncDrafts: true,
 		}),
 		payloadCloud(),
-		cloudStorage({
-			collections: {
-				media: {
-					adapter: storageAdapter,
-				},
-				icons: {
-					adapter: storageAdapter,
-				},
-				files: {
-					adapter: storageAdapter,
-				},
-				videos: {
-					adapter: storageAdapter,
-				},
-				// 'marketplace-media': {
-				// 	adapter: storageAdapter,
-				// },
-				// 'employee-media': {
-				// 	adapter: storageAdapter,
-				// },
-				// documents: {
-				// 	adapter: storageAdapter,
-				// },
-			},
-		}),
+		// cloudStorage({
+		// 	collections: {
+		// 		media: {
+		// 			adapter: storageAdapter,
+		// 		},
+		// 		icons: {
+		// 			adapter: storageAdapter,
+		// 		},
+		// 		files: {
+		// 			adapter: storageAdapter,
+		// 		},
+		// 		videos: {
+		// 			adapter: storageAdapter,
+		// 		},
+		// 		// 'marketplace-media': {
+		// 		// 	adapter: storageAdapter,
+		// 		// },
+		// 		// 'employee-media': {
+		// 		// 	adapter: storageAdapter,
+		// 		// },
+		// 		// documents: {
+		// 		// 	adapter: storageAdapter,
+		// 		// },
+		// 	},
+		// }),
 	],
 	db: postgresAdapter({
 		pool: {
