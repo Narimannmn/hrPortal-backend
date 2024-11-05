@@ -49,7 +49,7 @@ const start = async () => {
 		}
 	})
 
-	app.get('/:slug', async (req, res) => {
+	app.get('/api/utm/:slug', async (req, res) => {
 		const { slug } = req.params
 
 		if (!req.payload) {
@@ -92,7 +92,7 @@ const start = async () => {
 			},
 		})
 
-		res.redirect(trackedLink.href.toString())
+		return res.json(trackedLink.href.toString())
 	})
 
 	app.get('/api/marketplace-data', async (req, res) => {

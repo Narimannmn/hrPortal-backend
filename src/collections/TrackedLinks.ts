@@ -11,6 +11,9 @@ export const TrackedLinks: CollectionConfig = {
 	admin: {
 		useAsTitle: 'name',
 	},
+	access: {
+		read: () => true,
+	},
 	fields: [
 		{
 			name: 'name',
@@ -19,7 +22,7 @@ export const TrackedLinks: CollectionConfig = {
 		},
 		{
 			name: 'slug',
-			label: 'Сокращенная ссылка',
+			label: 'slug для Сокращенная ссылка',
 			type: 'text',
 			required: true,
 		},

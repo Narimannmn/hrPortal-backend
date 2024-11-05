@@ -8,6 +8,7 @@ const GenerateLinkButton: React.FC = () => {
 	const utm_campaign = useField<string>({ path: 'utm.utm_campaign' })
 	const utm_content = useField<string>({ path: 'utm.utm_content' })
 	const utm_term = useField<string>({ path: 'utm.utm_term' })
+	const slug = useField<string>({ path: 'slug' })
 
 	const utm = {
 		utm_source: utm_source.value,
@@ -25,6 +26,17 @@ const GenerateLinkButton: React.FC = () => {
 			return url.protocol === 'http:' || url.protocol === 'https:'
 		} catch (e) {
 			return false
+		}
+	}
+
+	const copyTextToClipboard = async () => {
+		try {
+			await navigator.clipboard.writeText(
+				'https://eub-web03-lt1.eub.kz/utms/' + slug.value
+			)
+			console.log('Текст успешно скопирован в буфер обмена!')
+		} catch (err) {
+			console.error('Ошибка:', err)
 		}
 	}
 
@@ -54,13 +66,27 @@ const GenerateLinkButton: React.FC = () => {
 	}
 
 	return (
-		<button
-			className='btn btn--style-primary btn--icon-style-without-border btn--size-small btn--icon-position-right'
-			type='button'
-			onClick={handleGenerateLink}
+		<div
+			style={{
+				display: 'flex',
+				gap: '10px',
+			}}
 		>
-			Сгенерировать ссылку
-		</button>
+			<button
+				className='btn btn--style-primary btn--icon-style-without-border btn--size-small btn--icon-position-right'
+				type='button'
+				onClick={handleGenerateLink}
+			>
+				Сгенерировать ссылку
+			</button>
+			<button
+				className='btn btn--style-primary btn--icon-style-without-border btn--size-small btn--icon-position-right'
+				type='button'
+				onClick={copyTextToClipboard}
+			>
+				Скопировать ссылку
+			</button>
+		</div>
 	)
 }
 
