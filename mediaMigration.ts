@@ -1,6 +1,16 @@
 import { XMLParser } from 'fast-xml-parser'
 import fs from 'fs'
 import payload from 'payload'
+import sharp from 'sharp'
+
+async function validateAndProcessImage(buffer) {
+	try {
+		return await sharp(buffer).toBuffer()
+	} catch (error) {
+		console.error('Ошибка обработки изображения:', error)
+		throw new Error('Некорректный формат изображения')
+	}
+}
 
 function getMimeType(filename: string) {
 	const extension = filename.split('.').pop().toLowerCase()
@@ -49,18 +59,22 @@ export const mediaMigration = async () => {
 			mediaItem.guid.includes('png') ||
 			mediaItem.guid.includes('gif')
 		) {
-			await payload.create({
-				collection: 'media',
-				data: {
-					alt: mediaItem.guid.split('?')[0].split('/').pop().split('.')[0],
-				},
-				file: {
-					data: buffer,
-					mimetype: getMimeType(mediaItem.guid),
-					name: mediaItem.guid.split('?')[0].split('/').pop(),
-					size: buffer.length,
-				},
-			})
+			try {
+				await payload.create({
+					collection: 'marketplace-media',
+					data: {
+						alt: mediaItem.title.toString(),
+					},
+					file: {
+						data: await validateAndProcessImage(buffer),
+						mimetype: getMimeType(mediaItem.guid),
+						name: mediaItem.guid.split('?')[0].split('/').pop(),
+						size: buffer.length,
+					},
+				})
+			} catch (error) {
+				console.error(`Ошибка при загрузке ${mediaItem.guid}:`, error)
+			}
 		}
 	}
 }

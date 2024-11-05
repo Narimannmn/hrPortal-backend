@@ -32,8 +32,8 @@ import Employees from './collections/employees'
 import FormCardSelection from './collections/forms/formCardSelection'
 import FormForOrderingCall from './collections/forms/formForOrderingCall'
 import FormForPerson from './collections/forms/formForPerson'
-import FormPreferentialLoan from './collections/forms/formPreferentialLoan'
 import FormForSms from './collections/forms/formForSms'
+import FormPreferentialLoan from './collections/forms/formPreferentialLoan'
 import FormWithAdditionalInfo from './collections/forms/formWithAdditionalInfo'
 import FormWithCity from './collections/forms/formWithCity'
 import FormWithCreditDelinquencies from './collections/forms/formWithCreditDelinquencies'
@@ -56,6 +56,7 @@ import PrivateCategory from './collections/private/PrivateCategory'
 import PrivateMap from './collections/private/PrivateMap'
 import { QuestionsSection } from './collections/questions/QuestionSections'
 import { Questions } from './collections/questions/Questions'
+import { HighlightedText } from './components/HighlightedText'
 import { webpackBundler } from '@payloadcms/bundler-webpack'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { payloadCloud } from '@payloadcms/plugin-cloud'
@@ -66,17 +67,17 @@ import path from 'path'
 import { openapi, swaggerUI } from 'payload-oapi'
 import { buildConfig } from 'payload/config'
 
-// const storageAdapter = s3Adapter({
-// 	config: {
-// 		region: process.env.S3_REGION,
-// 		endpoint: process.env.S3_ENDPOINT,
-// 		credentials: {
-// 			accessKeyId: process.env.S3_ACCESS_KEY,
-// 			secretAccessKey: process.env.S3_SECRET_KEY,
-// 		},
-// 	},
-// 	bucket: process.env.S3_BUCKET_NAME,
-// })
+const storageAdapter = s3Adapter({
+	config: {
+		region: process.env.S3_REGION,
+		endpoint: process.env.S3_ENDPOINT,
+		credentials: {
+			accessKeyId: process.env.S3_ACCESS_KEY,
+			secretAccessKey: process.env.S3_SECRET_KEY,
+		},
+	},
+	bucket: process.env.S3_BUCKET_NAME,
+})
 
 export default buildConfig({
 	admin: {
@@ -94,9 +95,16 @@ export default buildConfig({
 		}),
 	},
 	editor: slateEditor({
-		// admin: {
-		// 	leaves: ['bold', 'code', 'italic', 'strikethrough', 'underline', HighlightedText]
-		// }
+		admin: {
+			leaves: [
+				'bold',
+				'code',
+				'italic',
+				'strikethrough',
+				'underline',
+				HighlightedText,
+			],
+		},
 	}),
 	collections: [
 		Users,
@@ -177,31 +185,31 @@ export default buildConfig({
 			docsUrl: '/api/docs',
 		}),
 		payloadCloud(),
-		// cloudStorage({
-		// 	collections: {
-		// 		media: {
-		// 			adapter: storageAdapter,
-		// 		},
-		// 		icons: {
-		// 			adapter: storageAdapter,
-		// 		},
-		// 		files: {
-		// 			adapter: storageAdapter,
-		// 		},
-		// 		videos: {
-		// 			adapter: storageAdapter,
-		// 		},
-		// 		// 'marketplace-media': {
-		// 		// 	adapter: storageAdapter,
-		// 		// },
-		// 		// 'employee-media': {
-		// 		// 	adapter: storageAdapter,
-		// 		// },
-		// 		// documents: {
-		// 		// 	adapter: storageAdapter,
-		// 		// },
-		// 	},
-		// }),
+		cloudStorage({
+			collections: {
+				media: {
+					adapter: storageAdapter,
+				},
+				icons: {
+					adapter: storageAdapter,
+				},
+				files: {
+					adapter: storageAdapter,
+				},
+				videos: {
+					adapter: storageAdapter,
+				},
+				'marketplace-media': {
+					adapter: storageAdapter,
+				},
+				// 'employee-media': {
+				// 	adapter: storageAdapter,
+				// },
+				// documents: {
+				// 	adapter: storageAdapter,
+				// },
+			},
+		}),
 	],
 	db: postgresAdapter({
 		pool: {

@@ -15,21 +15,6 @@ import {
 	ResponsiveContainer,
 } from 'recharts'
 
-const fakeData = [
-	{ date: '2024-09-01', count: 432 },
-	{ date: '2024-09-02', count: 398 },
-	{ date: '2024-09-03', count: 456 },
-	{ date: '2024-09-04', count: 389 },
-	{ date: '2024-09-05', count: 467 },
-	{ date: '2024-09-06', count: 412 },
-	{ date: '2024-09-07', count: 399 },
-	{ date: '2024-09-08', count: 458 },
-	{ date: '2024-09-09', count: 385 },
-	{ date: '2024-09-10', count: 446 },
-	{ date: '2024-09-11', count: 412 },
-	{ date: '2024-09-12', count: 453 },
-]
-
 const LinkClickChart: FC = () => {
 	const { id } = useDocumentInfo()
 	const [dateRange, setDateRange] = useState<string>('7days')
@@ -59,7 +44,6 @@ const LinkClickChart: FC = () => {
 					`/api/trackedLinksClicks/getChartData/${id}?startDate=${startDate}&endDate=${endDate}&groupMode=${groupMode}`
 				)
 
-				console.log(res)
 				const data = await res.data
 				setLinkClickData(data)
 			} catch (error) {

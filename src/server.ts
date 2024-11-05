@@ -1,4 +1,3 @@
-import { mediaMigration } from '../mediaMigration'
 import cors from 'cors'
 import express from 'express'
 import payload from 'payload'
@@ -72,6 +71,16 @@ const start = async () => {
 
 		const trackedLink = linkDocs.docs[0]
 
+		const params = new URL(trackedLink.href.toString()).searchParams
+
+		const utms = {
+			utm_source: params.get('utm_source'),
+			utm_medium: params.get('utm_medium'),
+			utm_campaign: params.get('utm_campaign'),
+			utm_content: params.get('utm_content'),
+			utm_term: params.get('utm_term'),
+		}
+
 		await req.payload.create({
 			collection: 'trackedLinksClicks',
 			data: {
@@ -79,6 +88,7 @@ const start = async () => {
 				browser: parserResults.browser.name,
 				device: parserResults.device,
 				os: parserResults.os.name,
+				utms,
 			},
 		})
 
@@ -115,7 +125,6 @@ const start = async () => {
 
 	app.listen(4000, () => {
 		console.log('Server is running on port 4000')
-		mediaMigration()
 	})
 }
 
