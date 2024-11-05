@@ -1,7 +1,7 @@
+import { Accordion } from './static/accordion'
+import { PlainList } from './static/plainList'
+import { SectionList } from './static/sectionList'
 import { Block } from 'payload/types'
-import {PlainList} from "./static/PlainList";
-import {SectionList} from "./static/sectionList";
-import {Accordion} from "./static/accordion";
 
 export const DocList: Block = {
 	slug: 'DocList',
@@ -77,47 +77,42 @@ export const DocList: Block = {
 					name: 'list',
 					label: 'Контент списка документов',
 					type: 'group',
-					fields: [
-						...PlainList
-					],
+					fields: [...PlainList],
 					admin: {
-						condition: (_, siblingData) => siblingData.tabContentVariant === 'list',
+						condition: (_, siblingData) =>
+							siblingData.tabContentVariant === 'list',
 					},
 				},
 				{
 					name: 'sectionList',
 					label: 'Cписок документов по разделам',
 					type: 'array',
-					fields: [
-						...SectionList
-					],
+					fields: [...SectionList],
 					admin: {
-						condition: (_, siblingData) => siblingData.tabContentVariant === 'sectionList',
+						condition: (_, siblingData) =>
+							siblingData.tabContentVariant === 'sectionList',
 					},
 				},
 				{
 					name: 'accordion',
 					label: 'Контент аккордеона',
 					type: 'array',
-					fields: [
-						...Accordion
-					],
+					fields: [...Accordion],
 					admin: {
-						condition: (_, siblingData) => siblingData.tabContentVariant === 'accordion',
+						condition: (_, siblingData) =>
+							siblingData.tabContentVariant === 'accordion',
 					},
 				},
 			],
 			admin: {
-				condition: (_, siblingData) => siblingData.docType === 'tabs'
+				condition: (_, siblingData) => siblingData.docType === 'tabs',
 			},
 		},
 		{
 			name: 'sectionList',
 			label: 'Cписок документов по разделам',
 			type: 'array',
-			fields: [
-				...SectionList
-			],
+			fields: [...SectionList],
 			admin: {
 				condition: (_, siblingData) => siblingData.docType === 'sectionList',
 			},
