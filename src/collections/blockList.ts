@@ -9,7 +9,7 @@ import CardBlockWithIcon from '../blocks/CardBlockWithIcon'
 import CategoryBonusSection from '../blocks/CategoryBonusSection'
 import ContactBannerCard from '../blocks/ContactBannerCard'
 import { CurrencyTabList } from '../blocks/CurrencyTabList'
-import { DocumentList } from '../blocks/DocumentList'
+import { DocList } from '../blocks/DocList/DocList'
 import { ForSale } from '../blocks/ForSale'
 import GridContentCard from '../blocks/GridContentCard'
 import { Hero } from '../blocks/Hero'
@@ -124,7 +124,7 @@ export const PageBlocks: Block[] = [
 	OfficeLocator,
 	SpaceFiller,
 	PrivateFavorableConditions,
-	DocumentList,
+	DocList,
 	BankLocation,
 	ServicePackages,
 	PromotionsSection,
