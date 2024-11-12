@@ -127,6 +127,13 @@ const SliderHeroWithCardsBlock: Block = {
           relationTo: "media",
           required: true,
         },
+        {
+          name: "mobileImageUrl",
+          label: "Ссылка на изображение (mobile)",
+          type: "upload",
+          relationTo: "media",
+          required: false,
+        },
       ],
     },
     {
