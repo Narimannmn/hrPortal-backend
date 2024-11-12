@@ -30,11 +30,32 @@ export const SectionList: Block['fields'] = [
         type: 'array',
         fields: [
             {
-                name: 'doc',
-                type: 'upload',
+                name: 'docItem',
                 label: 'Документ',
-                relationTo: 'files',
-                required: true,
+                type: 'group',
+                fields: [
+                    {
+                        name: 'KZ_doc',
+                        type: 'upload',
+                        label: 'Қаз - Документ',
+                        relationTo: 'files',
+                        required: true,
+                    },
+                    {
+                        name: 'RU_doc',
+                        type: 'upload',
+                        label: 'Рус - Документ',
+                        relationTo: 'files',
+                        required: true,
+                    },
+                    {
+                        name: 'EN_doc',
+                        type: 'upload',
+                        label: 'En - Документ',
+                        relationTo: 'files',
+                        required: true,
+                    },
+                ]
             },
             {
                 name: 'info',
@@ -91,12 +112,33 @@ export const SectionList: Block['fields'] = [
                         type: 'array',
                         fields: [
                             {
-                                name: 'doc',
-                                type: 'upload',
+                                name: 'docItem',
                                 label: 'Документ',
-                                relationTo: 'files',
-                                required: true,
-                            }
+                                type: 'group',
+                                fields: [
+                                    {
+                                        name: 'KZ_doc',
+                                        type: 'upload',
+                                        label: 'Қаз - Документ',
+                                        relationTo: 'files',
+                                        required: true,
+                                    },
+                                    {
+                                        name: 'RU_doc',
+                                        type: 'upload',
+                                        label: 'Рус - Документ',
+                                        relationTo: 'files',
+                                        required: true,
+                                    },
+                                    {
+                                        name: 'EN_doc',
+                                        type: 'upload',
+                                        label: 'En - Документ',
+                                        relationTo: 'files',
+                                        required: true,
+                                    },
+                                ]
+                            },
                         ],
                     },
                 ]
