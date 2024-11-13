@@ -34,21 +34,18 @@ export const PlainList: Block['fields'] = [
                         type: 'upload',
                         label: 'Қаз - Документ',
                         relationTo: 'files',
-                        required: true,
                     },
                     {
                         name: 'RU_doc',
                         type: 'upload',
                         label: 'Рус - Документ',
                         relationTo: 'files',
-                        required: true,
                     },
                     {
                         name: 'EN_doc',
                         type: 'upload',
                         label: 'En - Документ',
                         relationTo: 'files',
-                        required: true,
                     },
                 ]
             },
