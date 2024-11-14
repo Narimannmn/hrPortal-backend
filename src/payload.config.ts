@@ -170,6 +170,11 @@ export default buildConfig({
 		MarketplaceServices,
 		MarketplaceCategories,
 	],
+	upload: {
+		limits: {
+			fileSize: 52_428_800, // 50MB, written in bytes
+		},
+	},
 	typescript: {
 		outputFile: path.resolve(__dirname, './generated-types.ts'),
 	},
