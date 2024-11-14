@@ -172,7 +172,7 @@ export default buildConfig({
 	],
 	upload: {
 		limits: {
-			fileSize: 52_428_800, // 50MB, written in bytes
+			fileSize: 24 * 1024 * 1024, // 24MB, written in bytes
 		},
 	},
 	typescript: {
