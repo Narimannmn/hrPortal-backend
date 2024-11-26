@@ -30,6 +30,10 @@ const Users: CollectionConfig = {
 					label: 'Налоговое имущество',
 					value: 'seller',
 				},
+				{
+					label: 'Hr рекрутер',
+					value: 'hr',
+				},
 			],
 			required: true,
 			defaultValue: 'seller',
