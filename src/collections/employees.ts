@@ -3,65 +3,46 @@ import { CollectionConfig } from 'payload/types'
 const Employees: CollectionConfig = {
 	slug: 'employees',
 	labels: {
-		singular: 'Правление - другие',
-		plural: 'Правление - другие',
+		singular: 'Сотрудник',
+		plural: 'Сотрудники',
 	},
 	access: {
 		read: () => true,
 	},
 	admin: {
-		group: 'О Банке',
+		group: 'Структура Банка',
 	},
 	fields: [
 		{
 			name: 'name',
 			label: 'Имя',
-			type: 'group',
-			fields: [
-				{
-					name: 'labelKz',
-					label: 'Имя (Kz)',
-					type: 'text',
-					required: true,
-				},
-				{
-					name: 'labelRu',
-					label: 'Имя (Ru)',
-					type: 'text',
-					required: true,
-				},
-				{
-					name: 'labelEn',
-					label: 'Имя (En)',
-					type: 'text',
-					required: true,
-				},
-			],
+			type: 'text',
+			required: true,
 		},
 		{
 			name: 'position',
 			label: 'Должность',
-			type: 'group',
-			fields: [
-				{
-					name: 'labelKz',
-					label: 'Должность (Kz)',
-					type: 'text',
-					required: true,
-				},
-				{
-					name: 'labelRu',
-					label: 'Должность (Ru)',
-					type: 'text',
-					required: true,
-				},
-				{
-					name: 'labelEn',
-					label: 'Должность (En)',
-					type: 'text',
-					required: true,
-				},
-			],
+			type: 'text',
+			required: true,
+		},
+		{
+			name: 'email',
+			label: 'Электронная почта',
+			type: 'email',
+			required: true,
+		},
+		{
+			name: 'telephone',
+			label: 'Телефон',
+			type: 'text',
+			required: true,
+		},
+		{
+			name: 'image',
+			label: 'Изображение',
+			type: 'upload',
+			relationTo: 'media',
+			required: true,
 		},
 	],
 }

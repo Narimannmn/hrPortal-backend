@@ -4,7 +4,7 @@ services:
   payload:
     image: node:18-alpine
     ports:
-      - '3000:3000'
+      - '4000:4000'
     volumes:
       - .:/home/node/app
       - node_modules:/home/node/app/node_modules
@@ -12,6 +12,7 @@ services:
     command: sh -c "yarn install && yarn dev"
     depends_on:
       - mongo
+      - postgres
     env_file:
       - .env
 
@@ -26,6 +27,18 @@ services:
     logging:
       driver: none
 
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: gKcsHMXrZ3PeH9b
+      POSTGRES_DB: hrPortal
+    ports:
+      - '5432:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
 volumes:
   data:
   node_modules:
+  pgdata:

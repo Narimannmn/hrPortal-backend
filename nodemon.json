@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json.schemastore.org/nodemon.json",
 	"ext": "ts",
-	"exec": "sh -c 'expect auto_confirm.sh'",
+	"exec": "ts-node src/server.ts",
 	"stdin": false
 }

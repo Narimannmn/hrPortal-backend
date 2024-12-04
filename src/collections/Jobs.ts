@@ -7,10 +7,10 @@ const Jobs: CollectionConfig = {
 		plural: 'Jobs',
 	},
 	access: {
-		read: () => true, // or add custom access control if needed
+		read: () => true,
 	},
 	admin: {
-		group: 'Bank Structure', // Place it in an appropriate group
+		group: 'Вакансии',
 	},
 	fields: [
 		{
@@ -30,10 +30,10 @@ const Jobs: CollectionConfig = {
 			label: 'Work Schedule',
 			type: 'select',
 			options: [
-				{ label: 'Full-Time', value: 'full-time' },
-				{ label: 'Part-Time', value: 'part-time' },
-				{ label: 'Remote', value: 'remote' },
-				{ label: 'Flexible', value: 'flexible' },
+				{ label: 'Full-Time', value: 'Full-Time' },
+				{ label: 'Part-Time', value: 'Part-Time' },
+				{ label: 'Remote', value: 'Remote' },
+				{ label: 'Flexible', value: 'Flexible' },
 			],
 			required: true,
 		},
@@ -44,10 +44,10 @@ const Jobs: CollectionConfig = {
 			required: true,
 		},
 		{
-			name: 'department',
-			label: 'Department',
+			name: 'jobGroup',
+			label: 'Job Group',
 			type: 'relationship',
-			relationTo: 'departments', // Links to the departments collection
+			relationTo: 'jobGroups',
 			required: true,
 		},
 		{

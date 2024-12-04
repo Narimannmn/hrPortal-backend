@@ -10,7 +10,7 @@ const Departments: CollectionConfig = {
 		read: () => true,
 	},
 	admin: {
-		group: 'Bank Structure',
+		group: 'Структура банка',
 	},
 	fields: [
 		{
@@ -20,11 +20,37 @@ const Departments: CollectionConfig = {
 			required: true,
 		},
 		{
-			name: 'parent',
-			label: 'Parent Department',
-			type: 'relationship',
-			relationTo: 'departments',
-			required: false,
+			name: 'teams',
+			label: 'Teams',
+			type: 'array',
+			fields: [
+				{
+					name: 'teamName',
+					label: 'Team Name',
+					type: 'text',
+					required: true,
+				},
+				{
+					name: 'description',
+					label: 'Description',
+					type: 'textarea',
+					required: false,
+				},
+				{
+					name: 'members',
+					label: 'Team Members',
+					type: 'array',
+					fields: [
+						{
+							name: 'member',
+							label: 'Member',
+							type: 'relationship',
+							relationTo: 'employees',
+							required: true,
+						},
+					],
+				},
+			],
 		},
 	],
 }

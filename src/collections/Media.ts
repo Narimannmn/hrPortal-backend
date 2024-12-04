@@ -27,7 +27,7 @@ const Media: CollectionConfig = {
 		},
 	},
 	admin: {
-		group: 'Общий медиа контент контент',
+		group: 'Общий медиа контент',
 		useAsTitle: 'alt',
 	},
 	fields: [

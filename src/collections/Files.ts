@@ -2,7 +2,7 @@ import { CollectionConfig } from 'payload/types'
 
 const validateFileName = (value: string) => {
 	if (value && /\s/.test(value)) {
-		return 'Название файла не должно содержать пробелов.'
+		return 'Filename should not contain spaces.'
 	}
 	return true
 }
@@ -10,46 +10,37 @@ const validateFileName = (value: string) => {
 const Files: CollectionConfig = {
 	slug: 'files',
 	labels: {
-		singular: 'Файл',
-		plural: 'Файлы',
+		singular: 'File',
+		plural: 'Files',
 	},
 	access: {
-		read: () => true,
+		read: () => true, // Public access to read files
 	},
 	upload: {
-		staticURL: '/files',
-		staticDir: 'files',
+		staticURL: '/files', // URL to access the file
+		staticDir: 'files', // Directory where files will be stored on the server
+		mimeTypes: [
+			'application/pdf',
+			'image/jpeg',
+			'image/png',
+			'application/msword',
+			'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+		], // Allowing various file types
 	},
 	admin: {
-		group: 'Общий медиа контент контент',
-		useAsTitle: 'alt',
+		group: 'Media Content',
+		useAsTitle: 'fileLabels', // Use 'fileLabels' field as the title in the admin panel
 	},
 	fields: [
 		{
 			name: 'fileLabels',
-			label: 'Название файла для отображения',
-			type: 'group',
-			fields: [
-				{
-					name: 'labelKz',
-					label: 'Казахский',
-					type: 'text',
-				},
-				{
-					name: 'labelRu',
-					label: 'Русский',
-					type: 'text',
-				},
-				{
-					name: 'labelEn',
-					label: 'Английский',
-					type: 'text',
-				},
-			],
+			label: 'File Label for Display',
+			type: 'text',
+			required: true,
 		},
 		{
 			name: 'alt',
-			label: 'Alt',
+			label: 'Alt Text',
 			type: 'text',
 			required: true,
 		},
@@ -59,8 +50,15 @@ const Files: CollectionConfig = {
 			type: 'text',
 			validate: validateFileName,
 			admin: {
-				hidden: true,
+				hidden: true, // Hidden from admin UI
 			},
+		},
+		{
+			name: 'file',
+			label: 'File',
+			type: 'upload', // The actual file to be uploaded
+			relationTo: 'files', // Reference to the 'files' collection
+			required: true, // Ensure file is uploaded
 		},
 	],
 }
